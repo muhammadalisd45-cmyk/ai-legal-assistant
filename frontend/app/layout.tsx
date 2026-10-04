@@ -16,13 +16,15 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <body>
         <TopNav />
         <main>{children}</main>
-        <footer className="footer footer-v3">
+        <footer className="footer footer-v3 landing-footer">
           <div className="footer-brand-block">
-            <div className="footer-brand"><span><Icon name="scale" size={24} /></span><strong>Pakistan Justice<br />Navigator</strong></div>
-            <p>Clearer legal information. Better-prepared conversations.</p>
+            <div className="footer-brand"><span><Icon name="scale" size={24} /></span><strong>LEGAL<br />AGENT</strong></div>
+            <p>AI-powered legal understanding and preparation for Pakistani legal contexts.</p>
+            <Link href="/case/new" className="footer-cta">Start Your Case <Icon name="arrow" size={16} /></Link>
           </div>
-          <div className="footer-links"><div><strong>Product</strong><Link href="/#story">How it works</Link><Link href="/dashboard">Dashboard</Link><Link href="/case/new">Start case</Link></div><div><strong>Research</strong><Link href="/sources">Official sources</Link><Link href="/research">Official legal research</Link></div><div><strong>Access</strong><Link href="/login">Sign in</Link><Link href="/case/new">Citizen intake</Link></div></div>
-          <div className="footer-legal"><span>© 2026 Pakistan Justice Navigator. All rights reserved.</span><p>Information and case-preparation support only — not legal representation or professional legal advice.</p></div>
+          <div className="footer-links"><div><strong>Explore</strong><Link href="/#about">About</Link><Link href="/#capabilities">Capabilities</Link><Link href="/#story">How it works</Link><Link href="/#pakistani-law">Pakistani law</Link></div><div><strong>Product</strong><Link href="/case/new">Legal Agent</Link><Link href="/research">Legal research</Link><Link href="/case/new">Start a case</Link></div><div><strong>Information</strong><Link href="/login">Sign in</Link><Link href="/sources">Sources</Link><Link href="/#responsible-ai">Responsible AI</Link></div></div>
+          <div className="footer-visual"><img src="/references/fist-scales.webp" alt="" /></div>
+          <div className="footer-legal"><span>© 2026 Legal Agent.</span><p>Legal Agent provides informational and preparation assistance and is not a substitute for professional legal representation.</p></div>
         </footer>
       </body>
     </html>

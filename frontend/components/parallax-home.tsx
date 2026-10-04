@@ -1,253 +1,111 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import { Icon } from "./icons";
 
-const clamp = (value: number) => Math.min(1, Math.max(0, value));
-const smooth = (value: number) => {
-  const x = clamp(value);
-  return x * x * (3 - 2 * x);
-};
-const phase = (p: number, start: number, end: number) => smooth((p - start) / (end - start));
-const bell = (p: number, start: number, peakIn: number, peakOut: number, end: number) => {
-  const enter = phase(p, start, peakIn);
-  const exit = 1 - phase(p, peakOut, end);
-  return Math.min(enter, exit);
-};
+const stages = [
+  ["01 — START WITH YOUR SITUATION", "Tell us what happened.", "Explain the problem naturally. The Legal Agent helps organise the facts and identify the legal questions hidden inside the situation."],
+  ["02 — UNDERSTAND", "Discover what may apply.", "Explore potentially relevant Pakistani legal principles, legislation and procedures in language that is easier to understand."],
+  ["03 — ANALYSE", "Turn documents into understanding.", "Review agreements, notices and other legal material while identifying important clauses, obligations, dates and issues that may need attention."],
+  ["04 — PREPARE", "Know what to ask. Know what to prepare.", "Organise information, prepare questions and create structured notes so you are better prepared before taking your next step."],
+  ["05 — MOVE FORWARD", "Legal clarity changes the conversation.", "Move forward with your facts organised, your questions prepared and a clearer understanding of your situation."]
+] as const;
 
-const setNumber = (node: HTMLElement, name: string, value: number) => {
-  node.style.setProperty(name, value.toFixed(4));
-};
+function IconMark({ children }: { children: ReactNode }) {
+  return <span className="legal-icon">{children}</span>;
+}
 
 export function ParallaxHome() {
-  const experienceRef = useRef<HTMLElement | null>(null);
+  const storyRef = useRef<HTMLElement | null>(null);
+  const [stage, setStage] = useState(0);
 
   useEffect(() => {
-    const experience = experienceRef.current;
-    if (!experience) return;
-
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const story = storyRef.current;
+    if (!story) return;
     let frame = 0;
-    let pointerFrame = 0;
-
-    const render = () => {
+    const update = () => {
       frame = 0;
-      const rect = experience.getBoundingClientRect();
-      const travel = Math.max(1, rect.height - window.innerHeight);
-      const p = clamp(-rect.top / travel);
-
-      setNumber(experience, "--p", p);
-      setNumber(experience, "--intro", 1 - phase(p, 0.09, 0.20));
-      setNumber(experience, "--story", bell(p, 0.10, 0.18, 0.28, 0.37));
-      setNumber(experience, "--organize", bell(p, 0.28, 0.36, 0.47, 0.56));
-      setNumber(experience, "--law", bell(p, 0.46, 0.54, 0.65, 0.74));
-      setNumber(experience, "--docs", bell(p, 0.64, 0.72, 0.82, 0.89));
-      setNumber(experience, "--finale", phase(p, 0.82, 0.95));
-      setNumber(experience, "--brown-to-green", phase(p, 0.36, 0.58));
-      setNumber(experience, "--green-to-brown", phase(p, 0.68, 0.80));
-      setNumber(experience, "--camera", smooth(p));
+      const rect = story.getBoundingClientRect();
+      const progress = Math.min(0.999, Math.max(0, -rect.top / Math.max(1, rect.height - window.innerHeight)));
+      setStage(Math.min(stages.length - 1, Math.floor(progress * stages.length)));
+      story.style.setProperty("--story-progress", progress.toFixed(3));
     };
-
-    const requestRender = () => {
-      if (!frame) frame = window.requestAnimationFrame(render);
+    const requestUpdate = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
     };
-
-    const onPointerMove = (event: PointerEvent) => {
-      if (reduceMotion || event.pointerType === "touch") return;
-      if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
-      pointerFrame = window.requestAnimationFrame(() => {
-        const x = (event.clientX / Math.max(window.innerWidth, 1) - 0.5) * 2;
-        const y = (event.clientY / Math.max(window.innerHeight, 1) - 0.5) * 2;
-        setNumber(experience, "--mx", x);
-        setNumber(experience, "--my", y);
-      });
-    };
-
-    const resetPointer = () => {
-      setNumber(experience, "--mx", 0);
-      setNumber(experience, "--my", 0);
-    };
-
-    render();
-    window.addEventListener("scroll", requestRender, { passive: true });
-    window.addEventListener("resize", requestRender);
-    experience.addEventListener("pointermove", onPointerMove, { passive: true });
-    experience.addEventListener("pointerleave", resetPointer);
-
+    update();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
     return () => {
-      window.removeEventListener("scroll", requestRender);
-      window.removeEventListener("resize", requestRender);
-      experience.removeEventListener("pointermove", onPointerMove);
-      experience.removeEventListener("pointerleave", resetPointer);
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
       if (frame) window.cancelAnimationFrame(frame);
-      if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
     };
   }, []);
 
   return (
-    <div className="experience-home">
-      <section ref={experienceRef} id="story" className="experience-track" aria-label="Pakistan Justice Navigator product story">
-        <div className="experience-stage">
-          <div className="experience-light light-warm" aria-hidden="true" />
-          <div className="experience-light light-green" aria-hidden="true" />
-          <div className="experience-grain" aria-hidden="true" />
-
-          <div className="experience-architecture" aria-hidden="true">
-            <div className="architecture-floor" />
-            <div className="architecture-column col-one" />
-            <div className="architecture-column col-two" />
-            <div className="architecture-column col-three" />
-            <div className="architecture-column col-four" />
-            <div className="architecture-portal portal-one" />
-            <div className="architecture-portal portal-two" />
-            <div className="architecture-portal portal-three" />
-            <div className="architecture-horizon" />
+    <div className="landing-page">
+      <section className="landing-hero" id="top">
+        <div className="hero-orbit orbit-a" aria-hidden="true" />
+        <div className="hero-orbit orbit-b" aria-hidden="true" />
+        <div className="hero-copy">
+          <span className="landing-kicker">AI LEGAL GUIDANCE</span>
+          <h1>Understand the law.<br /><em>Know your next move.</em></h1>
+          <p>An intelligent legal assistant designed to help you understand Pakistani law, organise your situation, analyse legal documents and prepare your next steps with greater clarity.</p>
+          <div className="landing-actions">
+            <Link href="/case/new" className="landing-button landing-button-dark">Start Your Case <Icon name="arrow" size={17} /></Link>
+            <a href="#how-it-works" className="landing-text-link">Explore how it works <Icon name="arrow" size={15} /></a>
           </div>
-
-          <div className="experience-progress" aria-hidden="true">
-            <span className="progress-label">01</span>
-            <span className="progress-line"><i /></span>
-            <span className="progress-label">06</span>
-          </div>
-
-          <div className="experience-scene scene-intro">
-            <div className="experience-copy intro-copy">
-              <span className="experience-eyebrow">PAKISTAN JUSTICE NAVIGATOR —</span>
-              <h1>Justice should not feel <em>out of reach.</em></h1>
-              <p>Tell us what happened. We help organize the story, surface official sources, and prepare you for the next legal conversation.</p>
-              <div className="experience-actions">
-                <Link href="/case/new" className="experience-cta primary">Start your case <Icon name="arrow" size={18} /></Link>
-                <Link href="/research" className="experience-cta ghost">Explore official sources</Link>
-              </div>
-              <div className="experience-microcopy">Information support — not legal representation.</div>
-            </div>
-
-            <div className="experience-console" aria-label="Product preview">
-              <div className="console-topline"><span>CASE PREPARATION</span><b>LIVE</b></div>
-              <div className="console-user">Mere chacha ne hamari inherited property par qabza kar liya hai.</div>
-              <div className="console-step"><i>01</i><div><strong>Clarify the facts</strong><span>Do you have ownership or inheritance documents?</span></div></div>
-              <div className="console-step emphasized"><i>02</i><div><strong>Find source context</strong><span>Official legislation is retrieved with provenance.</span></div></div>
-              <div className="console-step"><i>03</i><div><strong>Prepare the brief</strong><span>Facts, gaps, documents and source context.</span></div></div>
-            </div>
-
-            <div className="intro-caption">Built around Pakistani laws, courts and citizens.</div>
-          </div>
-
-          <div className="experience-scene scene-story">
-            <div className="story-center">
-              <span className="experience-eyebrow">START WITH YOUR OWN WORDS —</span>
-              <h2>You know something is wrong.<br /><em>You may not know the legal words.</em></h2>
-              <p>That is enough to begin.</p>
-            </div>
-
-            <div className="story-message">“Mere chacha ne hamari inherited property par qabza kar liya hai.”</div>
-
-            <div className="floating-paper paper-notice"><b>LEGAL NOTICE</b><span>Response period</span><small>ORIGINAL SOURCE</small></div>
-            <div className="floating-paper paper-deed"><b>SALE DEED</b><span>Ownership record</span><small>DOCUMENT</small></div>
-            <div className="floating-paper paper-order"><b>COURT ORDER</b><span>Case record</span><small>JUDGMENT</small></div>
-            <div className="floating-paper paper-fir"><b>FIR</b><span>Police record</span><small>CASE FILE</small></div>
-          </div>
-
-          <div className="experience-scene scene-organize">
-            <div className="organize-copy">
-              <span className="experience-eyebrow">FROM STORY TO STRUCTURE —</span>
-              <h2><span>Understand.</span><span><em>Organize.</em></span><span>Verify.</span></h2>
-              <p>Your words remain your words. AI organization and verified evidence stay visibly separate.</p>
-            </div>
-            <div className="case-orbit" aria-hidden="true">
-              <div className="orbit-disc"><Icon name="scale" size={32} /><strong>YOUR CASE</strong></div>
-              <div className="orbit-line orbit-line-one" />
-              <div className="orbit-line orbit-line-two" />
-              <div className="case-chip chip-one">PROPERTY</div>
-              <div className="case-chip chip-two">INHERITANCE</div>
-              <div className="case-chip chip-three">POSSESSION</div>
-              <div className="case-chip chip-four">MISSING FACTS</div>
-            </div>
-          </div>
-
-          <div className="experience-scene scene-law">
-            <div className="law-copy-new">
-              <span className="experience-eyebrow">OFFICIAL-SOURCE FIRST —</span>
-              <h2>Pakistani law.<br /><em>Not generic AI.</em></h2>
-              <p>Source identity stays attached to every result. Exact provisions appear only when retrieved from source text.</p>
-              <Link href="/research" className="experience-cta ivory">Open legal research <Icon name="arrow" size={17} /></Link>
-            </div>
-
-            <div className="law-book" aria-label="Official legal source preview">
-              <div className="law-book-spine">PAKISTAN CODE</div>
-              <div className="law-book-page">
-                <span className="law-seal"><Icon name="scale" size={22} /></span>
-                <small>OFFICIAL SOURCE</small>
-                <h3>Transfer of Property Act, 1882</h3>
-                <div className="law-rule" />
-                <p>Federal legislation</p>
-                <div className="law-source-row"><span>Authority</span><strong>Ministry of Law & Justice</strong></div>
-                <div className="law-source-row"><span>Status</span><strong>Source-linked</strong></div>
-                <div className="law-source-row"><span>Exact section</span><strong>Only after retrieval</strong></div>
-              </div>
-            </div>
-
-            <div className="law-source-tabs" aria-hidden="true">
-              <span>Pakistan Code</span><span>Sindh Laws</span><span>Court Judgments</span>
-            </div>
-          </div>
-
-          <div className="experience-scene scene-docs">
-            <div className="docs-copy-new">
-              <span className="experience-eyebrow">DOCUMENT INTELLIGENCE —</span>
-              <h2>Your documents.<br /><em>Understood.</em></h2>
-              <p>Important facts separate from the page without losing the original source.</p>
-            </div>
-
-            <div className="document-explosion" aria-hidden="true">
-              <div className="document-main">
-                <small>ORIGINAL DOCUMENT</small>
-                <strong>LEGAL NOTICE</strong>
-                <span>Property dispute — source preserved</span>
-                <div className="document-lines"><i /><i /><i /><i /><i /></div>
-              </div>
-              <div className="fact-card fact-date"><small>DATE</small><strong>12 MAR 2018</strong><span>From page 1</span></div>
-              <div className="fact-card fact-parties"><small>PARTIES</small><strong>SELLER / BUYER</strong><span>From document</span></div>
-              <div className="fact-card fact-deadline"><small>DEADLINE</small><strong>NEEDS REVIEW</strong><span>Not assumed</span></div>
-              <div className="fact-card fact-source"><small>PROVENANCE</small><strong>PAGE 1</strong><span>Traceable</span></div>
-            </div>
-          </div>
-
-          <div className="experience-scene scene-finale">
-            <div className="finale-copy-new">
-              <span className="experience-eyebrow">WALK IN PREPARED —</span>
-              <h2>Story + documents + law<br /><em>become one clear brief.</em></h2>
-              <p>Not a verdict. Not legal representation. A clearer starting point for professional review.</p>
-            </div>
-
-            <div className="brief-object" aria-label="Lawyer-ready brief preview">
-              <div className="brief-shadow-card shadow-three">OFFICIAL SOURCES</div>
-              <div className="brief-shadow-card shadow-two">DOCUMENTS + TIMELINE</div>
-              <div className="brief-shadow-card shadow-one">FACTS + OPEN QUESTIONS</div>
-              <div className="brief-main-card">
-                <span><Icon name="document" size={26} /></span>
-                <small>PREPARED FOR LEGAL REVIEW</small>
-                <strong>LAWYER-READY BRIEF</strong>
-                <i>Facts — timeline — documents — source context</i>
-              </div>
-            </div>
-
-            <Link href="/case/new" className="experience-cta primary finale-button">Start your case <Icon name="arrow" size={18} /></Link>
-          </div>
-
-          <div className="experience-scroll-hint" aria-hidden="true"><span>SCROLL</span><i /></div>
         </div>
+        <div className="hero-sculpture" aria-label="Bronze fist holding the scales of justice">
+          <div className="sculpture-halo" aria-hidden="true" />
+          <img src="/references/fist-scales.webp" alt="Bronze sculpture of a fist holding scales of justice" />
+        </div>
+        <aside className="hero-capability">
+          <div className="capability-icons"><IconMark>◌</IconMark><IconMark>⌕</IconMark><IconMark>⌗</IconMark></div>
+          <span className="landing-kicker">LEGAL AGENT</span>
+          <h2>Your first point of legal understanding</h2>
+          <p>Explain your situation and receive structured guidance to help you understand what may matter next.</p>
+          <ul><li>Understand your situation</li><li>Explore relevant legal context</li><li>Prepare your next steps</li></ul>
+        </aside>
+        <div className="hero-trust"><span>PAKISTANI LEGAL CONTEXT</span><span>DOCUMENT INTELLIGENCE</span><span>STRUCTURED GUIDANCE</span></div>
       </section>
 
-      <section className="experience-proof">
-        <div className="page-shell proof-inner">
-          <div><span>01</span><strong>Your facts</strong><small>What you actually told the system.</small></div>
-          <div><span>02</span><strong>AI organization</strong><small>Issues and questions prepared for review.</small></div>
-          <div><span>03</span><strong>Official sources</strong><small>Source identity remains visible.</small></div>
-          <div><span>04</span><strong>Verified evidence</strong><small>Only after retrieval confirms it.</small></div>
-        </div>
+      <section className="editorial-intro landing-section" id="about">
+        <div className="decor-circle circle-terracotta" aria-hidden="true" />
+        <div className="decor-circle circle-mustard" aria-hidden="true" />
+        <span className="landing-kicker">LEGAL INTELLIGENCE, MADE CLEAR</span>
+        <div className="intro-grid"><h2>Built for the moments<br /><em>when the law feels difficult.</em></h2><p>Legal information is often fragmented, technical and difficult to interpret. The Legal Agent brings your situation, documents and relevant legal context together so you can understand the problem before deciding what to do next.</p></div>
       </section>
+
+      <section className="capabilities landing-section" id="capabilities">
+        <div className="center-heading"><span className="landing-kicker">WHAT THE LEGAL AGENT CAN DO</span><h2>One place to understand,<br /><em>analyse and prepare.</em></h2><p>Use intelligent assistance to turn complex legal information into clearer, more structured next steps.</p></div>
+        <div className="capability-grid">
+          <article><span className="feature-number">01</span><IconMark>◒</IconMark><span className="landing-kicker">ASK &amp; UNDERSTAND</span><h3>Explain your situation</h3><p>Describe your legal concern in ordinary language. Organise the facts, identify important questions and clarify unfamiliar concepts.</p></article>
+          <article><span className="feature-number">02</span><IconMark>⌕</IconMark><span className="landing-kicker">RESEARCH</span><h3>Explore Pakistani legal context</h3><p>Discover potentially relevant legislation, legal principles and procedures without manually searching through disconnected legal material.</p></article>
+          <article><span className="feature-number">03</span><IconMark>▤</IconMark><span className="landing-kicker">ANALYSE &amp; PREPARE</span><h3>Work with your documents</h3><p>Review notices, agreements and other legal material, then prepare structured notes, questions and supporting drafts.</p></article>
+        </div>
+        <p className="responsible-note">Designed to support legal understanding and preparation, not replace qualified professional representation.</p>
+      </section>
+
+      <section className="guidance-section landing-section" id="how-it-works">
+        <div className="guidance-art"><div className="decor-circle circle-terracotta" aria-hidden="true" /><div className="decor-circle circle-mustard" aria-hidden="true" /><img src="/references/books-gavel.webp" alt="Books, scales of justice and a judge's gavel" /></div>
+        <div className="guidance-copy"><span className="landing-kicker">WHEN THE LAW FEELS COMPLICATED</span><h2>You don&apos;t have to<br /><em>navigate it blindly.</em></h2><p>When a notice arrives, a contract becomes unclear or a legal problem starts getting complicated, knowing where to begin can be difficult.</p><p>The Legal Agent helps turn that uncertainty into structured information—so you can understand the situation, identify useful questions and prepare what comes next.</p><Link href="/case/new" className="landing-text-link">Ask the Legal Agent <Icon name="arrow" size={15} /></Link></div>
+      </section>
+
+      <section className="word-transition" aria-label="Legal Agent identity"><div className="word word-legal">LEGAL</div><div className="word word-agent">AGENT</div><img className="agent-globe" src="/references/legal-agent-globe.webp" alt="Vintage globe representing global legal context" /><p>Technology built to make legal information easier to understand.</p></section>
+
+      <section ref={storyRef} className="video-story" id="story">
+        <div className="video-stage"><div className="video-text">{stages.map(([label, title, body], index) => <article key={label} className={index === stage ? "story-active" : ""}><img src="/references/story-card.webp" alt="" aria-hidden="true" /><div className="story-card-content"><span>{label}</span><h2>{title}</h2><p>{body}</p>{index === stages.length - 1 && <Link href="/case/new" className="landing-button landing-button-light">Start Your Case <Icon name="arrow" size={16} /></Link>}</div></article>)}</div><div className="film-frame" aria-label="Cinematic legal story visual"><video className="story-video" autoPlay muted loop playsInline preload="metadata"><source src="/video/legal-story.mp4" type="video/mp4" /></video><div className="film-column" /><div className="film-light" /><div className="film-caption">LEGAL AGENT / PAKISTAN</div></div><div className="story-progress"><span>01</span><i style={{ transform: `scaleX(${(stage + 1) / stages.length})` }} /><span>05</span></div></div>
+      </section>
+
+      <section className="pakistan-section landing-section" id="pakistani-law"><span className="landing-kicker">BUILT AROUND PAKISTANI LEGAL CONTEXT</span><div className="pakistan-grid"><h2>Complex law.<br /><em>Clearer understanding.</em></h2><p>Pakistan&apos;s legal landscape includes legislation, procedures, legal terminology and case-specific details that can be difficult to navigate without context. The Legal Agent is designed to help organise that complexity into information that is easier to understand and work with.</p></div><div className="law-list"><div><span>01</span><strong>Pakistani legal context</strong><p>Explore legal concepts with attention to laws and procedures relevant to Pakistan.</p></div><div><span>02</span><strong>Structured research</strong><p>Move from a question to organised legal information without disconnected sources.</p></div><div><span>03</span><strong>Document intelligence</strong><p>Understand important information contained inside notices, agreements and contracts.</p></div><div><span>04</span><strong>Practical preparation</strong><p>Turn understanding into better questions, organised facts and clearer preparation.</p></div></div></section>
+
+      <section className="responsible-section landing-section" id="responsible-ai"><div><span className="landing-kicker">RESPONSIBLE AI</span><h2>AI assistance.<br /><em>Human judgment still matters.</em></h2></div><div><p>The Legal Agent is designed to support legal understanding, research and preparation. Legal outcomes depend on the specific facts of each situation, and important decisions should be reviewed with a qualified legal professional where appropriate.</p><div className="responsible-words"><span>UNDERSTAND</span><span>PREPARE</span><span>DECIDE INFORMED</span></div></div></section>
+
+      <section className="final-cta landing-section"><span className="landing-kicker">YOUR NEXT STEP CAN START HERE</span><h2>Start your first case.</h2><p>Describe your situation and let the Legal Agent help you organise the facts, understand the legal context and prepare what comes next.</p><Link href="/case/new" className="landing-button landing-button-dark">Start Your Case <Icon name="arrow" size={17} /></Link></section>
     </div>
   );
 }

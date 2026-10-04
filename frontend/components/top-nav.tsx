@@ -11,10 +11,10 @@ export function TopNav() {
   const onHome = pathname === "/";
 
   const links = [
+    ["/#about", "About"],
+    ["/#capabilities", "Capabilities"],
     ["/#story", "How it works"],
-    ["/sources", "Legal sources"],
-    ["/research", "Research"],
-    ["/dashboard", "Dashboard"]
+    ["/#pakistani-law", "Pakistani law"]
   ] as const;
 
   return (
@@ -37,7 +37,7 @@ export function TopNav() {
         ))}
         <Link href="/login" className="nav-login" onClick={() => setOpen(false)}>Sign in</Link>
         <Link href="/case/new" className="nav-cta" onClick={() => setOpen(false)}>
-          Start case <Icon name="arrow" size={17} />
+          Start a case <Icon name="arrow" size={17} />
         </Link>
       </nav>
     </header>
