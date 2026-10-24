@@ -4,35 +4,24 @@ const component = fs.readFileSync(new URL('../components/parallax-home.tsx', imp
 const css = fs.readFileSync(new URL('../app/globals.css', import.meta.url), 'utf8');
 
 const requirements = [
-  ['single cinematic track', component.includes('className="experience-track"')],
-  ['single sticky stage', component.includes('className="experience-stage"')],
-  ['continuous progress variable', component.includes('"--p"')],
-  ['overlapping story phase', component.includes('"--story"')],
-  ['overlapping organize phase', component.includes('"--organize"')],
-  ['overlapping law phase', component.includes('"--law"')],
-  ['overlapping document phase', component.includes('"--docs"')],
-  ['finale phase', component.includes('"--finale"')],
-  ['pointer depth', component.includes('"--mx"') && component.includes('"--my"')],
-  ['one long scroll track', css.includes('height:650vh')],
-  ['sticky viewport', css.includes('.experience-stage') && css.includes('position:sticky')],
+  ['hero section', component.includes('id="top"')],
+  ['about section', component.includes('id="about"')],
+  ['capabilities section', component.includes('id="capabilities"')],
+  ['how-it-works section', component.includes('id="how-it-works"')],
+  ['cinematic story section', component.includes('id="story"')],
+  ['Pakistani law section', component.includes('id="pakistani-law"')],
+  ['responsible AI section', component.includes('id="responsible-ai"')],
+  ['story stage progress', component.includes('story-progress') && component.includes('story-active')],
+  ['case start call to action', component.includes('href="/case/new"')],
+  ['hero image', component.includes('/references/fist-scales.webp')],
+  ['story video', component.includes('/video/legal-story.mp4')],
   ['reduced-motion fallback', css.includes('@media (prefers-reduced-motion: reduce)')],
 ];
 
 const failed = requirements.filter(([, ok]) => !ok);
 if (failed.length) {
-  for (const [name] of failed) console.error(`FAIL landing v5 — ${name}`);
+  for (const [name] of failed) console.error(`FAIL landing — ${name}`);
   process.exit(1);
 }
 
-if (component.includes('data-parallax-scene') || component.includes('className="parallax-scene')) {
-  console.error('FAIL landing v5 — old stacked-scene architecture still present in component.');
-  process.exit(1);
-}
-
-const sceneSections = [...component.matchAll(/<section/g)].length;
-if (sceneSections > 2) {
-  console.error(`FAIL landing v5 — expected at most cinematic track + proof section, found ${sceneSections} sections.`);
-  process.exit(1);
-}
-
-console.log('PASS landing v5 — one sticky cinematic world, continuous progress, overlapping phases, pointer depth, and reduced-motion fallback verified.');
+console.log('PASS landing — all sections, story progress, call to action, media, and reduced-motion fallback present.');
