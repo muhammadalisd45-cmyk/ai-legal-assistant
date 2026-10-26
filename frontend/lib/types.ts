@@ -18,10 +18,10 @@ export type FollowUpQuestion = {
 };
 
 export type TriageResult = {
-  mode: "demo" | "backend" | "demo-fallback";
+  mode: "demo" | "backend" | "backend-fallback";
   category: string;
   summary: string;
-  urgency: "low" | "medium" | "high";
+  urgency: "low" | "medium" | "high" | "critical" | "unknown";
   facts: string[];
   legalIssues: string[];
   missingInformation: string[];
@@ -29,6 +29,7 @@ export type TriageResult = {
   followUpQuestions: FollowUpQuestion[];
   sourceIds: string[];
   guardrail: string;
+  notice?: string;
 };
 
 export type CaseDocument = {
