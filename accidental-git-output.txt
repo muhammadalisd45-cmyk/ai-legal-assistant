@@ -1,0 +1,16 @@
+warning: in the working copy of 'backend/app/schemas/triage.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'backend/app/services/fallback.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/components/case-intake.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/docs/API_CONTRACT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/lib/types.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/next-env.d.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/package.json', LF will be replaced by CRLF the next time Git touches it
+ backend/app/schemas/triage.py       |  1 [32m+[m
+ backend/app/services/fallback.py    |  1 [32m+[m
+ frontend/app/api/triage/route.ts    | 52 [32m++++++++++++++[m[31m-----------------------[m
+ frontend/components/case-intake.tsx |  2 [32m++[m
+ frontend/docs/API_CONTRACT.md       |  4 [32m++[m[31m-[m
+ frontend/lib/types.ts               |  5 [32m++[m[31m--[m
+ frontend/next-env.d.ts              |  4 [32m+[m[31m--[m
+ frontend/package.json               |  3 [32m++[m[31m-[m
+ 8 files changed, 34 insertions(+), 38 deletions(-)
