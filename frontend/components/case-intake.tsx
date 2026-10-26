@@ -202,6 +202,8 @@ export function CaseIntake() {
 
         {error && <div className="error-panel" role="alert"><span>!</span><div><strong>Something needs attention</strong><p>{error}</p></div>{step === 1 && <button type="button" className="text-button" onClick={analyze}>Retry</button>}</div>}
 
+        {triage?.notice && <div className="notice-panel" role="status"><span className="notice-dot">i</span><p>{triage.notice}</p></div>}
+
         {step === 1 && (
           <div className="intake-card depth-card step-enter">
             <span className="eyebrow">{ui.eyebrow} 01</span>
