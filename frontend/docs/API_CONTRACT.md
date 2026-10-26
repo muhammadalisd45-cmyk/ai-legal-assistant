@@ -6,7 +6,7 @@ The citizen frontend stays usable even while the team services are being integra
 
 Frontend route: `POST /api/triage`
 
-The Next.js route either forwards to `BACKEND_API_URL/v1/triage` or uses the deterministic demo triage engine.
+The Next.js route forwards configured services to `BACKEND_API_URL/api/v1/triage`. If no backend is configured, it uses deterministic demo triage and labels the response as demo mode. If a configured backend fails, it returns a safe `502` response and does not substitute demo output.
 
 ### Request
 ```json
@@ -36,6 +36,8 @@ Allowed languages: `en`, `roman-ur`, `ur`.
   "guardrail": "Preliminary informational triage — not a final legal opinion."
 }
 ```
+
+The proxy maps `description` to backend `message`, and `en` / `roman-ur` / `ur` to `english` / `roman_urdu` / `urdu`. The backend returns `mode: "live"` or `mode: "deterministic_fallback"`; the latter becomes `mode: "backend-fallback"` with a visible notice in the citizen flow.
 
 ## 2. Legal search — Member 4
 

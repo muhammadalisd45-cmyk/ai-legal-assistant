@@ -1,46 +1,34 @@
 import { NextResponse } from "next/server";
 import { runDemoTriage } from "@/lib/demo-triage";
-import type { Language, TriageResult } from "@/lib/types";
+import { parseClientTriageRequest, requestBackendTriage } from "@/lib/triage-contract.mjs";
 
 export const runtime = "nodejs";
 
-function isLanguage(value: unknown): value is Language {
-  return value === "en" || value === "roman-ur" || value === "ur";
-}
-
 export async function POST(request: Request) {
-  const body = (await request.json()) as { description?: unknown; language?: unknown };
-  const description = typeof body.description === "string" ? body.description.trim() : "";
-  const language: Language = isLanguage(body.language) ? body.language : "en";
-
-  if (description.length < 20) {
-    return NextResponse.json(
-      { error: "Please provide at least 20 characters describing the legal problem." },
-      { status: 400 }
-    );
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Send a valid JSON triage request." }, { status: 400 });
   }
+  const parsed = parseClientTriageRequest(body);
+  if (!parsed.ok) return NextResponse.json({ error: parsed.error }, { status: 400 });
 
   const backendUrl = process.env.BACKEND_API_URL?.replace(/\/$/, "");
 
   if (backendUrl) {
-    try {
-      const upstream = await fetch(`${backendUrl}/v1/triage`, {
-        method: "POST",
-        headers: { "content-type": "application/json", "x-pjn-client": "citizen-web" },
-        body: JSON.stringify({ description, language }),
-        cache: "no-store",
-        signal: AbortSignal.timeout(12000)
-      });
-
-      if (upstream.ok) {
-        const result = (await upstream.json()) as TriageResult;
-        return NextResponse.json({ ...result, mode: "backend" });
-      }
-    } catch {
-      // Resilience fallback: keep intake usable if the external triage service is temporarily unavailable.
-    }
+    const upstream = await requestBackendTriage({ backendUrl, request: parsed.value });
+    if (upstream.ok) return NextResponse.json(upstream.result);
+    // Deliberately do not substitute demo output when a configured backend is unavailable.
+    return NextResponse.json(
+      { error: "The triage service is temporarily unavailable. Please retry; your draft remains saved." },
+      { status: 502 }
+    );
   }
 
-  const demo = runDemoTriage(description, language);
-  return NextResponse.json({ ...demo, mode: backendUrl ? "demo-fallback" : "demo" });
+  const demo = runDemoTriage(parsed.value.description, parsed.value.language);
+  return NextResponse.json({
+    ...demo,
+    notice: "Demo triage is active because no triage backend is configured. This is not a live AI assessment."
+  });
 }
