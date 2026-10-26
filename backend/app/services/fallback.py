@@ -1,7 +1,8 @@
-from app.schemas.triage import (
+﻿from app.schemas.triage import (
     FollowUpQuestion, LegalIssue, Pathway, TriageRequest,
     TriageResult, Urgency, Warning,
 )
+
 
 def deterministic_fallback(request: TriageRequest) -> TriageResult:
     text = request.message.lower()
@@ -10,17 +11,48 @@ def deterministic_fallback(request: TriageRequest) -> TriageResult:
     issues = []
     questions = []
 
+    tenancy_terms = [
+        "landlord", "tenant", "rent", "rented", "rental",
+        "evict", "eviction", "tenancy", "lease", "kiraya",
+        "kirayedar", "makaan malik", "ghar khali",
+    ]
+    inheritance_terms = [
+        "inherit", "inheritance", "inherited", "waris",
+        "virasat", "وراثت",
+    ]
     property_terms = [
         "property", "land", "plot", "house", "qabza", "possession",
-        "inherit", "inheritance", "zameen", "ghar", "jaidad"
+        "zameen", "ghar", "jaidad",
     ]
 
-    if any(term in text for term in property_terms):
+    if any(term in text for term in tenancy_terms):
+        category = "Landlord / Tenant"
+        subcategory = "Possible rental, tenancy, or eviction dispute"
+        issues.append(LegalIssue(
+            issue="landlord/tenant dispute",
+            explanation="The message appears to involve a rental, tenancy, or eviction issue.",
+            confidence=0.55,
+        ))
+        questions.extend([
+            FollowUpQuestion(
+                id="tenancy_agreement",
+                question="Do you have a written rental agreement, and when did the tenancy begin?",
+                reason="The agreement and tenancy dates may affect the available options.",
+                priority="high",
+            ),
+            FollowUpQuestion(
+                id="eviction_notice",
+                question="Have you received a written eviction notice or any court order?",
+                reason="Notices, orders, and deadlines need to be checked carefully.",
+                priority="high",
+            ),
+        ])
+    elif any(term in text for term in inheritance_terms):
         category = "Property / Inheritance"
         subcategory = "Possible property, possession, or inheritance dispute"
         issues.append(LegalIssue(
             issue="property/possession/inheritance",
-            explanation="The message appears to involve property-related rights or possession.",
+            explanation="The message appears to involve property-related rights or inheritance.",
             confidence=0.55,
         ))
         questions.extend([
@@ -33,6 +65,28 @@ def deterministic_fallback(request: TriageRequest) -> TriageResult:
             FollowUpQuestion(
                 id="property_documents",
                 question="What property, inheritance, or ownership documents do you have?",
+                reason="The available documents may affect the next step.",
+                priority="high",
+            ),
+        ])
+    elif any(term in text for term in property_terms):
+        category = "Property / Inheritance"
+        subcategory = "Possible property or possession dispute"
+        issues.append(LegalIssue(
+            issue="property/possession",
+            explanation="The message appears to involve property rights or possession; the exact issue needs clarification.",
+            confidence=0.45,
+        ))
+        questions.extend([
+            FollowUpQuestion(
+                id="property_owner",
+                question="Who is currently recorded as the owner of the property?",
+                reason="Ownership records can materially change the legal analysis.",
+                priority="high",
+            ),
+            FollowUpQuestion(
+                id="property_documents",
+                question="What property or ownership documents do you have?",
                 reason="The available documents may affect the next step.",
                 priority="high",
             ),
@@ -78,4 +132,5 @@ def deterministic_fallback(request: TriageRequest) -> TriageResult:
             message="The available information is insufficient for a definitive legal conclusion.",
             severity="warning",
         )],
+        mode="deterministic_fallback",
     )

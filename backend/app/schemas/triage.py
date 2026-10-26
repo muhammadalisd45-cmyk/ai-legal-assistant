@@ -58,6 +58,7 @@ class TriageResult(BaseModel):
     possible_pathways: list[Pathway] = Field(default_factory=list)
     warnings: list[Warning] = Field(default_factory=list)
     source_ids_used: list[str] = Field(default_factory=list)
+    mode: Literal["live", "deterministic_fallback"] = "live"
     disclaimer: str = (
         "This is an AI-generated intake/triage summary, not a legal opinion. "
         "Verify important facts, deadlines and legal sources with a qualified "

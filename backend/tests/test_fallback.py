@@ -16,3 +16,11 @@ def test_property_fallback():
 def test_empty_message_rejected():
     with pytest.raises(ValueError):
         TriageRequest(message="")
+
+def test_landlord_eviction_is_not_misclassified_as_inheritance():
+    request = TriageRequest(
+        message="My landlord is trying to evict me from the house I rent.",
+        language="english",
+    )
+    result = deterministic_fallback(request)
+    assert result.category != "Property / Inheritance"
