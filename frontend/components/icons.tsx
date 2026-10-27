@@ -12,7 +12,17 @@ export type IconName =
   | "clock"
   | "book"
   | "plus"
-  | "external";
+  | "external"
+  | "dashboard"
+  | "brief"
+  | "edit"
+  | "library"
+  | "bookmark"
+  | "map"
+  | "help"
+  | "settings"
+  | "menu"
+  | "close";
 
 export function Icon({
   name,
@@ -88,7 +98,54 @@ export function Icon({
         <path d="M14 5h5v5M13 11l6-6" />
         <path d="M18 13v6H5V6h6" />
       </>
-    )
+    ),
+    dashboard: (
+      <>
+        <rect x="4" y="4" width="7" height="8" rx="1.5" />
+        <rect x="13" y="4" width="7" height="5" rx="1.5" />
+        <rect x="13" y="11" width="7" height="9" rx="1.5" />
+        <rect x="4" y="14" width="7" height="6" rx="1.5" />
+      </>
+    ),
+    brief: (
+      <>
+        <rect x="4" y="7" width="16" height="12" rx="2" />
+        <path d="M9 7V5h6v2M4 12h16" />
+      </>
+    ),
+    edit: (
+      <>
+        <path d="M4 20h4L19 9l-4-4L4 16v4Z" />
+        <path d="m13.5 6.5 4 4" />
+      </>
+    ),
+    library: (
+      <>
+        <path d="M5 4v16M9 4v16M13 6l4 14M19 5l-3 .8" />
+      </>
+    ),
+    bookmark: <path d="M7 4h10v16l-5-3.5L7 20V4Z" />,
+    map: (
+      <>
+        <path d="m9 5-5 2v12l5-2 6 2 5-2V5l-5 2-6-2Z" />
+        <path d="M9 5v12M15 7v12" />
+      </>
+    ),
+    help: (
+      <>
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="M9.6 9.5a2.5 2.5 0 1 1 3.6 2.2c-.8.4-1.2.9-1.2 1.8M12 16.6v.1" />
+      </>
+    ),
+    settings: (
+      <>
+        <path d="M5 7h9M18 7h1M5 17h1M10 17h9" />
+        <circle cx="16" cy="7" r="2" />
+        <circle cx="8" cy="17" r="2" />
+      </>
+    ),
+    menu: <path d="M4 7h16M4 12h16M4 17h16" />,
+    close: <path d="m6 6 12 12M18 6 6 18" />
   };
 
   return (

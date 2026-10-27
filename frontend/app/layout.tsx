@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import "./globals.css";
-import { TopNav } from "@/components/top-nav";
+import "./app-shell.css";
+import { SiteChrome } from "@/components/site-chrome";
 import { Icon } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -14,9 +15,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en">
       <body>
-        <TopNav />
-        <main>{children}</main>
-        <footer className="footer footer-v3 landing-footer">
+        <SiteChrome footer={<footer className="footer footer-v3 landing-footer">
           <div className="footer-brand-block">
             <div className="footer-brand"><span><Icon name="scale" size={24} /></span><strong>LEGAL<br />AGENT</strong></div>
             <p>AI-powered legal understanding and preparation for Pakistani legal contexts.</p>
@@ -25,7 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           <div className="footer-links"><div><strong>Explore</strong><Link href="/#about">About</Link><Link href="/#capabilities">Capabilities</Link><Link href="/#story">How it works</Link><Link href="/#pakistani-law">Pakistani law</Link></div><div><strong>Product</strong><Link href="/case/new">Legal Agent</Link><Link href="/research">Legal research</Link><Link href="/case/new">Start a case</Link></div><div><strong>Information</strong><Link href="/login">Sign in</Link><Link href="/sources">Sources</Link><Link href="/#responsible-ai">Responsible AI</Link></div></div>
           <div className="footer-visual"><img src="/references/fist-scales.webp" alt="" /></div>
           <div className="footer-legal"><span>© 2026 Legal Agent.</span><p>Legal Agent provides informational and preparation assistance and is not a substitute for professional legal representation.</p></div>
-        </footer>
+        </footer>}>{children}</SiteChrome>
       </body>
     </html>
   );
