@@ -6,7 +6,7 @@ The citizen frontend stays usable even while the team services are being integra
 
 Frontend route: `POST /api/triage`
 
-The Next.js route either forwards to `BACKEND_API_URL/v1/triage` or uses the deterministic demo triage engine.
+The Next.js route either forwards to `BACKEND_API_URL/api/v1/triage` (mapping the request and response to the shapes below) or uses the deterministic demo triage engine.
 
 ### Request
 ```json
