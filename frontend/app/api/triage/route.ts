@@ -4,8 +4,42 @@ import type { Language, TriageResult } from "@/lib/types";
 
 export const runtime = "nodejs";
 
+// Shape returned by the FastAPI triage service (backend/app/schemas/triage.py).
+type BackendTriage = {
+  category: string;
+  subcategory: string;
+  summary: string;
+  urgency: "low" | "medium" | "high" | "critical" | "unknown";
+  facts: string[];
+  issues: { issue: string }[];
+  missing_facts: string[];
+  follow_up_questions: { id: string; question: string }[];
+  source_ids_used: string[];
+  disclaimer: string;
+};
+
 function isLanguage(value: unknown): value is Language {
   return value === "en" || value === "roman-ur" || value === "ur";
+}
+
+function toBackendLanguage(language: Language) {
+  return language === "ur" ? "urdu" : language === "roman-ur" ? "roman_urdu" : "english";
+}
+
+function toFrontendTriage(result: BackendTriage): Omit<TriageResult, "mode"> {
+  const urgency = result.urgency === "critical" ? "high" : result.urgency === "unknown" ? "medium" : result.urgency;
+  return {
+    category: result.category,
+    summary: result.summary,
+    urgency,
+    facts: result.facts,
+    legalIssues: result.issues.map((item) => item.issue),
+    missingInformation: result.missing_facts,
+    suggestedDocuments: [],
+    followUpQuestions: result.follow_up_questions.map((item) => ({ id: item.id, prompt: item.question, type: "text" as const })),
+    sourceIds: result.source_ids_used,
+    guardrail: result.disclaimer
+  };
 }
 
 export async function POST(request: Request) {
@@ -24,16 +58,16 @@ export async function POST(request: Request) {
 
   if (backendUrl) {
     try {
-      const upstream = await fetch(`${backendUrl}/v1/triage`, {
+      const upstream = await fetch(`${backendUrl}/api/v1/triage`, {
         method: "POST",
         headers: { "content-type": "application/json", "x-pjn-client": "citizen-web" },
-        body: JSON.stringify({ description, language }),
+        body: JSON.stringify({ message: description, language: toBackendLanguage(language) }),
         cache: "no-store",
         signal: AbortSignal.timeout(12000)
       });
 
       if (upstream.ok) {
-        const result = (await upstream.json()) as TriageResult;
+        const result = toFrontendTriage((await upstream.json()) as BackendTriage);
         return NextResponse.json({ ...result, mode: "backend" });
       }
     } catch {
