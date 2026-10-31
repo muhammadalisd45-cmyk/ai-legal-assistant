@@ -42,14 +42,29 @@ function toFrontendTriage(result: BackendTriage): Omit<TriageResult, "mode"> {
   };
 }
 
+// Matches the FastAPI TriageRequest.message limit (backend/app/schemas/triage.py).
+const MAX_DESCRIPTION_LENGTH = 12000;
+
 export async function POST(request: Request) {
-  const body = (await request.json()) as { description?: unknown; language?: unknown };
+  let body: { description?: unknown; language?: unknown };
+  try {
+    body = (await request.json()) as { description?: unknown; language?: unknown };
+  } catch {
+    return NextResponse.json({ error: "Request body must be JSON." }, { status: 400 });
+  }
   const description = typeof body.description === "string" ? body.description.trim() : "";
   const language: Language = isLanguage(body.language) ? body.language : "en";
 
   if (description.length < 20) {
     return NextResponse.json(
       { error: "Please provide at least 20 characters describing the legal problem." },
+      { status: 400 }
+    );
+  }
+
+  if (description.length > MAX_DESCRIPTION_LENGTH) {
+    return NextResponse.json(
+      { error: `Please keep your story under ${MAX_DESCRIPTION_LENGTH} characters.` },
       { status: 400 }
     );
   }
