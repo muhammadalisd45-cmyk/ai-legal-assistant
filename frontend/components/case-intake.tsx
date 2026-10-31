@@ -110,6 +110,10 @@ export function CaseIntake() {
       });
       if (!response.ok) throw new Error("Triage request failed");
       const result = (await response.json()) as TriageResult;
+      // Answers are keyed by question id, and ids (e.g. "q1") are reused across triage engines.
+      // Only keep answers when the question set is unchanged, so they never attach to a different question.
+      const questionKey = (list: TriageResult["followUpQuestions"]) => list.map((q) => `${q.id}:${q.prompt}`).join("|");
+      if (!triage || questionKey(triage.followUpQuestions) !== questionKey(result.followUpQuestions)) setAnswers({});
       setTriage(result);
       setQuestionIndex(0);
       setStep(result.followUpQuestions.length ? 2 : 3);
@@ -155,7 +159,8 @@ export function CaseIntake() {
     setLoading(true);
     setError("");
     const now = new Date().toISOString();
-    const caseId = `PJN-${Date.now().toString().slice(-6)}`;
+    // Date.now() suffixes repeat every ~1000 s and would overwrite an earlier case with the same id.
+    const caseId = `PJN-${Date.now().toString(36).toUpperCase().slice(-4)}${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
     const draft: CaseDraft = {
       caseId,
       language,
@@ -227,6 +232,7 @@ export function CaseIntake() {
               <span className={`review-priority priority-${triage.urgency}`}>Review priority: {triage.urgency}</span>
             </div>
             <p className="priority-help">This is a workflow priority for review — not a legal finding or verified deadline.</p>
+            {triage.mode !== "backend" && <p className="priority-help" role="status">Organized by the built-in preliminary engine — the legal triage service is not connected or was unavailable right now.</p>}
             <div className="mini-summary"><span className="provenance-pill reported">YOU REPORTED</span><strong>{triage.category}</strong><p>{triage.summary}</p></div>
 
             <div className="conversation-progress"><span>Question {questionIndex + 1} of {triage.followUpQuestions.length}</span><div><i style={{ width: `${((questionIndex + 1) / triage.followUpQuestions.length) * 100}%` }} /></div></div>
