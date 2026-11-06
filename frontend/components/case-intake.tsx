@@ -161,19 +161,12 @@ export function CaseIntake() {
     setError("");
 
     const now = new Date().toISOString();
-<<<<<<< Updated upstream
-    // Date.now() suffixes repeat every ~1000 s and would overwrite an earlier case with the same id.
-    const caseId = `PJN-${Date.now().toString(36).toUpperCase().slice(-4)}${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
-=======
-
-    // Retry par wahi Case ID reuse hogi.
+    // Reuse the same ID on retries; generate a collision-resistant ID for new cases.
     const caseId =
       pendingCaseId.current ??
-      `PJN-${Date.now().toString().slice(-6)}`;
+      `PJN-${Date.now().toString(36).toUpperCase().slice(-4)}${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
 
     pendingCaseId.current = caseId;
-
->>>>>>> Stashed changes
     const draft: CaseDraft = {
       caseId,
       language,
