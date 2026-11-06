@@ -6,8 +6,7 @@ The citizen frontend stays usable even while the team services are being integra
 
 Frontend route: `POST /api/triage`
 
-The Next.js route forwards configured services to `BACKEND_API_URL/api/v1/triage`. If no backend is configured, it uses deterministic demo triage and labels the response as demo mode. If a configured backend fails, it returns a safe `502` response and does not substitute demo output.
-
+The Next.js route forwards configured services to `BACKEND_API_URL/api/v1/triage`. If no backend is configured, it uses deterministic demo triage and labels the response as demo mode. If a configured backend fails or returns an invalid response, it returns a safe `502` response and does not substitute demo output.
 ### Request
 ```json
 {

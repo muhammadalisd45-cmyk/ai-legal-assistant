@@ -1,4 +1,5 @@
 import json
+import httpx
 from pydantic import ValidationError
 from app.prompts.triage_prompt import SYSTEM_PROMPT, USER_TEMPLATE
 from app.schemas.triage import TriageRequest, TriageResult
@@ -26,7 +27,7 @@ class TriageService:
             self._enforce_source_boundary(result, request)
             self._ensure_disclaimer(result)
             return result
-        except (RuntimeError, ValidationError, KeyError, ValueError):
+        except (RuntimeError, ValidationError, KeyError, ValueError, httpx.HTTPError):
             return deterministic_fallback(request)
 
     @staticmethod
