@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState, type ChangeEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 import { clearIntakeDraft, loadIntakeDraft, saveCase, saveIntakeDraft } from "@/lib/case-store";
 import type { CaseDocument, CaseDraft, Language, TriageResult } from "@/lib/types";
@@ -69,6 +69,7 @@ export function CaseIntake() {
   const [consent, setConsent] = useState(false);
   const [hydrated, setHydrated] = useState(false);
   const [saveLabel, setSaveLabel] = useState("Draft ready");
+  const pendingCaseId = useRef<string | null>(null);
   const ui = copy[language];
 
   const canAnalyze = description.trim().length >= 20;
@@ -153,14 +154,26 @@ export function CaseIntake() {
     if (questionIndex < triage.followUpQuestions.length - 1) setQuestionIndex((index) => index + 1);
     else setStep(3);
   }
-
   async function finishCase() {
     if (!triage || !consent || loading) return;
+
     setLoading(true);
     setError("");
+
     const now = new Date().toISOString();
+<<<<<<< Updated upstream
     // Date.now() suffixes repeat every ~1000 s and would overwrite an earlier case with the same id.
     const caseId = `PJN-${Date.now().toString(36).toUpperCase().slice(-4)}${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+=======
+
+    // Retry par wahi Case ID reuse hogi.
+    const caseId =
+      pendingCaseId.current ??
+      `PJN-${Date.now().toString().slice(-6)}`;
+
+    pendingCaseId.current = caseId;
+
+>>>>>>> Stashed changes
     const draft: CaseDraft = {
       caseId,
       language,
@@ -172,12 +185,30 @@ export function CaseIntake() {
       createdAt: now,
       updatedAt: now
     };
+
     try {
-      await saveCase(draft);
+      const saveResult = await saveCase(draft);
+
+      // Cloud save confirm na ho to draft clear nahi karna.
+      if (saveResult !== "supabase") {
+        setError(
+          "Your case could not be confirmed as saved to the cloud. Your intake draft has been preserved on this device. Please try again later and do not clear your browser data."
+        );
+
+        setLoading(false);
+        return;
+      }
+
+      // Cloud save successful hone ke baad hi draft clear hoga.
       clearIntakeDraft();
+      pendingCaseId.current = null;
+
       router.push(`/case/${caseId}`);
     } catch {
-      setError("Your brief could not be saved. Your intake draft is still available, so nothing you typed has been lost.");
+      setError(
+        "Your case could not be saved. Your intake draft is still available. Please try again."
+      );
+
       setLoading(false);
     }
   }
