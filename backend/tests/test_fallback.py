@@ -11,7 +11,9 @@ def test_property_fallback():
     assert result.category == "Property / Inheritance"
     assert result.issues
     assert result.follow_up_questions
-    assert result.urgency.value == "unknown"
+    # "qabza kar liya hai" = possession has been taken → dispossession indicator (intake priority, not a legal finding)
+    assert result.urgency.value == "high"
+    assert any(ind.code == "eviction_or_dispossession" for ind in result.urgency_indicators)
 
 def test_empty_message_rejected():
     with pytest.raises(ValueError):

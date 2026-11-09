@@ -1,4 +1,16 @@
 
 backend/uploads/
+backend/data/
+backend/.cache/
 
 supabase/.temp/
+
+# Local environment files (secrets)
+.env
+.env.local
+
+# Official PDFs are reproducible: python backend/scripts/acquire_corpus.py (hashes in provenance.json)
+frontend/pakistan_legal_corpus/**/*.pdf
+# Embeddings are reproducible: python backend/scripts/build_index.py
+frontend/data/rag_index/legal_chunk_embeddings.npy
+frontend/data/rag_index/legal_chunk_embeddings.meta.json

@@ -1,0 +1,43 @@
+{
+  "description": "Retrieval evaluation set. expected_documents: any listed document in the top-k counts as a document hit; expected_sections: any listed provision label in the top-k counts as a provision hit.",
+  "k": 5,
+  "queries": [
+    {"language": "english", "query": "When can bail be granted for a non-bailable offence?", "expected_documents": ["PK-003"], "expected_sections": ["Section 497", "Section 498"]},
+    {"language": "english", "query": "How is an FIR registered at the police station?", "expected_documents": ["PK-003"], "expected_sections": ["Section 154"]},
+    {"language": "english", "query": "punishment for qatl-i-amd murder", "expected_documents": ["PK-002"], "expected_sections": ["Section 302"]},
+    {"language": "english", "query": "punishment for cheating and dishonestly inducing delivery of property", "expected_documents": ["PK-002"], "expected_sections": ["Section 417", "Section 420"]},
+    {"language": "english", "query": "punishment for criminal intimidation threats", "expected_documents": ["PK-002"], "expected_sections": ["Section 503", "Section 506"]},
+    {"language": "english", "query": "right to fair trial and due process", "expected_documents": ["PK-001"], "expected_sections": ["Article 10A"]},
+    {"language": "english", "query": "safeguards as to arrest and detention, produced before magistrate within 24 hours", "expected_documents": ["PK-001", "PK-003"], "expected_sections": ["Article 10", "Section 61"]},
+    {"language": "english", "query": "equality of citizens before law", "expected_documents": ["PK-001"], "expected_sections": ["Article 25"]},
+    {"language": "english", "query": "recover possession of immovable property after being dispossessed without consent", "expected_documents": ["PK-007"], "expected_sections": ["Section 8", "Section 9"]},
+    {"language": "english", "query": "temporary injunction to stop the defendant", "expected_documents": ["PK-004"], "expected_sections": ["Order XXXIX, Rule 1", "Order XXXIX, Rule 2"]},
+    {"language": "english", "query": "extension of limitation period for sufficient cause", "expected_documents": ["PK-008"], "expected_sections": ["Section 5"]},
+    {"language": "english", "query": "complaint of harassment at the workplace inquiry committee", "expected_documents": ["PK-017"], "expected_sections": ["Section 3", "Section 4"]},
+    {"language": "english", "query": "free legal aid for people who cannot afford a lawyer", "expected_documents": ["PK-020"], "expected_sections": []},
+    {"language": "english", "query": "which documents must be compulsorily registered", "expected_documents": ["PK-010"], "expected_sections": ["Section 17"]},
+    {"language": "english", "query": "depriving women from inheriting property", "expected_documents": ["PK-002"], "expected_sections": ["Section 498A"]},
+    {"language": "english", "query": "writ jurisdiction of the High Court", "expected_documents": ["PK-001"], "expected_sections": ["Article 199"]},
+
+    {"language": "roman_urdu", "query": "zamanat kaise milti hai jab jurm na-qabil-e-zamanat ho", "expected_documents": ["PK-003"], "expected_sections": ["Section 497", "Section 498"]},
+    {"language": "roman_urdu", "query": "thane mein FIR kaise darj karwayen", "expected_documents": ["PK-003"], "expected_sections": ["Section 154"]},
+    {"language": "roman_urdu", "query": "qatl ki saza kya hai", "expected_documents": ["PK-002"], "expected_sections": ["Section 302"]},
+    {"language": "roman_urdu", "query": "kisi ne paison ka dhoka diya to kya saza hai", "expected_documents": ["PK-002"], "expected_sections": ["Section 417", "Section 420"]},
+    {"language": "roman_urdu", "query": "mujhe jaan se maarne ki dhamki di gayi", "expected_documents": ["PK-002"], "expected_sections": ["Section 503", "Section 506"]},
+    {"language": "roman_urdu", "query": "chacha ne hamari zameen par qabza kar liya hai", "expected_documents": ["PK-007"], "expected_sections": ["Section 8", "Section 9"]},
+    {"language": "roman_urdu", "query": "daftar mein harassment ki shikayat kaise karein", "expected_documents": ["PK-017"], "expected_sections": ["Section 3", "Section 4"]},
+    {"language": "roman_urdu", "query": "aurat ko virasat se mehroom karna", "expected_documents": ["PK-002"], "expected_sections": ["Section 498A"]},
+    {"language": "roman_urdu", "query": "giraftari ke waqt mere kya huqooq hain", "expected_documents": ["PK-001", "PK-003"], "expected_sections": ["Article 10"]},
+    {"language": "roman_urdu", "query": "muft qanooni madad kaise milegi", "expected_documents": ["PK-020"], "expected_sections": []},
+
+    {"language": "urdu", "query": "ضمانت کب ملتی ہے", "expected_documents": ["PK-003"], "expected_sections": ["Section 497", "Section 498", "Section 496"]},
+    {"language": "urdu", "query": "تھانے میں ایف آئی آر کیسے درج ہوتی ہے", "expected_documents": ["PK-003"], "expected_sections": ["Section 154"]},
+    {"language": "urdu", "query": "قتل کی سزا کیا ہے", "expected_documents": ["PK-002"], "expected_sections": ["Section 302"]},
+    {"language": "urdu", "query": "جان سے مارنے کی دھمکی", "expected_documents": ["PK-002"], "expected_sections": ["Section 503", "Section 506"]},
+    {"language": "urdu", "query": "زمین پر ناجائز قبضہ ہو گیا ہے", "expected_documents": ["PK-007"], "expected_sections": ["Section 8", "Section 9"]},
+    {"language": "urdu", "query": "دفتر میں ہراسانی کی شکایت", "expected_documents": ["PK-017"], "expected_sections": ["Section 3", "Section 4"]},
+    {"language": "urdu", "query": "عورت کو وراثت سے محروم کرنا", "expected_documents": ["PK-002"], "expected_sections": ["Section 498A"]},
+    {"language": "urdu", "query": "گرفتاری کے وقت کیا حقوق ہیں", "expected_documents": ["PK-001", "PK-003"], "expected_sections": ["Article 10"]},
+    {"language": "urdu", "query": "مفت قانونی امداد", "expected_documents": ["PK-020"], "expected_sections": []}
+  ]
+}

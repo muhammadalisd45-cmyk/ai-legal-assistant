@@ -1,33 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { getSupabaseBrowserClient } from "@/lib/supabase/client";
+import { displayName, useCurrentUser } from "@/lib/auth-user";
 import { Notice, PageHeader } from "./app-ui";
 
-const USER_KEY = "pjn:demo-user:v1";
 const DRAFTS_KEY = "pjn:drafts:v1";
 const CASES_KEY = "pjn:cases:v2";
 
 export function SettingsPanel() {
+  const user = useCurrentUser();
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    try {
-      const user = JSON.parse(window.localStorage.getItem(USER_KEY) ?? "null") as { name?: string } | null;
-      setName(user?.name ?? "");
-    } catch {
-      setName("");
-    }
-  }, []);
+    if (user) setName(displayName(user));
+  }, [user]);
 
-  function saveName() {
-    try {
-      const current = JSON.parse(window.localStorage.getItem(USER_KEY) ?? "null") as Record<string, unknown> | null;
-      window.localStorage.setItem(USER_KEY, JSON.stringify({ email: "", mode: "demo", ...current, name: name.trim() }));
-      setMessage("Saved.");
-    } catch {
-      setMessage("Could not save in this browser.");
-    }
+  async function saveName() {
+    const { error } = await getSupabaseBrowserClient().auth.updateUser({ data: { full_name: name.trim() } });
+    setMessage(error ? "Could not save your name. Please try again." : "Saved to your account.");
   }
 
   function clearLocal() {
@@ -39,12 +31,12 @@ export function SettingsPanel() {
 
   return (
     <div className="app-page">
-      <PageHeader eyebrow="Settings" title="Preferences" lede="Everything here applies to this browser only." />
+      <PageHeader eyebrow="Settings" title="Preferences" lede={user?.email ? `Account: ${user.email}` : "Your account and local data."} />
 
       <section className="app-grid-2">
         <div className="app-card">
           <div className="app-card-head"><h2>Display name</h2></div>
-          <form className="app-form" onSubmit={(event) => { event.preventDefault(); saveName(); }}>
+          <form className="app-form" onSubmit={(event) => { event.preventDefault(); void saveName(); }}>
             <label className="app-field"><span>Name shown on the dashboard</span><input value={name} onChange={(event) => setName(event.target.value)} maxLength={60} /></label>
             <button type="submit" className="app-btn app-btn-primary">Save name</button>
           </form>

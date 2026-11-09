@@ -133,3 +133,18 @@ Recommended endpoint: `POST /v1/cases/{case_id}/documents`
 ```
 
 The citizen UI already has selected/uploaded/processing/analyzed/failed document states and should only show `analyzed` after the service confirms it.
+
+## 3. Unified backend (phases 4–12)
+
+`backend/` now serves triage, search, answers and cases from one FastAPI app; point both
+`BACKEND_API_URL` and `LEGAL_RAG_API_URL` at it. Existing response fields above are unchanged; new fields are additive:
+
+* Triage adds `detected_language`, `response_language`, `urgency_indicators[]`, `urgency_note`, `fallback_reason`, `request_id`. `urgency` can also be `critical` or `unknown`.
+* Search results add `chunk_id`, `section_heading`, `page_start`/`page_end`, `page_reference`, `is_legal_provision`,
+  `relevance {term_coverage, semantic_similarity, strong_match}` and `provenance {page_url, file_sha256, fetched_at}`.
+  The response adds `detected_language`, `evidence_summary`, `low_confidence`, `fallback_reason`.
+  The `mode` is one of `local-hybrid`, `local-lexical`, `supabase-hybrid` or `metadata-only`.
+* `POST /api/v1/answer` returns citation-backed answers (`mode`: `live` | `extractive_fallback` | `no_evidence`).
+* `/api/v1/cases…` provides authenticated case, message and document persistence (see `backend/README.md`).
+
+Live check: `BACKEND_API_URL=http://127.0.0.1:8000 [NEXT_APP_URL=http://127.0.0.1:3000] npm run test:integration`.

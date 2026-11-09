@@ -1,8 +1,15 @@
 fastapi>=0.115,<1
 uvicorn[standard]>=0.30,<1
 pydantic>=2.8,<3
-pydantic-settings>=2.4,<3
+pydantic-settings>=2.7,<3
 httpx>=0.27,<1
-pytest>=8,<9
-pypdf
 python-multipart>=0.0.9
+pypdf>=5,<7
+PyJWT>=2.8,<3
+numpy>=1.26,<3
+# Local 384-d multilingual embeddings (ONNX, no torch). Optional at runtime: lexical search works without it.
+fastembed>=0.5,<1
+# OS trust store for official .gov.pk sites that omit intermediate certificates (TLS stays verified).
+truststore>=0.9,<1
+pytest>=8,<9
+anyio>=4,<5

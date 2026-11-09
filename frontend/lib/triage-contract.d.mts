@@ -1,7 +1,11 @@
-import type { Language, TriageResult } from "./types";
+import type { ClarificationAnswer, Language, TriageResult } from "./types";
 
-export type ClientTriageRequest = { description: string; language: Language };
-export type BackendTriageRequest = { message: string; language: "english" | "roman_urdu" | "urdu" };
+export type ClientTriageRequest = { description: string; language: Language; answers?: ClarificationAnswer[] };
+export type BackendTriageRequest = {
+  message: string;
+  language: "english" | "roman_urdu" | "urdu";
+  answers?: { question_id: string; question: string; answer: string }[];
+};
 
 export function parseClientTriageRequest(value: unknown): { ok: true; value: ClientTriageRequest } | { ok: false; error: string };
 export function toBackendTriageRequest(request: ClientTriageRequest): BackendTriageRequest;

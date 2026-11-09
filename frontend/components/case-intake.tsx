@@ -4,8 +4,16 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 import { clearIntakeDraft, loadIntakeDraft, saveCase, saveIntakeDraft } from "@/lib/case-store";
-import type { CaseDocument, CaseDraft, Language, TriageResult } from "@/lib/types";
+import type { CaseDocument, CaseDraft, ClarificationAnswer, Language, TriageResult } from "@/lib/types";
 import { Icon } from "./icons";
+
+/** Answered follow-up questions, paired with the question text they answer. */
+function clarificationList(triage: TriageResult | null, answers: Record<string, string>): ClarificationAnswer[] {
+  if (!triage) return [];
+  return triage.followUpQuestions
+    .filter((question) => answers[question.id]?.trim())
+    .map((question) => ({ id: question.id, question: question.prompt, answer: answers[question.id].trim() }));
+}
 
 const copy = {
   en: {
@@ -62,6 +70,9 @@ export function CaseIntake() {
   const [questionIndex, setQuestionIndex] = useState(0);
   const [description, setDescription] = useState("");
   const [triage, setTriage] = useState<TriageResult | null>(null);
+  // Triage re-run with the clarification answers (category, missing facts and next steps can change).
+  const [refined, setRefined] = useState<TriageResult | null>(null);
+  const [refining, setRefining] = useState(false);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [documents, setDocuments] = useState<CaseDocument[]>([]);
   const [loading, setLoading] = useState(false);
@@ -73,6 +84,7 @@ export function CaseIntake() {
   const ui = copy[language];
 
   const canAnalyze = description.trim().length >= 20;
+  const effective = refined ?? triage;
   const activeQuestion = triage?.followUpQuestions[questionIndex];
   const answeredCount = useMemo(() => triage ? triage.followUpQuestions.filter((q) => answers[q.id]?.trim()).length : 0, [answers, triage]);
 
@@ -85,6 +97,7 @@ export function CaseIntake() {
       setAnswers(saved.answers);
       setDocuments(saved.documents ?? []);
       setTriage(saved.triage);
+      setRefined(saved.refinedTriage ?? null);
     }
     setHydrated(true);
   }, []);
@@ -93,11 +106,37 @@ export function CaseIntake() {
     if (!hydrated) return;
     setSaveLabel("Saving…");
     const id = window.setTimeout(() => {
-      saveIntakeDraft({ version: 2, language, step, description, answers, documents, triage, updatedAt: new Date().toISOString() });
+      saveIntakeDraft({ version: 2, language, step, description, answers, documents, triage, refinedTriage: refined, updatedAt: new Date().toISOString() });
       setSaveLabel("Saved just now");
     }, 450);
     return () => window.clearTimeout(id);
-  }, [answers, description, documents, hydrated, language, step, triage]);
+  }, [answers, description, documents, hydrated, language, refined, step, triage]);
+
+  async function refineWithAnswers() {
+    const clarifications = clarificationList(triage, answers);
+    if (!clarifications.length) {
+      setRefined(null);
+      return;
+    }
+    setRefining(true);
+    try {
+      const response = await fetch("/api/triage", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ description, language, answers: clarifications })
+      });
+      if (response.ok) setRefined((await response.json()) as TriageResult);
+    } catch {
+      // Keep the first triage; the answers are still saved with the case and shown in the brief.
+    } finally {
+      setRefining(false);
+    }
+  }
+
+  function finishClarifying() {
+    setStep(3);
+    void refineWithAnswers();
+  }
 
   async function analyze() {
     if (!canAnalyze || loading) return;
@@ -116,6 +155,7 @@ export function CaseIntake() {
       const questionKey = (list: TriageResult["followUpQuestions"]) => list.map((q) => `${q.id}:${q.prompt}`).join("|");
       if (!triage || questionKey(triage.followUpQuestions) !== questionKey(result.followUpQuestions)) setAnswers({});
       setTriage(result);
+      setRefined(null);
       setQuestionIndex(0);
       setStep(result.followUpQuestions.length ? 2 : 3);
     } catch {
@@ -152,10 +192,10 @@ export function CaseIntake() {
   function nextQuestion() {
     if (!triage) return;
     if (questionIndex < triage.followUpQuestions.length - 1) setQuestionIndex((index) => index + 1);
-    else setStep(3);
+    else finishClarifying();
   }
   async function finishCase() {
-    if (!triage || !consent || loading) return;
+    if (!triage || !effective || !consent || loading || refining) return;
 
     setLoading(true);
     setError("");
@@ -172,8 +212,9 @@ export function CaseIntake() {
       language,
       description,
       answers,
+      clarifications: clarificationList(triage, answers),
       documents,
-      triage,
+      triage: effective,
       consentAcknowledged: true,
       createdAt: now,
       updatedAt: now
@@ -308,7 +349,7 @@ export function CaseIntake() {
               </div>
             ))}</div>}
 
-            <div className="suggested-docs"><span className="eyebrow">MAY BE USEFUL —</span><div className="tag-row">{triage.suggestedDocuments.map((doc) => <span className="tag" key={doc}>{doc}</span>)}</div></div>
+            {(effective ?? triage).suggestedDocuments.length > 0 && <div className="suggested-docs"><span className="eyebrow">MAY BE USEFUL —</span><div className="tag-row">{(effective ?? triage).suggestedDocuments.map((doc) => <span className="tag" key={doc}>{doc}</span>)}</div></div>}
             <div className="action-row">
               <button type="button" className="button button-quiet" onClick={() => setStep(triage.followUpQuestions.length ? 2 : 1)}>Back</button>
               <div className="action-cluster"><button type="button" className="text-button" onClick={() => setStep(4)}>Continue without documents</button><button type="button" className="button button-primary" onClick={() => setStep(4)}>Review brief <Icon name="arrow" size={18} /></button></div>
@@ -322,13 +363,13 @@ export function CaseIntake() {
             <h2>Review before creating the brief.</h2>
             <p className="lede">The result will clearly separate your statements, AI-organized review points, document status and official-source context.</p>
             <div className="review-grid">
-              <div className="review-block"><span>Case category</span><strong>{triage.category}</strong></div>
+              <div className="review-block"><span>Case category</span><strong>{refining ? "Updating with your answers…" : (effective ?? triage).category}</strong></div>
               <div className="review-block"><span>Questions answered</span><strong>{answeredCount} / {triage.followUpQuestions.length}</strong></div>
               <div className="review-block"><span>Files selected</span><strong>{documents.length}</strong></div>
             </div>
             <label className="consent-card"><input type="checkbox" checked={consent} onChange={(event: ChangeEvent<HTMLInputElement>) => setConsent(event.target.checked)} /><span><strong>I understand this is case-preparation support, not legal representation.</strong><small>Important rights, deadlines, evidence and legal strategy should be verified from original sources and, where appropriate, with a qualified lawyer.</small></span></label>
-            <div className="guardrail"><Icon name="shield" size={20} /><p>{triage.guardrail}</p></div>
-            <div className="action-row"><button type="button" className="button button-quiet" onClick={() => setStep(3)}>Back</button><button type="button" className="button button-accent" onClick={finishCase} disabled={!consent || loading}>{loading ? "Saving brief…" : ui.finish} <Icon name="arrow" size={18} /></button></div>
+            <div className="guardrail"><Icon name="shield" size={20} /><p>{(effective ?? triage).guardrail}</p></div>
+            <div className="action-row"><button type="button" className="button button-quiet" onClick={() => setStep(3)}>Back</button><button type="button" className="button button-accent" onClick={finishCase} disabled={!consent || loading || refining}>{loading ? "Saving brief…" : refining ? "Updating with your answers…" : ui.finish} <Icon name="arrow" size={18} /></button></div>
           </div>
         )}
       </section>

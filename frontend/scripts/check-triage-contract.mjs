@@ -47,6 +47,33 @@ test("maps the public request onto the FastAPI endpoint and language contract", 
   assert.deepEqual(result.result.followUpQuestions, [{ id: "property_owner", prompt: "Who is shown as the owner?", type: "text" }]);
 });
 
+test("forwards clarification answers and drops blank ones", () => {
+  const parsed = parseClientTriageRequest({
+    description: "Someone robbed my laptop and now it is gone.",
+    language: "en",
+    answers: [
+      { id: "location", question: "In which city?", answer: " islamabad " },
+      { id: "fir_status", question: "Has an FIR been registered?", answer: "   " }
+    ]
+  });
+  assert.equal(parsed.ok, true);
+  assert.deepEqual(toBackendTriageRequest(parsed.value), {
+    message: "Someone robbed my laptop and now it is gone.",
+    language: "english",
+    answers: [{ question_id: "location", question: "In which city?", answer: "islamabad" }]
+  });
+  assert.equal(parseClientTriageRequest({ description: "Someone robbed my laptop and now it is gone.", language: "en", answers: "islamabad" }).ok, false);
+  assert.equal(parseClientTriageRequest({ description: "Someone robbed my laptop and now it is gone.", language: "en", answers: [{ answer: "x" }] }).ok, false);
+});
+
+test("adapts practical pathways from the backend", () => {
+  const result = adaptBackendTriageResponse({
+    ...backendPayload,
+    possible_pathways: [{ title: "Report it to the police", description: "Ask for an FIR.", prerequisites: [], caution: "Keep a copy." }, { title: "" }]
+  });
+  assert.deepEqual(result.pathways, [{ title: "Report it to the police", description: "Ask for an FIR.", caution: "Keep a copy." }]);
+});
+
 test("adapts backend fields without inventing document recommendations", () => {
   const result = adaptBackendTriageResponse(backendPayload);
   assert.deepEqual(result.legalIssues, ["property/possession/inheritance"]);
