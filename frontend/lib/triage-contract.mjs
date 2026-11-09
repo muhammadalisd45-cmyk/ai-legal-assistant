@@ -16,11 +16,38 @@ export function parseClientTriageRequest(value) {
   if (!CLIENT_LANGUAGES.has(value.language)) {
     return { ok: false, error: "Choose English, Roman Urdu, or Urdu." };
   }
-  return { ok: true, value: { description, language: value.language } };
+  const answers = parseAnswers(value.answers);
+  if (!answers) return { ok: false, error: "Clarification answers must be a list of { id, question, answer }." };
+  return { ok: true, value: answers.length ? { description, language: value.language, answers } : { description, language: value.language } };
+}
+
+/** Optional answers to earlier follow-up questions; blank answers are dropped. Returns null when malformed. */
+function parseAnswers(value) {
+  if (value === undefined || value === null) return [];
+  if (!Array.isArray(value) || value.length > 20) return null;
+  const answers = [];
+  for (const item of value) {
+    if (!item || typeof item !== "object" || typeof item.id !== "string" || !item.id.trim() || item.id.length > 80) return null;
+    if (typeof item.answer !== "string" || (item.question !== undefined && typeof item.question !== "string")) return null;
+    const answer = item.answer.trim().slice(0, 2000);
+    if (answer) answers.push({ id: item.id.trim(), question: (item.question ?? "").trim().slice(0, 500), answer });
+  }
+  return answers;
 }
 
 export function toBackendTriageRequest(request) {
-  return { message: request.description, language: BACKEND_LANGUAGES[request.language] };
+  const body = { message: request.description, language: BACKEND_LANGUAGES[request.language] };
+  if (request.answers?.length) {
+    body.answers = request.answers.map((item) => ({ question_id: item.id, question: item.question, answer: item.answer }));
+  }
+  return body;
+}
+
+function adaptPathways(value) {
+  if (!Array.isArray(value)) return [];
+  return value
+    .filter((item) => item && typeof item === "object" && typeof item.title === "string" && item.title.trim() && typeof item.description === "string")
+    .map((item) => ({ title: item.title, description: item.description, caution: typeof item.caution === "string" ? item.caution : "" }));
 }
 
 function isStringArray(value) {
@@ -64,6 +91,7 @@ export function adaptBackendTriageResponse(value) {
     // The backend does not return document recommendations, so do not infer them.
     suggestedDocuments: [],
     followUpQuestions,
+    pathways: adaptPathways(value.possible_pathways),
     sourceIds: value.source_ids_used,
     guardrail: value.disclaimer,
     notice: usedFallback
@@ -72,7 +100,7 @@ export function adaptBackendTriageResponse(value) {
   };
 }
 
-export async function requestBackendTriage({ backendUrl, request, fetchImpl = fetch, timeoutMs = 12000 }) {
+export async function requestBackendTriage({ backendUrl, request, fetchImpl = fetch, timeoutMs = 45000 }) {
   try {
     const response = await fetchImpl(`${backendUrl.replace(/\/$/, "")}/api/v1/triage`, {
       method: "POST",

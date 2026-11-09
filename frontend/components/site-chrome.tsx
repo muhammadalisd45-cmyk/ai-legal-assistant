@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
+import { signOut, useCurrentUser } from "@/lib/auth-user";
 import { Icon, type IconName } from "./icons";
 import { TopNav } from "./top-nav";
 
@@ -52,7 +53,15 @@ function NavGroup({ title, items, pathname }: { title: string; items: NavItem[];
 
 export function SiteChrome({ footer, children }: { footer: ReactNode; children: ReactNode }) {
   const pathname = usePathname();
+  const router = useRouter();
+  const user = useCurrentUser();
   const [open, setOpen] = useState(false);
+
+  async function handleSignOut() {
+    await signOut();
+    router.replace("/login");
+    router.refresh();
+  }
 
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
@@ -97,6 +106,14 @@ export function SiteChrome({ footer, children }: { footer: ReactNode; children: 
             <Icon name="shield" size={16} />
             <p>Informational support only — not legal advice. Verify important matters with a qualified lawyer or official source.</p>
           </div>
+          {user && !user.is_anonymous ? (
+            <div className="side-account">
+              <span title={user.email}>Signed in as {user.email}</span>
+              <button type="button" className="side-signout" onClick={handleSignOut}>Sign out</button>
+            </div>
+          ) : (
+            <Link href={`/login?next=${encodeURIComponent(pathname)}`} className="side-home">Sign in</Link>
+          )}
           <Link href="/" className="side-home">← Back to home</Link>
         </div>
       </aside>

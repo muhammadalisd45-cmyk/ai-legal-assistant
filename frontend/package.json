@@ -9,10 +9,13 @@
     "typecheck": "tsc --noEmit",
     "test:core": "node scripts/check-corpus.mjs && node scripts/check-product-copy.mjs && node scripts/check-triage-contract.mjs && node scripts/check-landing-v5.mjs && node scripts/check-member4.mjs && python scripts/test_member4_core.py",
     "test:triage-contract": "node scripts/check-triage-contract.mjs",
+    "test:integration": "node scripts/check-backend-integration.mjs",
     "check": "npm run test:core && npm run typecheck && npm run build",
     "test:member4": "node scripts/check-member4.mjs && python scripts/test_member4_core.py"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.0",
     "next": "16.3.8",
     "react": "19.2.0",
     "react-dom": "19.2.0"

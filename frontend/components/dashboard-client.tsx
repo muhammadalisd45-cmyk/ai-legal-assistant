@@ -4,13 +4,12 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { listCases } from "@/lib/case-store";
 import { listDrafts } from "@/lib/draft-store";
+import { displayName, useCurrentUser } from "@/lib/auth-user";
 import { LIBRARY_TOTAL, libraryByType } from "@/lib/justice-regions";
 import type { CaseDraft } from "@/lib/types";
 import { EmptyState, Notice, formatDate } from "./app-ui";
 import { Icon, type IconName } from "./icons";
 import { JusticeMap } from "./justice-map";
-
-type DemoUser = { name: string; email: string; mode: "demo" };
 
 const TOOLS: { href: string; icon: IconName; title: string; body: string }[] = [
   { href: "/research", icon: "search", title: "Legal Research", body: "Search official-source records by topic." },
@@ -22,16 +21,11 @@ const TOOLS: { href: string; icon: IconName; title: string; body: string }[] = [
 export function DashboardClient() {
   const [cases, setCases] = useState<CaseDraft[] | null>(null);
   const [drafts, setDrafts] = useState(0);
-  const [user, setUser] = useState<DemoUser | null>(null);
+  const name = displayName(useCurrentUser());
 
   useEffect(() => {
     void listCases().then(setCases);
     setDrafts(listDrafts().length);
-    try {
-      setUser(JSON.parse(window.localStorage.getItem("pjn:demo-user:v1") ?? "null") as DemoUser | null);
-    } catch {
-      setUser(null);
-    }
   }, []);
 
   const stats = useMemo(() => {
@@ -43,7 +37,7 @@ export function DashboardClient() {
   const max = Math.max(...byType.map((item) => item.value), 1);
 
   const cards = [
-    { label: "Saved cases", value: cases === null ? "…" : String(stats.total), note: "stored in this browser", icon: "brief" as IconName },
+    { label: "Saved cases", value: cases === null ? "…" : String(stats.total), note: "saved to your account", icon: "brief" as IconName },
     { label: "Attached documents", value: cases === null ? "…" : String(stats.docs), note: "across your cases", icon: "document" as IconName },
     { label: "Saved drafts", value: String(drafts), note: "from Draft Documents", icon: "edit" as IconName },
     { label: "Official sources", value: String(LIBRARY_TOTAL), note: "in the source library", icon: "library" as IconName }
@@ -54,7 +48,7 @@ export function DashboardClient() {
       <header className="app-pagehead">
         <div>
           <span className="app-eyebrow">Dashboard</span>
-          <h1>{user?.name ? `Welcome back, ${user.name}.` : "Welcome to your workspace."}</h1>
+          <h1>{name ? `Welcome back, ${name}.` : "Welcome to your workspace."}</h1>
           <p>Start a legal query, continue a saved case, or inspect the official sources behind your brief.</p>
         </div>
         <Link href="/case/new" className="app-btn app-btn-primary"><Icon name="plus" size={18} /> New query</Link>

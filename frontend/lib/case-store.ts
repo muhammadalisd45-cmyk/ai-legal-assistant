@@ -1,62 +1,23 @@
 "use client";
 
 import type { CaseDraft, IntakeDraft } from "./types";
+import { getSupabaseBrowserClient } from "./supabase/client";
+import { supabaseConfig } from "./supabase/config";
 
 const INTAKE_KEY = "pjn:intake:v2";
 const CASES_KEY = "pjn:cases:v2";
-const SESSION_KEY = "pjn:supabase-session:v1";
-
-type SupabaseSession = {
-  access_token: string;
-  refresh_token: string;
-  expires_at?: number;
-  expires_in?: number;
-  user: { id: string };
-};
-
 function browser() { return typeof window !== "undefined"; }
-function config() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, "");
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  return url && key ? { url, key } : null;
-}
 
-function readSession(): SupabaseSession | null {
+// Uses the signed-in account's session (cookie-based, see lib/supabase). No anonymous sign-ups:
+// if nobody is signed in, cases stay in this browser only. RLS limits rows to the owning user.
+async function ensureSession(): Promise<{ accessToken: string; userId: string; url: string; key: string } | null> {
   if (!browser()) return null;
-  try { return JSON.parse(window.localStorage.getItem(SESSION_KEY) ?? "null") as SupabaseSession | null; } catch { return null; }
-}
-function writeSession(session: SupabaseSession) {
-  if (browser()) window.localStorage.setItem(SESSION_KEY, JSON.stringify(session));
-}
-
-async function authRequest(url: string, key: string, path: string, body: unknown) {
-  const response = await fetch(`${url}/auth/v1/${path}`, {
-    method: "POST",
-    headers: { apikey: key, Authorization: `Bearer ${key}`, "content-type": "application/json" },
-    body: JSON.stringify(body)
-  });
-  if (!response.ok) throw new Error(`Supabase auth failed (${response.status})`);
-  return (await response.json()) as SupabaseSession;
-}
-
-async function ensureSession(): Promise<{ session: SupabaseSession; url: string; key: string } | null> {
-  const cfg = config();
-  if (!cfg) return null;
-  let session = readSession();
-  const now = Math.floor(Date.now() / 1000);
-  if (session?.access_token && (!session.expires_at || session.expires_at > now + 60)) return { session, ...cfg };
-  if (session?.refresh_token) {
-    try {
-      session = await authRequest(cfg.url, cfg.key, "token?grant_type=refresh_token", { refresh_token: session.refresh_token });
-      writeSession(session);
-      return { session, ...cfg };
-    } catch {
-      window.localStorage.removeItem(SESSION_KEY);
-    }
-  }
-  session = await authRequest(cfg.url, cfg.key, "signup", { data: { app: "pakistan-justice-navigator" }, gotrue_meta_security: {} });
-  writeSession(session);
-  return { session, ...cfg };
+  let url: string, key: string;
+  try { ({ url, key } = supabaseConfig()); } catch { return null; }
+  const { data } = await getSupabaseBrowserClient().auth.getSession();
+  const session = data.session;
+  if (!session || session.user.is_anonymous) return null;
+  return { accessToken: session.access_token, userId: session.user.id, url, key };
 }
 
 async function dataRequest(path: string, options: RequestInit = {}) {
@@ -66,7 +27,7 @@ async function dataRequest(path: string, options: RequestInit = {}) {
     ...options,
     headers: {
       apikey: auth.key,
-      Authorization: `Bearer ${auth.session.access_token}`,
+      Authorization: `Bearer ${auth.accessToken}`,
       ...(options.headers ?? {})
     }
   });
@@ -101,7 +62,7 @@ export async function saveCase(draft: CaseDraft): Promise<"supabase" | "local"> 
       method: "POST",
       headers: { "content-type": "application/json", Prefer: "resolution=merge-duplicates,return=minimal" },
       body: JSON.stringify({
-        user_id: auth.session.user.id,
+        user_id: auth.userId,
         public_case_id: draft.caseId,
         language: draft.language,
         category: draft.triage.category,

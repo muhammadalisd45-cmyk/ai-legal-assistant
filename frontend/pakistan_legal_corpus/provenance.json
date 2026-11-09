@@ -1,0 +1,389 @@
+{
+  "generated_by": "backend/scripts/acquire_corpus.py",
+  "documents": {
+    "PK-001": {
+      "document_id": "PK-001",
+      "title": "Constitution of the Islamic Republic of Pakistan, 1973",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator9d8e2ecc414c6d3371ac41114b61a2c4.pdf",
+      "source_name": "Pakistan Code",
+      "file": "constitution/constitution_1973.pdf",
+      "sha256": "bd0caf96b8ea2b257e7dd5d70684fba71b70e41e7c64720314d9ba619b4009e9",
+      "bytes": 1184244,
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 16 Sep 2026 06:31:21 GMT",
+      "fetched_at": "2026-11-08T12:03:22.139585+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 176,
+        "text_chars": 451702,
+        "avg_chars_per_page": 2566.5,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "constitution",
+          "islamic",
+          "republic",
+          "pakistan"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-002": {
+      "document_id": "PK-002",
+      "title": "Pakistan Penal Code, 1860",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratoracbdabf2b79c8956d6ea4804fcceb92d.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratoracbdabf2b79c8956d6ea4804fcceb92d.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/ppc_1860.pdf",
+      "sha256": "ff2f4748624512e7ff9d810836e3ac11ba95211f52285a27e186e1f3dbd2fda9",
+      "bytes": 1776297,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 30 Apr 2019 11:07:34 GMT",
+      "fetched_at": "2026-11-08T12:03:41.607901+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 178,
+        "text_chars": 510682,
+        "avg_chars_per_page": 2869.0,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "pakistan",
+          "penal"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-003": {
+      "document_id": "PK-003",
+      "title": "Code of Criminal Procedure, 1898",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator7db1e56f0f1d39a6e67573ec6b0944e2.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator7db1e56f0f1d39a6e67573ec6b0944e2.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/crpc_1898.pdf",
+      "sha256": "08cf18684b87ad585a6af00b962ce7324456826ee22f9291b6f69a9ee735afb4",
+      "bytes": 15543542,
+      "content_type": "application/pdf",
+      "last_modified": "Thu, 18 Jun 2026 07:31:00 GMT",
+      "fetched_at": "2026-11-08T12:04:30.981376+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 307,
+        "text_chars": 792576,
+        "avg_chars_per_page": 2581.7,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "criminal",
+          "procedure"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-004": {
+      "document_id": "PK-004",
+      "title": "Code of Civil Procedure, 1908",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator6598dabbad120033d4d42d717dcf9755.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator6598dabbad120033d4d42d717dcf9755.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/cpc_1908.pdf",
+      "sha256": "c51d194bfc14f076769f266db7efabc1901f1de2182da89c8f0ef82d92844b33",
+      "bytes": 2281447,
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 11 Sep 2024 06:30:24 GMT",
+      "fetched_at": "2026-11-08T12:05:02.544279+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 318,
+        "text_chars": 806346,
+        "avg_chars_per_page": 2535.7,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "civil",
+          "procedure"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-007": {
+      "document_id": "PK-007",
+      "title": "Specific Relief Act, 1877",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratorf257754bbb3c6863d879492bc8cd8f6e.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratorf257754bbb3c6863d879492bc8cd8f6e.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/specific_relief_act_1877.pdf",
+      "sha256": "46203a92b1ac847737643251cf10e8dbaea009be2b0cc991fac8716a3d7082a5",
+      "bytes": 506190,
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 19 Jul 2023 10:27:25 GMT",
+      "fetched_at": "2026-11-08T12:05:10.343369+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 35,
+        "text_chars": 83451,
+        "avg_chars_per_page": 2384.3,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "specific",
+          "relief"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-008": {
+      "document_id": "PK-008",
+      "title": "Limitation Act, 1908",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator3294e35255f255ea96b3356091fb4844.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator3294e35255f255ea96b3356091fb4844.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/limitation_act_1908.pdf",
+      "sha256": "35a1f21a4f2ad6c26a553600c6781065b36a0c25db87bd26d46a9bc01c7a535a",
+      "bytes": 702818,
+      "content_type": "application/pdf",
+      "last_modified": "Fri, 07 Jul 2023 11:00:18 GMT",
+      "fetched_at": "2026-11-08T12:05:16.707292+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 47,
+        "text_chars": 90867,
+        "avg_chars_per_page": 1933.3,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "limitation"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-010": {
+      "document_id": "PK-010",
+      "title": "Registration Act, 1908",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator0f29bc9f1e3dfed37c0034eed1e29d53.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator0f29bc9f1e3dfed37c0034eed1e29d53.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/registration_act_1908.pdf",
+      "sha256": "b9f6a700e43ad5824252330b41abd675690035b2347da61978f08d486fa40674",
+      "bytes": 481856,
+      "content_type": "application/pdf",
+      "last_modified": "Sun, 07 May 2023 11:22:55 GMT",
+      "fetched_at": "2026-11-08T12:05:21.630448+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 35,
+        "text_chars": 100528,
+        "avg_chars_per_page": 2872.2,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "registration"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-015": {
+      "document_id": "PK-015",
+      "title": "Anti-Money Laundering Act, 2010",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator47c7a5354061a54634a6246d2046ddcf.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator47c7a5354061a54634a6246d2046ddcf.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/anti_money_laundering_act_2010.pdf",
+      "sha256": "59ba26c42bbcce67abf5a2aa8b637e27695f9fac8412fea33216b2c5ed1bb446",
+      "bytes": 399704,
+      "content_type": "application/pdf",
+      "last_modified": "Fri, 02 Sep 2022 09:48:12 GMT",
+      "fetched_at": "2026-11-08T12:05:25.890378+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 44,
+        "text_chars": 96083,
+        "avg_chars_per_page": 2183.7,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "anti",
+          "money",
+          "laundering"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-016": {
+      "document_id": "PK-016",
+      "title": "Anti-Terrorism Act, 1997",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratora8658ee078a7253e456379e890652a2a.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratora8658ee078a7253e456379e890652a2a.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/anti_terrorism_act_1997.pdf",
+      "sha256": "5e23a9198c1b0acd47b6e1e37895d75dc3bf8f928ec1984999177b8d90f692da",
+      "bytes": 573124,
+      "content_type": "application/pdf",
+      "last_modified": "Thu, 18 Apr 2019 11:06:58 GMT",
+      "fetched_at": "2026-11-08T12:05:37.100212+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 50,
+        "text_chars": 131294,
+        "avg_chars_per_page": 2625.9,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "anti",
+          "terrorism"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-017": {
+      "document_id": "PK-017",
+      "title": "Protection against Harassment of Women at the Workplace Act, 2010",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratorc22e81f4add9ea3dc023086953ca2b4f.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratorc22e81f4add9ea3dc023086953ca2b4f.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/workplace_harassment_act_2010.pdf",
+      "sha256": "8e52ae128747fbe0b6936f56720e5589291d83c1c2b8c7a408bce4eff086b9b9",
+      "bytes": 191668,
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 24 Aug 2022 08:04:58 GMT",
+      "fetched_at": "2026-11-08T12:05:38.049270+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 12,
+        "text_chars": 26923,
+        "avg_chars_per_page": 2243.6,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "protection",
+          "against",
+          "harassment",
+          "women",
+          "workplace"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-018": {
+      "document_id": "PK-018",
+      "title": "Electronic Transactions Ordinance, 2002",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratordbc98dd49f2df3b1d07bb986dcceb9a3.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratordbc98dd49f2df3b1d07bb986dcceb9a3.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/electronic_transactions_ordinance_2002.pdf",
+      "sha256": "b690834ee4c78b17d635f0d57cda07e1a647677ea9351828ca20e3ccbe3c2726",
+      "bytes": 372601,
+      "content_type": "application/pdf",
+      "last_modified": "Thu, 26 Mar 2026 06:09:50 GMT",
+      "fetched_at": "2026-11-08T12:05:40.310914+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 20,
+        "text_chars": 46601,
+        "avg_chars_per_page": 2330.1,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "electronic",
+          "transactions"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-019": {
+      "document_id": "PK-019",
+      "title": "Juvenile Justice System Act, 2018",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator01c49d3cff67abf97e39c2e1d6dacc43.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator01c49d3cff67abf97e39c2e1d6dacc43.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/juvenile_justice_system_act_2018.pdf",
+      "sha256": "774a8f06f6a905a1075e80cc7f62f50ee3d1685b2f05b222b379deb4431ac17c",
+      "bytes": 364942,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 23 Jul 2024 08:02:08 GMT",
+      "fetched_at": "2026-11-08T12:05:42.884904+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 13,
+        "text_chars": 27299,
+        "avg_chars_per_page": 2099.9,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "juvenile",
+          "justice",
+          "system"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-020": {
+      "document_id": "PK-020",
+      "title": "Legal Aid and Justice Authority Act, 2020",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator11e683b2b54d0251e10b6fa8181d73e4.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator11e683b2b54d0251e10b6fa8181d73e4.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/legal_aid_justice_authority_act_2020.pdf",
+      "sha256": "27e53dbffaebdc7074952b9145d7e598239027419f2595c753e366d0f62a143f",
+      "bytes": 264967,
+      "content_type": "application/pdf",
+      "last_modified": "Fri, 31 Jan 2025 07:52:20 GMT",
+      "fetched_at": "2026-11-08T12:05:43.660015+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 9,
+        "text_chars": 19988,
+        "avg_chars_per_page": 2220.9,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "legal",
+          "justice",
+          "authority"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    }
+  },
+  "updated_at": "2026-11-08T12:05:43.660594+00:00"
+}

@@ -1,13 +1,6 @@
 ﻿import { DashboardClient } from "@/components/dashboard-client";
-import { DashboardSidebar } from "@/components/dashboard-sidebar";
 
+// The app sidebar comes from <SiteChrome> in the root layout (every app route), so the page renders content only.
 export default function DashboardPage() {
-  return (
-    <div className="pjn-dashboard-layout">
-      <DashboardSidebar />
-      <div className="pjn-dashboard-content">
-        <DashboardClient />
-      </div>
-    </div>
-  );
+  return <DashboardClient />;
 }
