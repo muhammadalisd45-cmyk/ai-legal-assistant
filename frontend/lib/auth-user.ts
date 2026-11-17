@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 import { getSupabaseBrowserClient } from "./supabase/client";
+import { isSupabaseConfigured } from "./supabase/config";
 
 // Browser caches that belong to whoever is signed in. Wiped on sign-out so a shared computer doesn't leak them.
 const USER_SCOPED_KEYS = ["pjn:cases:v2", "pjn:intake:v2", "pjn:drafts:v1", "pjn:demo-user:v1", "pjn:supabase-session:v1"];
@@ -24,6 +25,8 @@ export function displayName(user: User | null) {
 export function useCurrentUser() {
   const [user, setUser] = useState<User | null>(null);
   useEffect(() => {
+    // Rendered on every page (site chrome); without Supabase settings just show the signed-out state.
+    if (!isSupabaseConfigured()) return;
     const supabase = getSupabaseBrowserClient();
     void supabase.auth.getUser().then(({ data }) => setUser(data.user));
     const { data } = supabase.auth.onAuthStateChange((_event, session) => setUser(session?.user ?? null));

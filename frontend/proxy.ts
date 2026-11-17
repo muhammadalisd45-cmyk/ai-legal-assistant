@@ -1,11 +1,28 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
-import { PROTECTED_API_PREFIXES, PROTECTED_PREFIXES, matchesPrefix, supabaseConfig } from "@/lib/supabase/config";
+import {
+  PROTECTED_API_PREFIXES, PROTECTED_PREFIXES, SUPABASE_NOT_CONFIGURED, isSupabaseConfigured, matchesPrefix, supabaseConfig
+} from "@/lib/supabase/config";
 
 // Next.js 16 "proxy" (formerly middleware): refreshes the Supabase session cookie on every request and
 // blocks signed-out visitors from the workspace before any page renders.
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
+
+  // Missing Supabase settings must not take the whole site down: public pages keep working, and account
+  // pages fail closed with a clear 503 instead of an opaque 500 on every URL.
+  if (!isSupabaseConfigured()) {
+    const { pathname } = request.nextUrl;
+    console.error("proxy: Supabase is not configured; account routes are unavailable");
+    if (matchesPrefix(pathname, PROTECTED_API_PREFIXES)) {
+      return NextResponse.json({ error: SUPABASE_NOT_CONFIGURED }, { status: 503 });
+    }
+    if (matchesPrefix(pathname, PROTECTED_PREFIXES)) {
+      return new NextResponse(SUPABASE_NOT_CONFIGURED, { status: 503, headers: { "content-type": "text/plain; charset=utf-8" } });
+    }
+    return response;
+  }
+
   const { url, key } = supabaseConfig();
 
   const supabase = createServerClient(url, key, {

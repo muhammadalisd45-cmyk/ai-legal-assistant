@@ -1,3 +1,11 @@
+export const SUPABASE_NOT_CONFIGURED =
+  "Sign-in is temporarily unavailable: the site is missing its Supabase settings (NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY).";
+
+/** True when both public Supabase settings are present. NEXT_PUBLIC_* values are inlined at build time. */
+export function isSupabaseConfigured() {
+  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+}
+
 // Browser-safe Supabase settings. The anon/publishable key is designed to be public; RLS protects the data.
 export function supabaseConfig() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, "");

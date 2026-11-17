@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
+import { SUPABASE_NOT_CONFIGURED, isSupabaseConfigured } from "@/lib/supabase/config";
 import { Icon } from "./icons";
 
 type Mode = "signin" | "signup" | "forgot";
@@ -47,6 +48,7 @@ export function LoginForm({ next, linkError }: { next: string; linkError: boolea
     if (!/^\S+@\S+\.\S+$/.test(cleanEmail)) return setError("Enter a valid email address.");
     if (mode !== "forgot" && password.length < 8) return setError("Password must be at least 8 characters.");
 
+    if (!isSupabaseConfigured()) return setError(SUPABASE_NOT_CONFIGURED);
     const supabase = getSupabaseBrowserClient();
     const callback = (target: string) => `${window.location.origin}/auth/callback?next=${encodeURIComponent(target)}`;
     setBusy(true);
