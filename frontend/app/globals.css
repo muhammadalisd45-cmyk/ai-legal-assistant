@@ -463,7 +463,7 @@ main { min-height: calc(100vh - 200px); }
 .landing-footer { position: relative; display: grid; grid-template-columns: 1.2fr 1.5fr .8fr; align-items: start; gap: 50px; background: var(--ink) !important; color: var(--paper); padding: 85px max(24px, calc((100vw - 1180px) / 2)) 28px; }
 .landing-footer .footer-brand strong, .landing-footer .footer-links strong { color: var(--paper); }
 .landing-footer .footer-brand-block p, .landing-footer .footer-legal p { color: #c8b9aa; }
-.landing-footer .footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.landing-footer .footer-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .landing-footer .footer-links div { display: flex; flex-direction: column; gap: 11px; }
 .landing-footer .footer-links a { color: #c8b9aa; font-size: 12px; }
 .landing-footer .footer-links a:hover { color: var(--mustard); }
@@ -1081,3 +1081,36 @@ body { background: #f4efe7; color: #1b130f; }
 .side-account { display:grid; gap:6px; margin:10px 0; font-size:12px; }
 .side-account span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; opacity:.8; }
 .side-signout { background:none; border:1px solid currentColor; border-radius:999px; padding:6px 12px; font:inherit; font-size:12px; color:inherit; cursor:pointer; justify-self:start; }
+
+/* Voice input (Web Speech API) */
+.voice-input { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 10px; }
+.voice-input.compact { margin-top: 0; flex-wrap: nowrap; }
+.voice-button { position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; border: 1.5px solid var(--ink); border-radius: 999px; padding: 8px 16px; background: var(--paper-2); color: var(--ink); font-size: 14px; font-weight: 850; cursor: pointer; transition: transform .16s ease, background .16s ease, box-shadow .16s ease; }
+.voice-input.compact .voice-button { width: 48px; min-height: 48px; padding: 0; justify-content: center; border-radius: 10px; }
+.voice-button:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
+.voice-button:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+.voice-button.listening { background: var(--red); border-color: var(--red); color: var(--paper-2); }
+.voice-pulse { position: absolute; inset: -5px; border: 2px solid var(--red); border-radius: inherit; animation: voice-pulse 1.4s ease-out infinite; pointer-events: none; }
+@keyframes voice-pulse { from { opacity: .8; transform: scale(1); } to { opacity: 0; transform: scale(1.18); } }
+.voice-status { flex: 1 1 220px; min-width: 0; font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.voice-input.compact .voice-status:empty { display: none; }
+.voice-error { color: var(--red); font-weight: 700; }
+.answer-row { display: flex; gap: 10px; align-items: flex-start; }
+.answer-row .answer-input { flex: 1; min-width: 0; }
+.answer-row .voice-input.compact { flex-direction: column; align-items: flex-end; max-width: 50%; }
+@media (prefers-reduced-motion: reduce) { .voice-pulse { animation: none; opacity: .6; } }
+
+/* Legal documents (terms, privacy, refunds) */
+.legal-doc { width: min(780px, calc(100% - 32px)); margin: 0 auto; padding: 56px 0 80px; }
+.legal-doc-head { padding-bottom: 22px; border-bottom: 1.5px solid var(--ink); margin-bottom: 28px; }
+.legal-doc-head h1 { font-family: Georgia, serif; font-size: clamp(36px, 6vw, 56px); line-height: 1.05; margin: 10px 0 12px; }
+.legal-doc-date { color: var(--muted); font-size: 13px; margin: 12px 0 0; }
+.legal-doc-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.legal-doc-nav a { border: 1.5px solid var(--ink); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 800; color: var(--ink); text-decoration: none; }
+.legal-doc-nav a[aria-current="page"] { background: var(--teal); color: var(--paper-2); }
+.legal-doc-body { font-size: 16px; line-height: 1.7; color: var(--ink-2); }
+.legal-doc-body h2 { font-family: Georgia, serif; font-size: 23px; color: var(--ink); margin: 34px 0 8px; }
+.legal-doc-body ul { padding-left: 22px; }
+.legal-doc-body li { margin: 6px 0; }
+.legal-doc-body a { color: var(--teal-dark); }
+@media (max-width: 760px) { .landing-footer .footer-links { grid-template-columns: 1fr 1fr; } }

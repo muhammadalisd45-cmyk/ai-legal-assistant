@@ -27,8 +27,8 @@ export function SourceLibrary({ documents }: { documents: LegalDocumentMeta[] })
           <input value={query} onChange={(event: ChangeEvent<HTMLInputElement>) => setQuery(event.target.value)} placeholder="Search law or authority" />
         </label>
         <div className="filter-row" aria-label="Jurisdiction filters">
-          {["All", "Federal", "Sindh"].map((item) => (
-            <button key={item} type="button" className={jurisdiction === item ? "chip chip-active" : "chip"} onClick={() => setJurisdiction(item)}>{item}</button>
+          {["All", "Federal", "Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan"].map((item) => (
+            <button key={item} type="button" className={jurisdiction === item ? "chip chip-active" : "chip"} onClick={() => setJurisdiction(item)}>{item === "Khyber Pakhtunkhwa" ? "KP" : item}</button>
           ))}
         </div>
       </div>

@@ -1,0 +1,195 @@
+dataset,label,url,status,final_url,error,checked_at
+source_directory,SCP Judgments Search,https://scp.gov.pk/JudgmentsSearch,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:54:24+00:00
+source_directory,SCP Latest Judgments,https://scp.gov.pk/LatestJudgments.aspx,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:54:24+00:00
+source_directory,SCP robots.txt,https://scp.gov.pk/robots.txt,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:54:24+00:00
+source_directory,SC legacy PDF host,https://www.supremecourt.gov.pk/downloads_judgements/,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:54:24+00:00
+source_directory,Federal Constitutional Court judgments,https://www.fccp.gov.pk/judgments,200,https://fccp.gov.pk/judgments,,2026-11-13T04:54:24+00:00
+source_directory,FSC Shariat Petitions list,https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php,200,https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php,,2026-11-13T04:54:24+00:00
+source_directory,FSC Criminal / Suo Moto pages,https://www.federalshariatcourt.gov.pk/criminaljudgments.html,200,https://www.federalshariatcourt.gov.pk/criminaljudgments.html,,2026-11-13T04:54:25+00:00
+source_directory,IHC Judgments,https://mis.ihc.gov.pk/frmJgmnt,200,https://mis.ihc.gov.pk/frmJgmnt,,2026-11-13T04:54:26+00:00
+source_directory,IHC search JSON,https://mis.ihc.gov.pk/ihc.asmx/srchDecisionClms,,,TooManyRedirects: Exceeded maximum allowed redirects.,2026-11-13T04:54:26+00:00
+source_directory,LHC AFR (sitting judges),https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting,200,https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting,,2026-11-13T04:54:27+00:00
+source_directory,LHC AFR (former judges),https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting_by_former_judges,200,https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting_by_former_judges,,2026-11-13T04:54:27+00:00
+source_directory,LHC PDF host,https://sys.lhc.gov.pk/appjudgments/,200,https://sys.lhc.gov.pk/appjudgments/,,2026-11-13T04:54:29+00:00
+source_directory,LHC Annual Report 2025,https://lhc.gov.pk/system/files/Annual%20Report%202025.pdf,200,https://lhc.gov.pk/system/files/Annual%20Report%202025.pdf,,2026-11-13T04:54:29+00:00
+source_directory,SHC Caselaw Advance Search,https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search,200,https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search,,2026-11-13T04:54:30+00:00
+source_directory,SHC Report-002 AFR,https://caselaw.shc.gov.pk/caselaw/public/rpt-afr,200,https://caselaw.shc.gov.pk/caselaw/public/rpt-afr,,2026-11-13T04:54:33+00:00
+source_directory,SHC Disclaimer,https://sindhhighcourt.gov.pk/disclaimer.php,200,https://sindhhighcourt.gov.pk/disclaimer.php,,2026-11-13T04:54:36+00:00
+source_directory,SHC digital / Search Citation,https://digital.shc.gov.pk/search-citation,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:54:36+00:00
+source_directory,PHC Reported Judgments,https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php,200,https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php,,2026-11-13T04:54:36+00:00
+source_directory,PHC Case Law digest,https://peshawarhighcourt.gov.pk/app/site/108/c/Case_Law.html,200,https://peshawarhighcourt.gov.pk/app/site/108/c/Case_Law.html,,2026-11-13T04:54:37+00:00
+source_directory,BHC Judgments index,https://bhc.gov.pk/resources/judgments,200,https://bhc.gov.pk/resources/judgments,,2026-11-13T04:54:38+00:00
+source_directory,BHC portal,https://portal.bhc.gov.pk/judgments,200,https://portal.bhc.gov.pk/judgments/,,2026-11-13T04:54:39+00:00
+source_directory,GBCC Reported Judgments,https://gbcc.gov.pk/ReportedJudgments.aspx,200,https://gbcc.gov.pk/ReportedJudgments.aspx,,2026-11-13T04:54:40+00:00
+source_directory,SAC GB Judgments,https://sacgb.gov.pk/Judgments.html,200,https://sacgb.gov.pk/Judgments.html,,2026-11-13T04:54:41+00:00
+source_directory,AJK HC Judgments,https://ajkhighcourt.gok.pk/important-judgments,200,https://ajkhighcourt.gok.pk/important-judgments,,2026-11-13T04:54:42+00:00
+source_directory,AJK SC Judgements/Orders,https://ajksupremecourt.gok.pk/judgements-orders/,200,https://ajksupremecourt.gok.pk/judgements-orders/,,2026-11-13T04:54:42+00:00
+source_directory,AJK SC REST API,https://ajksupremecourt.gok.pk/wp-json/wp/v2/posts?categories=18&per_page=100,200,https://ajksupremecourt.gok.pk/wp-json/wp/v2/posts?categories=18&per_page=100,,2026-11-13T04:54:43+00:00
+source_directory,CCP Orders,https://cc.gov.pk/home/orders,200,https://cc.gov.pk/home/orders,,2026-11-13T04:54:46+00:00
+source_directory,CAT orders (CCP-hosted),https://cc.gov.pk/home/decidedcatcases,200,https://cc.gov.pk/home/decidedcatcases,,2026-11-13T04:54:46+00:00
+source_directory,FTO Reported Decisions,https://www.fto.gov.pk/decisions.aspx,,,"ConnectError: (""The certificate's CN name does not match the passed value."",)",2026-11-13T04:54:48+00:00
+source_directory,FTO Signed Decisions (15-day),http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions,200,http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions,,2026-11-13T04:54:48+00:00
+source_directory,Wafaqi Mohtasib Findings,https://mohtasib.gov.pk/Publications,200,https://mohtasib.gov.pk/Publications,,2026-11-13T04:55:10+00:00
+source_directory,FST site,https://www.fst.gov.pk/,200,https://www.fst.gov.pk/cgi-sys/suspendedpage.cgi,,2026-11-13T04:55:10+00:00
+source_directory,FST archived home,http://web.archive.org/web/20260716134606/https://fst.gov.pk/,200,http://web.archive.org/web/20260716134606/https://fst.gov.pk/,,2026-11-13T04:55:11+00:00
+source_directory,ATIR Judgements,https://atir.gov.pk/Judgements,200,https://atir.gov.pk/Judgements/,,2026-11-13T04:55:12+00:00
+source_directory,LJCP ATSC 2024 report,https://ljcp.gov.pk/SiteImage/Misc/files/ATSC%202024%20(20-06-25).pdf,206,https://ljcp.gov.pk/SiteImage/Misc/files/ATSC%202024%20(20-06-25).pdf,,2026-11-13T04:55:14+00:00
+source_directory,Pakistan Code,https://pakistancode.gov.pk/english/index.php,200,https://pakistancode.gov.pk/english/index.php,,2026-11-13T04:55:15+00:00
+source_directory,Punjab Code,https://punjabcode.punjab.gov.pk/en/alphabetical,200,https://punjabcode.punjab.gov.pk/en/alphabetical,,2026-11-13T04:55:16+00:00
+source_directory,Punjab Code – recently updated,https://punjabcode.punjab.gov.pk/en/recently_updated,200,https://punjabcode.punjab.gov.pk/en/recently_updated,,2026-11-13T04:55:18+00:00
+source_directory,Sindh Code,https://sindhlaws.gov.pk/Alpha.aspx?pg=ACT,200,https://sindhlaws.gov.pk/Alpha.aspx?pg=ACT,,2026-11-13T04:55:20+00:00
+source_directory,Sindh Judicial Academy – Updated Laws,https://sja.gos.pk/updated-laws/,200,https://sja.gos.pk/updated-laws/,,2026-11-13T04:55:20+00:00
+source_directory,Pakistan Code – chronological / latest ordinances,https://pakistancode.gov.pk/english/KmTY5e.php,200,https://pakistancode.gov.pk/english/KmTY5e.php,,2026-11-13T04:55:21+00:00
+source_directory,KP Code,https://kpcode.kp.gov.pk/homepage/list_all_law,200,https://kpcode.kp.gov.pk/homepage/list_all_law,,2026-11-13T04:55:21+00:00
+source_directory,KP Assembly Acts,https://www.pakp.gov.pk/act/,200,https://www.pakp.gov.pk/act/,,2026-11-13T04:55:22+00:00
+source_directory,Balochistan Code,https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1,200,https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1,,2026-11-13T04:55:22+00:00
+source_directory,Balochistan Assembly Acts,https://pabalochistan.gov.pk/acts,200,https://pabalochistan.gov.pk/acts,,2026-11-13T04:55:24+00:00
+source_directory,Balochistan Printing Dept,https://printing.balochistan.gov.pk/,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:55:24+00:00
+source_directory,blncode.pitb.gov.pk,http://blncode.pitb.gov.pk,,,ConnectTimeout: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time,2026-11-13T04:55:24+00:00
+source_directory,GB Assembly Acts,https://gbassembly.gbit.gov.pk/pages/acts,200,https://gbassembly.gbit.gov.pk/pages/acts,,2026-11-13T04:55:46+00:00
+source_directory,GB Govt Acts / Laws,https://gilgitbaltistan.gov.pk/pages/acts,200,https://gilgitbaltistan.gov.pk/pages/acts,,2026-11-13T04:55:47+00:00
+source_directory,gba.gov.pk / gba.gbit.gov.pk,https://gba.gov.pk/acts/,,,ConnectError: ('A required certificate is not within its validity period when verifying against the current system clock or the timest,2026-11-13T04:55:48+00:00
+source_directory,AJK Law Dept,https://law.gok.pk/acts/,200,https://law.gok.pk/acts/,,2026-11-13T04:55:48+00:00
+source_directory,AJK Assembly Acts,https://ajkassembly.gok.pk/acts/,200,https://ajkassembly.gok.pk/acts/,,2026-11-13T04:55:49+00:00
+source_directory,Copyright Ordinance 1962 (Pakistan Code PDF),https://pakistancode.gov.pk/pdffiles/administratorc8dc84cf91fcedf0a4a00fc2710945a1.pdf,206,https://pakistancode.gov.pk/pdffiles/administratorc8dc84cf91fcedf0a4a00fc2710945a1.pdf,,2026-11-13T04:55:50+00:00
+source_directory,Copyright Ordinance 1962 (WIPO Lex),https://www.wipo.int/wipolex/en/text/129350,200,https://www.wipo.int/wipolex/en/text/129350,,2026-11-13T04:55:51+00:00
+source_directory,Juvenile Justice System Act 2018,https://lpr.adb.org/sites/default/files/2024-07/pakistan-juvenile-justice-system-act-2018.pdf,200,https://lpr.adb.org/sites/default/files/2024-07/pakistan-juvenile-justice-system-act-2018.pdf,,2026-11-13T04:55:52+00:00
+source_directory,s.376A PPC Gazette scan,https://sld.com.pk/wp-content/uploads/2021/04/1485428121_999.pdf,200,https://sld.com.pk/wp-content/uploads/2021/04/1485428121_999.pdf,,2026-11-13T04:55:52+00:00
+source_directory,LHC victim-anonymity ruling,https://dawn.com/news/1828670/lhc-asks-judges-to-protect-rape-victims-identity-in-verdicts,403,https://dawn.com/news/1828670/lhc-asks-judges-to-protect-rape-victims-identity-in-verdicts,,2026-11-13T04:55:53+00:00
+source_directory,PakistanLawsite,https://www.pakistanlawsite.com/,200,https://www.pakistanlawsite.com/,,2026-11-13T04:55:54+00:00
+source_directory,Pakistan Case Law terms,https://pakistancaselaw.com/terms,200,https://pakistancaselaw.com/terms,,2026-11-13T04:55:54+00:00
+source_directory,LJCP home (NJPMC AI guidelines link),https://ljcp.gov.pk/,200,https://ljcp.gov.pk/,,2026-11-13T04:55:54+00:00
+source_directory,PHC footnote-omission petition,https://www.dawn.com/news/1949786,403,https://www.dawn.com/news/1949786,,2026-11-13T04:55:55+00:00
+source_directory,Pakistan_Laws_Dataset (D1),https://huggingface.co/datasets/AyeshaJadoon/Pakistan_Laws_Dataset,200,https://huggingface.co/datasets/AyeshaJadoon/Pakistan_Laws_Dataset,,2026-11-13T04:55:55+00:00
+source_directory,ipfs_pakistan_provincial_laws (D2),https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_provincial_laws,200,https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_provincial_laws,,2026-11-13T04:55:55+00:00
+source_directory,ipfs_pakistan_laws (federal sibling),https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_laws,200,https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_laws,,2026-11-13T04:55:57+00:00
+source_directory,adaption-pakistan-law-qa-pairs (D3),https://huggingface.co/datasets/abdullah693/adaption-pakistan-law-qa-pairs,200,https://huggingface.co/datasets/abdullah693/adaption-pakistan-law-qa-pairs,,2026-11-13T04:55:58+00:00
+source_directory,Zenodo Pakistani Law Dataset,https://zenodo.org/records/20509007,200,https://zenodo.org/records/20509007,,2026-11-13T04:56:00+00:00
+source_directory,PakLegalAid QA (companion),https://zenodo.org/records/20509273,200,https://zenodo.org/records/20509273,,2026-11-13T04:56:01+00:00
+source_directory,SC NER dataset (alternative),https://zenodo.org/records/21671415,200,https://zenodo.org/records/21671415,,2026-11-13T04:56:02+00:00
+source_directory,Pakistani-Law-Cases-Search-Engine,https://github.com/SyedAhtsham/Pakistani-Law-Cases-Search-Engine,200,https://github.com/SyedAhtsham/Pakistani-Law-Cases-Search-Engine,,2026-11-13T04:56:04+00:00
+evidence,D1,https://scp.gov.pk/robots.txt,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:54:24+00:00
+evidence,D2,https://scp.gov.pk/JudgmentsSearch,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:54:24+00:00
+evidence,D3,https://www.supremecourt.gov.pk/downloads_judgements/c.p._2972_2022.pdf,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:56:05+00:00
+evidence,D4,https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php,200,https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php,,2026-11-13T04:54:24+00:00
+evidence,D4,https://www.federalshariatcourt.gov.pk/criminaljudgments.html,200,https://www.federalshariatcourt.gov.pk/criminaljudgments.html,,2026-11-13T04:54:25+00:00
+evidence,D5,https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php?download=128,200,https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php?download=128,,2026-11-13T04:56:05+00:00
+evidence,D6,https://mis.ihc.gov.pk/frmJgmnt,200,https://mis.ihc.gov.pk/frmJgmnt,,2026-11-13T04:54:26+00:00
+evidence,D6,https://mis.ihc.gov.pk/ihc.asmx/srchDecisionClms,,,TooManyRedirects: Exceeded maximum allowed redirects.,2026-11-13T04:54:26+00:00
+evidence,D7,https://lhc.gov.pk/reported_judgments,200,https://lhc.gov.pk/reported_judgments,,2026-11-13T04:56:05+00:00
+evidence,D8,https://lhc.gov.pk/system/files/Annual%20Report%202025.pdf,200,https://lhc.gov.pk/system/files/Annual%20Report%202025.pdf,,2026-11-13T04:54:29+00:00
+evidence,D8,https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting,200,https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting,,2026-11-13T04:54:27+00:00
+evidence,D9,https://caselaw.shc.gov.pk/caselaw/public/rpt-afr,200,https://caselaw.shc.gov.pk/caselaw/public/rpt-afr,,2026-11-13T04:54:33+00:00
+evidence,D10,https://sindhhighcourt.gov.pk/disclaimer.php,200,https://sindhhighcourt.gov.pk/disclaimer.php,,2026-11-13T04:54:36+00:00
+evidence,D11,https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php?action=search,200,https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php?action=search,,2026-11-13T04:56:08+00:00
+evidence,D12,https://bhc.gov.pk/robots.txt,200,https://bhc.gov.pk/robots.txt,,2026-11-13T04:56:09+00:00
+evidence,D13,https://ajksupremecourt.gok.pk/wp-json/wp/v2/categories?per_page=50,200,https://ajksupremecourt.gok.pk/wp-json/wp/v2/categories?per_page=50,,2026-11-13T04:56:10+00:00
+evidence,D13,https://ajksupremecourt.gok.pk/robots.txt,200,https://ajksupremecourt.gok.pk/robots.txt,,2026-11-13T04:56:10+00:00
+evidence,D14,https://www.fst.gov.pk/robots.txt,200,https://www.fst.gov.pk/cgi-sys/suspendedpage.cgi,,2026-11-13T04:56:11+00:00
+evidence,D14,https://atir.gov.pk/Judgements,200,https://atir.gov.pk/Judgements/,,2026-11-13T04:55:12+00:00
+evidence,D15,http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions,200,http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions,,2026-11-13T04:54:48+00:00
+evidence,D16,https://pakistancode.gov.pk/pdffiles/administratorc8dc84cf91fcedf0a4a00fc2710945a1.pdf,206,https://pakistancode.gov.pk/pdffiles/administratorc8dc84cf91fcedf0a4a00fc2710945a1.pdf,,2026-11-13T04:55:50+00:00
+evidence,D17,https://www.pakistanlawsite.com/,200,https://www.pakistanlawsite.com/,,2026-11-13T04:55:54+00:00
+evidence,D17,https://pakistancaselaw.com/terms,200,https://pakistancaselaw.com/terms,,2026-11-13T04:55:54+00:00
+evidence,D18,https://lpr.adb.org/sites/default/files/2024-07/pakistan-juvenile-justice-system-act-2018.pdf,200,https://lpr.adb.org/sites/default/files/2024-07/pakistan-juvenile-justice-system-act-2018.pdf,,2026-11-13T04:55:52+00:00
+evidence,D19,https://mis.ihc.gov.pk/attachments/judgements/209540/1/Muhammad_Usman_v_FoP_WP_No_1553_of_2026__J_Arbab_Muhammad_Tahir__Approved_for_Reporting_639280833781874862.pdf,200,https://mis.ihc.gov.pk/attachments/judgements/209540/1/Muhammad_Usman_v_FoP_WP_No_1553_of_2026__J_Arbab_Muhammad_Tahir__Approved_for_Reporting_639280833781874862.pdf,,2026-11-13T04:56:12+00:00
+evidence,D20,https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Fvbpw%3D-sg-jjjjjjjjjjjjj,200,https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Fvbpw%3D-sg-jjjjjjjjjjjjj,,2026-11-13T04:56:12+00:00
+evidence,D21,https://kpcode.kp.gov.pk/homepage/faq,200,https://kpcode.kp.gov.pk/homepage/faq,,2026-11-13T04:56:12+00:00
+evidence,D21,https://www.pakp.gov.pk/act/,200,https://www.pakp.gov.pk/act/,,2026-11-13T04:55:22+00:00
+evidence,D22,https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1,200,https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1,,2026-11-13T04:55:22+00:00
+evidence,D23,https://printing.balochistan.gov.pk/robots.txt,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:56:12+00:00
+evidence,D24,https://gbassembly.gbit.gov.pk/pages/acts,200,https://gbassembly.gbit.gov.pk/pages/acts,,2026-11-13T04:55:46+00:00
+evidence,D24,https://gba.gov.pk/acts/,,,ConnectError: ('A required certificate is not within its validity period when verifying against the current system clock or the timest,2026-11-13T04:55:48+00:00
+evidence,D25,https://law.gok.pk/acts/,200,https://law.gok.pk/acts/,,2026-11-13T04:55:48+00:00
+evidence,D25,https://law.gok.pk/ordinance/,200,https://law.gok.pk/ordinance/,,2026-11-13T04:56:12+00:00
+evidence,D26,https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_provincial_laws/raw/main/README.md,200,https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_provincial_laws/raw/main/README.md,,2026-11-13T04:56:13+00:00
+evidence,D27,https://datasets-server.huggingface.co/filter?dataset=abdullah693/adaption-pakistan-law-qa-pairs&config=default&split=train&where=%22domain%22%20IS%20NULL&length=5,500,https://datasets-server.huggingface.co/filter?dataset=abdullah693/adaption-pakistan-law-qa-pairs&config=default&split=train&where=%22domain%22%20IS%20NULL&length=5,,2026-11-13T04:56:13+00:00
+evidence,D28,https://zenodo.org/api/records/20509007,200,https://zenodo.org/api/records/20509007,,2026-11-13T04:56:35+00:00
+evidence,D29,https://github.com/SyedAhtsham/Pakistani-Law-Cases-Search-Engine/blob/main/CaSearch%20Report.pdf,200,https://github.com/SyedAhtsham/Pakistani-Law-Cases-Search-Engine/blob/main/CaSearch%20Report.pdf,,2026-11-13T04:56:36+00:00
+evidence,D30,https://data.lhc.gov.pk/dynamic/approved_judgments_result_new.php?year=2025&debug=0&courtName=All%20Courts&caseNumber=&citationTag=&partyName=&decisionDate0=&decisionDate1=&uploadDate=&uploadDate1=,200,https://data.lhc.gov.pk/dynamic/approved_judgments_result_new.php?year=2025&debug=0&courtName=All%20Courts&caseNumber=&citationTag=&partyName=&decisionDate0=&decisionDate1=&uploadDate=&uploadDate1=,,2026-11-13T04:56:37+00:00
+evidence,D30,https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search,200,https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search,,2026-11-13T04:54:30+00:00
+registry.home_url,pakistan_code,https://pakistancode.gov.pk/english/,200,https://pakistancode.gov.pk/english/,,2026-11-13T04:56:37+00:00
+registry.new_items_url,pakistan_code,https://pakistancode.gov.pk/english/KmTY5e.php,200,https://pakistancode.gov.pk/english/KmTY5e.php,,2026-11-13T04:55:21+00:00
+registry.home_url,pakistan_code_chronological,https://pakistancode.gov.pk/english/,200,https://pakistancode.gov.pk/english/,,2026-11-13T04:56:37+00:00
+registry.new_items_url,pakistan_code_chronological,https://pakistancode.gov.pk/english/LGu0xBD?year=2026&page=1&action=inactive,200,https://pakistancode.gov.pk/english/LGu0xBD?year=2026&page=1&action=inactive,,2026-11-13T04:56:38+00:00
+registry.home_url,pakistan_code_urdu,https://pakistancode.gov.pk/english/UHyrdu.php,200,https://pakistancode.gov.pk/english/UHyrdu.php,,2026-11-13T04:56:39+00:00
+registry.listing_url,pakistan_code_urdu,https://pakistancode.gov.pk/english/UHyrdu.php,200,https://pakistancode.gov.pk/english/UHyrdu.php,,2026-11-13T04:56:39+00:00
+registry.home_url,punjab_code,https://punjabcode.punjab.gov.pk/,200,https://punjabcode.punjab.gov.pk/,,2026-11-13T04:56:40+00:00
+registry.new_items_url,punjab_code,https://punjabcode.punjab.gov.pk/en/recently_updated,200,https://punjabcode.punjab.gov.pk/en/recently_updated,,2026-11-13T04:55:18+00:00
+registry.home_url,sindh_code,https://www.sindhlaws.gov.pk/SindhIndex.aspx,200,https://www.sindhlaws.gov.pk/SindhIndex.aspx,,2026-11-13T04:56:41+00:00
+registry.listing_url,sindh_code,https://sindhlaws.gov.pk/Alpha.aspx?pg=ACT,200,https://sindhlaws.gov.pk/Alpha.aspx?pg=ACT,,2026-11-13T04:55:20+00:00
+registry.new_items_url,sindh_code,https://sindhlaws.gov.pk/Gazette.aspx?pg=ACT,200,https://sindhlaws.gov.pk/Gazette.aspx?pg=ACT,,2026-11-13T04:56:41+00:00
+registry.home_url,sja_updated_laws,https://sja.gos.pk/,200,https://sja.gos.pk/,,2026-11-13T04:56:41+00:00
+registry.listing_url,sja_updated_laws,https://sja.gos.pk/updated-laws/,200,https://sja.gos.pk/updated-laws/,,2026-11-13T04:55:20+00:00
+registry.new_items_url,sja_updated_laws,https://sja.gos.pk/updated-laws/,200,https://sja.gos.pk/updated-laws/,,2026-11-13T04:55:20+00:00
+registry.home_url,kp_code,https://kpcode.kp.gov.pk/,200,https://kpcode.kp.gov.pk/,,2026-11-13T04:56:42+00:00
+registry.new_items_url,kp_code,https://kpcode.kp.gov.pk/homepage/latest_more,200,https://kpcode.kp.gov.pk/homepage/latest_more,,2026-11-13T04:56:42+00:00
+registry.home_url,balochistan_code,https://balochistancode.gob.pk/,200,https://balochistancode.gob.pk/,,2026-11-13T04:56:43+00:00
+registry.listing_url,balochistan_code,https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1,200,https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1,,2026-11-13T04:55:22+00:00
+registry.new_items_url,balochistan_code,https://balochistancode.gob.pk/laws_rules.aspx?wise=chronological&opento=1&dst=3&dstn=Acts,200,https://balochistancode.gob.pk/laws_rules.aspx?wise=chronological&opento=1&dst=3&dstn=Acts,,2026-11-13T04:56:44+00:00
+registry.home_url,ajk_law,https://law.gok.pk/,200,https://law.gok.pk/,,2026-11-13T04:56:45+00:00
+registry.listing_url,ajk_law,https://law.gok.pk/acts/,200,https://law.gok.pk/acts/,,2026-11-13T04:55:48+00:00
+registry.new_items_url,ajk_law,https://law.gok.pk/ordinance/,200,https://law.gok.pk/ordinance/,,2026-11-13T04:56:12+00:00
+registry.home_url,gb_laws,https://gilgitbaltistan.gov.pk/,200,https://gilgitbaltistan.gov.pk/,,2026-11-13T04:56:46+00:00
+registry.listing_url,gb_laws,https://gilgitbaltistan.gov.pk/pages/acts,200,https://gilgitbaltistan.gov.pk/pages/acts,,2026-11-13T04:55:47+00:00
+registry.new_items_url,gb_laws,https://gilgitbaltistan.gov.pk/pages/laws,200,https://gilgitbaltistan.gov.pk/pages/laws,,2026-11-13T04:56:47+00:00
+registry.home_url,na_acts,https://www.na.gov.pk/,206,https://www.na.gov.pk/en/index.php,,2026-11-13T04:56:48+00:00
+registry.listing_url,na_acts,https://www.na.gov.pk/en/acts-tenure.php,206,https://www.na.gov.pk/en/acts-tenure.php,,2026-11-13T04:56:49+00:00
+registry.new_items_url,na_acts,https://www.na.gov.pk/en/acts-tenure.php,206,https://www.na.gov.pk/en/acts-tenure.php,,2026-11-13T04:56:49+00:00
+registry.home_url,pas_acts,https://pas.gov.pk/,200,https://pas.gov.pk/,,2026-11-13T04:56:50+00:00
+registry.listing_url,pas_acts,https://pas.gov.pk/acts,200,https://pas.gov.pk/acts,,2026-11-13T04:56:52+00:00
+registry.new_items_url,pas_acts,https://pas.gov.pk/acts,200,https://pas.gov.pk/acts,,2026-11-13T04:56:52+00:00
+registry.home_url,pakp_acts,https://www.pakp.gov.pk/,200,https://www.pakp.gov.pk/,,2026-11-13T04:56:53+00:00
+registry.listing_url,pakp_acts,https://www.pakp.gov.pk/all-acts/,200,https://www.pakp.gov.pk/all-acts/,,2026-11-13T04:56:54+00:00
+registry.new_items_url,pakp_acts,https://www.pakp.gov.pk/act/,200,https://www.pakp.gov.pk/act/,,2026-11-13T04:55:22+00:00
+registry.home_url,pab_acts,https://pabalochistan.gov.pk/,200,https://pabalochistan.gov.pk/,,2026-11-13T04:56:55+00:00
+registry.listing_url,pab_acts,https://pabalochistan.gov.pk/acts,200,https://pabalochistan.gov.pk/acts,,2026-11-13T04:55:24+00:00
+registry.new_items_url,pab_acts,https://pabalochistan.gov.pk/acts,200,https://pabalochistan.gov.pk/acts,,2026-11-13T04:55:24+00:00
+registry.home_url,scp_judgments,https://scp.gov.pk/,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:56:56+00:00
+registry.listing_url,scp_judgments,https://scp.gov.pk/LatestJudgments.aspx,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:54:24+00:00
+registry.new_items_url,scp_judgments,https://scp.gov.pk/LatestJudgments.aspx,,,not fetched: robots/AI-crawl restrictions,2026-11-13T04:54:24+00:00
+registry.home_url,fsc_judgments,https://www.federalshariatcourt.gov.pk/,200,https://www.federalshariatcourt.gov.pk/,,2026-11-13T04:56:56+00:00
+registry.listing_url,fsc_judgments,https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php,200,https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php,,2026-11-13T04:54:24+00:00
+registry.new_items_url,fsc_judgments,https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php,200,https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php,,2026-11-13T04:54:24+00:00
+registry.home_url,ihc_judgments,https://www.ihc.gov.pk/,,,RemoteProtocolError: Server disconnected without sending a response.,2026-11-13T04:56:56+00:00
+registry.listing_url,ihc_judgments,https://mis.ihc.gov.pk/frmJgmnt,200,https://mis.ihc.gov.pk/frmJgmnt,,2026-11-13T04:54:26+00:00
+registry.new_items_url,ihc_judgments,https://mis.ihc.gov.pk/ihc.asmx/GetLatestJgmntsNew,,,TooManyRedirects: Exceeded maximum allowed redirects.,2026-11-13T04:56:56+00:00
+registry.home_url,lhc_judgments,https://lhc.gov.pk/,200,https://lhc.gov.pk/,,2026-11-13T04:56:56+00:00
+registry.new_items_url,lhc_judgments,https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting,200,https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting,,2026-11-13T04:54:27+00:00
+registry.home_url,shc_judgments,https://sindhhighcourt.gov.pk/,200,https://sindhhighcourt.gov.pk/,,2026-11-13T04:56:58+00:00
+registry.listing_url,shc_judgments,https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search,200,https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search,,2026-11-13T04:54:30+00:00
+registry.new_items_url,shc_judgments,https://caselaw.shc.gov.pk/caselaw/public/rpt-afr,200,https://caselaw.shc.gov.pk/caselaw/public/rpt-afr,,2026-11-13T04:54:33+00:00
+registry.home_url,phc_judgments,https://peshawarhighcourt.gov.pk/,200,https://peshawarhighcourt.gov.pk/,,2026-11-13T04:56:58+00:00
+registry.listing_url,phc_judgments,https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php,200,https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php,,2026-11-13T04:54:36+00:00
+registry.new_items_url,phc_judgments,https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php,200,https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php,,2026-11-13T04:54:36+00:00
+registry.home_url,bhc_judgments,https://bhc.gov.pk/,200,https://bhc.gov.pk/,,2026-11-13T04:56:59+00:00
+registry.listing_url,bhc_judgments,https://bhc.gov.pk/resources/judgments,200,https://bhc.gov.pk/resources/judgments,,2026-11-13T04:54:38+00:00
+registry.new_items_url,bhc_judgments,https://bhc.gov.pk/resources/judgments,200,https://bhc.gov.pk/resources/judgments,,2026-11-13T04:54:38+00:00
+registry.home_url,gbcc_judgments,https://gbcc.gov.pk/,200,https://gbcc.gov.pk/index.aspx,,2026-11-13T04:57:00+00:00
+registry.listing_url,gbcc_judgments,https://gbcc.gov.pk/ReportedJudgments.aspx,200,https://gbcc.gov.pk/ReportedJudgments.aspx,,2026-11-13T04:54:40+00:00
+registry.new_items_url,gbcc_judgments,https://gbcc.gov.pk/ReportedJudgments.aspx,200,https://gbcc.gov.pk/ReportedJudgments.aspx,,2026-11-13T04:54:40+00:00
+registry.home_url,sacgb_judgments,https://sacgb.gov.pk/,200,https://sacgb.gov.pk/,,2026-11-13T04:57:01+00:00
+registry.listing_url,sacgb_judgments,https://sacgb.gov.pk/Judgments.html,200,https://sacgb.gov.pk/Judgments.html,,2026-11-13T04:54:41+00:00
+registry.new_items_url,sacgb_judgments,https://sacgb.gov.pk/Judgments.html,200,https://sacgb.gov.pk/Judgments.html,,2026-11-13T04:54:41+00:00
+registry.home_url,ajkhc_judgments,https://ajkhighcourt.gok.pk/,200,https://ajkhighcourt.gok.pk/,,2026-11-13T04:57:01+00:00
+registry.listing_url,ajkhc_judgments,https://ajkhighcourt.gok.pk/important-judgments,200,https://ajkhighcourt.gok.pk/important-judgments,,2026-11-13T04:54:42+00:00
+registry.new_items_url,ajkhc_judgments,https://ajkhighcourt.gok.pk/important-judgments,200,https://ajkhighcourt.gok.pk/important-judgments,,2026-11-13T04:54:42+00:00
+registry.home_url,ajksc_judgments,https://ajksupremecourt.gok.pk/,200,https://ajksupremecourt.gok.pk/,,2026-11-13T04:57:01+00:00
+registry.listing_url,ajksc_judgments,https://ajksupremecourt.gok.pk/wp-json/wp/v2/posts?categories=18&per_page=100,200,https://ajksupremecourt.gok.pk/wp-json/wp/v2/posts?categories=18&per_page=100,,2026-11-13T04:54:43+00:00
+registry.new_items_url,ajksc_judgments,https://ajksupremecourt.gok.pk/judgements-orders/,200,https://ajksupremecourt.gok.pk/judgements-orders/,,2026-11-13T04:54:42+00:00
+registry.home_url,ccp_orders,https://cc.gov.pk/,200,https://cc.gov.pk/,,2026-11-13T04:57:02+00:00
+registry.listing_url,ccp_orders,https://cc.gov.pk/home/orders,200,https://cc.gov.pk/home/orders,,2026-11-13T04:54:46+00:00
+registry.new_items_url,ccp_orders,https://cc.gov.pk/home/orders,200,https://cc.gov.pk/home/orders,,2026-11-13T04:54:46+00:00
+registry.home_url,cat_orders,https://cc.gov.pk/,200,https://cc.gov.pk/,,2026-11-13T04:57:02+00:00
+registry.listing_url,cat_orders,https://cc.gov.pk/home/decidedcatcases,200,https://cc.gov.pk/home/decidedcatcases,,2026-11-13T04:54:46+00:00
+registry.new_items_url,cat_orders,https://cc.gov.pk/home/decidedcatcases,200,https://cc.gov.pk/home/decidedcatcases,,2026-11-13T04:54:46+00:00
+registry.home_url,fto_decisions,https://www.fto.gov.pk/,,,"ConnectError: (""The certificate's CN name does not match the passed value."",)",2026-11-13T04:57:03+00:00
+registry.listing_url,fto_decisions,https://www.fto.gov.pk/decisions.aspx,,,"ConnectError: (""The certificate's CN name does not match the passed value."",)",2026-11-13T04:54:48+00:00
+registry.new_items_url,fto_decisions,http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions,200,http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions,,2026-11-13T04:54:48+00:00
+registry.home_url,mohtasib_findings,https://mohtasib.gov.pk/,200,https://mohtasib.gov.pk/,,2026-11-13T04:57:03+00:00
+registry.listing_url,mohtasib_findings,https://mohtasib.gov.pk/Publications,200,https://mohtasib.gov.pk/Publications,,2026-11-13T04:55:10+00:00
+registry.new_items_url,mohtasib_findings,https://mohtasib.gov.pk/Publications,200,https://mohtasib.gov.pk/Publications,,2026-11-13T04:55:10+00:00
+registry.home_url,fst_judgments,https://www.fst.gov.pk/,200,https://www.fst.gov.pk/cgi-sys/suspendedpage.cgi,,2026-11-13T04:55:10+00:00
+registry.listing_url,fst_judgments,https://www.fst.gov.pk/,200,https://www.fst.gov.pk/cgi-sys/suspendedpage.cgi,,2026-11-13T04:55:10+00:00
+registry.home_url,atir_judgments,https://atir.gov.pk/,200,https://atir.gov.pk/,,2026-11-13T04:57:03+00:00
+registry.listing_url,atir_judgments,https://atir.gov.pk/Judgements,200,https://atir.gov.pk/Judgements/,,2026-11-13T04:55:12+00:00

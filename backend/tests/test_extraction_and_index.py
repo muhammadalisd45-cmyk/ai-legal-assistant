@@ -129,3 +129,21 @@ def test_bm25_ranks_relevant_chunk_first():
     index, _ = LocalIndex.load(settings.chunks_path, settings.embeddings_path, settings.embeddings_meta_path)
     scores = index.bm25(tokenize("bail non-bailable offence"))
     assert index.chunks[int(np.argmax(scores))]["section_or_article"] == "Section 497"
+
+
+def test_narrow_wrapped_body_page_after_contents_is_not_contents():
+    # Sindh Code PDFs wrap body text at ~60 characters; a body page following the TOC must stay indexable.
+    body = "\n".join([
+        "SINDH ACT NO.XV OF 2014", "THE SINDH CHILD MARRIAGES RESTRAINT ACT, 2013",
+        "An Act to restrain the solemnization of child marriages.", "It is hereby enacted as follows:-",
+        "1. (1) This Act may be called the Sindh Child Marriages", "Restraint Act, 2013.",
+        "(2) It shall come into force at once.", "2. In this Act, unless there is anything repugnant in the",
+        "subject or context -", "(a) \"child\" means a person male or female who is",
+        "under eighteen years of age;", "3. Whoever being a male above eighteen years of age",
+        "contracts a child marriage shall be punishable with", "rigorous imprisonment which may extend to three years",
+    ])
+    assert not looks_like_contents(body, previous_was_contents=True)
+    toc_tail = "\n".join(["239B. Reference to authorities 500", "240. Removal of difficulties 501",
+                          "241. Validation 501", "FIRST SCHEDULE", "PART I", "RATES OF TAX", "Division I",
+                          "Rates of Tax for Individuals 505", "Division II", "Rates of Tax for Companies"])
+    assert looks_like_contents(toc_tail, previous_was_contents=True)

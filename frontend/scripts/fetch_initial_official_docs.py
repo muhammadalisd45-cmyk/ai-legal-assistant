@@ -22,6 +22,12 @@ def destination(row: dict[str, str]) -> Path:
         folder = CORPUS / "constitution"
     elif document_id.startswith("SD-") or "sindh" in jurisdiction and not court:
         folder = CORPUS / "sindh_laws"
+    elif document_id.startswith("PB-") or "punjab" in jurisdiction and not court:
+        folder = CORPUS / "punjab_laws"
+    elif document_id.startswith("KP-") or "khyber" in jurisdiction and not court:
+        folder = CORPUS / "kp_laws"
+    elif document_id.startswith("BL-") or "balochistan" in jurisdiction and not court:
+        folder = CORPUS / "balochistan_laws"
     elif "supreme court" in court:
         folder = CORPUS / "supreme_court"
     elif "sindh high court" in court:

@@ -46,17 +46,17 @@
     "jurisdiction": "Federal",
     "authority": "Parliament of Pakistan",
     "source_name": "Pakistan Code",
-    "source_url": "https://pakistancode.gov.pk/english/",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator8332a6df32386960ac7d81a5cf7aade2.pdf",
     "priority": "High"
   },
   {
     "document_id": "PK-006",
     "title": "Qanun-e-Shahadat Order, 1984",
-    "document_type": "Federal Law",
+    "document_type": "Federal Order",
     "jurisdiction": "Federal",
     "authority": "Government of Pakistan",
     "source_name": "Pakistan Code",
-    "source_url": "https://pakistancode.gov.pk/english/",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator01031a2c8cddc523d08a0df0ec37d7d0.pdf",
     "priority": "High"
   },
   {
@@ -86,7 +86,7 @@
     "jurisdiction": "Federal",
     "authority": "Parliament of Pakistan",
     "source_name": "Pakistan Code",
-    "source_url": "https://pakistancode.gov.pk/english/",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator77923ce792b475e339e1f46ba0442da3.pdf",
     "priority": "High"
   },
   {
@@ -106,7 +106,7 @@
     "jurisdiction": "Federal",
     "authority": "Parliament of Pakistan",
     "source_name": "Pakistan Code",
-    "source_url": "https://pakistancode.gov.pk/english/",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administratorbbc0b5b0d78c35e99e3b94f6b77b69db.pdf",
     "priority": "Medium"
   },
   {
@@ -116,7 +116,7 @@
     "jurisdiction": "Federal",
     "authority": "Parliament of Pakistan",
     "source_name": "Pakistan Code",
-    "source_url": "https://pakistancode.gov.pk/english/",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator89de324eeaa53c96ff701820d2e007e4.pdf",
     "priority": "High"
   },
   {
@@ -126,7 +126,7 @@
     "jurisdiction": "Federal",
     "authority": "Parliament of Pakistan",
     "source_name": "Pakistan Code",
-    "source_url": "https://pakistancode.gov.pk/english/",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator03eadfb5474bfa7c9e45ab4558d5a926.pdf",
     "priority": "Medium"
   },
   {
@@ -136,7 +136,7 @@
     "jurisdiction": "Federal",
     "authority": "Parliament of Pakistan",
     "source_name": "Pakistan Code",
-    "source_url": "https://pakistancode.gov.pk/english/",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator0a802e3468735238090ceede22ccfd11.pdf",
     "priority": "Medium"
   },
   {
@@ -200,13 +200,233 @@
     "priority": "High"
   },
   {
+    "document_id": "PK-021",
+    "title": "Prevention of Electronic Crimes Act, 2016 (PECA)",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "PK-022",
+    "title": "Islamabad Consumers Protection Act, 1995",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administratorbc4daf1cd281f7808ceb417c316f18ea.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "PK-023",
+    "title": "Muslim Family Laws Ordinance, 1961",
+    "document_type": "Federal Ordinance",
+    "jurisdiction": "Federal",
+    "authority": "Government of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administratoreecaf3b490e2d43d2e3b50c0c068b5d7.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "PK-024",
+    "title": "Family Courts Act, 1964",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administratorf08eaec19066a65a1b82cb4ad49feb4d.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "PK-025",
+    "title": "Dowry and Bridal Gifts (Restriction) Act, 1976",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator359d2ddc2ad3cb8f4a5bfa3c263e5ba1.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "PK-026",
+    "title": "Child Marriage Restraint Act, 1929",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator0cb12b901d4304d7e5463da076d88639.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "PK-027",
+    "title": "Factories Act, 1934",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administratorf38efe0a6e760531f05b4a29ba4ba215.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PK-028",
+    "title": "Industrial Relations Act, 2012",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator964ce81cc171ed5dcd0960630e922422.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PK-029",
+    "title": "Minimum Wages Ordinance, 1961",
+    "document_type": "Federal Ordinance",
+    "jurisdiction": "Federal",
+    "authority": "Government of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator26a975453aac76e06711066e6c07e718.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PK-030",
+    "title": "Employees' Old-Age Benefits Act, 1976",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administratorf3be1ec8d21dfebb9c5d1733f43cffe6.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PK-031",
+    "title": "Workers' Welfare Fund Ordinance, 1971",
+    "document_type": "Federal Ordinance",
+    "jurisdiction": "Federal",
+    "authority": "Government of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator8b34b071116ce718a2770908b43282a9.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PK-032",
+    "title": "Customs Act, 1969",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator6d344e569c576550c200d66afb7b28f6.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PK-033",
+    "title": "Sales Tax Act, 1990",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administratorf6d20932403661e059756ab223d8542b.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PK-034",
+    "title": "Income Tax Ordinance, 2001",
+    "document_type": "Federal Ordinance",
+    "jurisdiction": "Federal",
+    "authority": "Government of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administratorc09ecd376211abe32a7e44510f3fd719.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PK-035",
+    "title": "Federal Excise Act, 2005",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator06f0200ef997b50983df81ea052e8011.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PK-036",
+    "title": "National Accountability Ordinance, 1999",
+    "document_type": "Federal Ordinance",
+    "jurisdiction": "Federal",
+    "authority": "Government of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator889746414e53d53e4398264cda458947.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PK-037",
+    "title": "Illegal Dispossession Act, 2005",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator8af69a2733e5a880a7795e33df01e2e8.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "PK-038",
+    "title": "Right of Access to Information Act, 2017",
+    "document_type": "Federal Act",
+    "jurisdiction": "Federal",
+    "authority": "Parliament of Pakistan",
+    "source_name": "Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk/pdffiles/administrator3599d65bc5ecb2dd1915d04c7db91e8f.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PB-001",
+    "title": "Punjab Consumer Protection Act, 2005",
+    "document_type": "Punjab Law",
+    "jurisdiction": "Punjab",
+    "authority": "Provincial Assembly of the Punjab",
+    "source_name": "Punjab Code",
+    "source_url": "https://punjabcode.punjab.gov.pk/uploads/articles/the_punjab_consumer_protection_act_2005-pdf.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "PB-002",
+    "title": "Punjab Land Revenue Act, 1967",
+    "document_type": "Punjab Law",
+    "jurisdiction": "Punjab",
+    "authority": "Provincial Assembly of the Punjab",
+    "source_name": "Punjab Code",
+    "source_url": "https://punjabcode.punjab.gov.pk/uploads/articles/punjab-land-revenue-act-1967-pdf.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "PB-003",
+    "title": "Punjab Local Government Act, 2022",
+    "document_type": "Punjab Law",
+    "jurisdiction": "Punjab",
+    "authority": "Provincial Assembly of the Punjab",
+    "source_name": "Punjab Code",
+    "source_url": "https://punjabcode.punjab.gov.pk/uploads/articles/punjab-local-government-act-2022-xxxiii-of-2022-docx1-pdf.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "PB-004",
+    "title": "Punjab Industrial Relations Act, 2010",
+    "document_type": "Punjab Law",
+    "jurisdiction": "Punjab",
+    "authority": "Provincial Assembly of the Punjab",
+    "source_name": "Punjab Code",
+    "source_url": "https://punjabcode.punjab.gov.pk/uploads/articles/THE_PUNJAB_INDUSTRIAL_RELATIONS_ACT_2010.doc.pdf",
+    "priority": "Medium"
+  },
+  {
     "document_id": "SD-001",
     "title": "Sindh Civil Courts Ordinance, 1962",
     "document_type": "Sindh Law",
     "jurisdiction": "Sindh",
     "authority": "Government of Sindh",
-    "source_name": "Sindh Code",
-    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "source_name": "Sindh Judicial Academy",
+    "source_url": "https://sja.gos.pk/assets/Updated_Laws/Sindh%20Civil%20Court%20Ordinance%2C1962%20Final.pdf",
     "priority": "High"
   },
   {
@@ -216,7 +436,7 @@
     "jurisdiction": "Sindh",
     "authority": "Government of Sindh",
     "source_name": "Sindh Code",
-    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000156.pdf",
     "priority": "High"
   },
   {
@@ -226,7 +446,7 @@
     "jurisdiction": "Sindh",
     "authority": "Government of Sindh",
     "source_name": "Sindh Code",
-    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000484.pdf",
     "priority": "High"
   },
   {
@@ -236,7 +456,7 @@
     "jurisdiction": "Sindh",
     "authority": "Government of Sindh",
     "source_name": "Sindh Code",
-    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-26-000094.pdf",
     "priority": "Medium"
   },
   {
@@ -246,7 +466,7 @@
     "jurisdiction": "Sindh",
     "authority": "Government of Sindh",
     "source_name": "Sindh Code",
-    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000076.pdf",
     "priority": "Medium"
   },
   {
@@ -256,7 +476,7 @@
     "jurisdiction": "Sindh",
     "authority": "Government of Sindh",
     "source_name": "Sindh Code",
-    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000096.pdf",
     "priority": "Medium"
   },
   {
@@ -266,7 +486,7 @@
     "jurisdiction": "Sindh",
     "authority": "Government of Sindh",
     "source_name": "Sindh Code",
-    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000103.pdf",
     "priority": "Medium"
   },
   {
@@ -276,7 +496,7 @@
     "jurisdiction": "Sindh",
     "authority": "Government of Sindh",
     "source_name": "Sindh Code",
-    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000141.pdf",
     "priority": "Medium"
   },
   {
@@ -286,7 +506,7 @@
     "jurisdiction": "Sindh",
     "authority": "Government of Sindh",
     "source_name": "Sindh Code",
-    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000083.pdf",
     "priority": "Medium"
   },
   {
@@ -296,8 +516,68 @@
     "jurisdiction": "Sindh",
     "authority": "Government of Sindh",
     "source_name": "Sindh Code",
-    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-20-000002.pdf",
     "priority": "Medium"
+  },
+  {
+    "document_id": "SD-011",
+    "title": "Sindh Land Revenue Act, 1967",
+    "document_type": "Sindh Law",
+    "jurisdiction": "Sindh",
+    "authority": "Provincial Assembly of Sindh",
+    "source_name": "Sindh Code",
+    "source_url": "https://www.sindhlaws.gov.pk/SindhIndex.aspx",
+    "priority": "High"
+  },
+  {
+    "document_id": "KP-001",
+    "title": "Khyber Pakhtunkhwa Consumers Protection Act, 1997",
+    "document_type": "KP Law",
+    "jurisdiction": "Khyber Pakhtunkhwa",
+    "authority": "Provincial Assembly of Khyber Pakhtunkhwa",
+    "source_name": "KP Code",
+    "source_url": "https://kpcode.kp.gov.pk/uploads/1997_06_THE_KHYBER_PAKHTUNKHWA_CONSUMERS_PROTECTION_ACT_1997_.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "KP-002",
+    "title": "Khyber Pakhtunkhwa Local Government Act, 2013",
+    "document_type": "KP Law",
+    "jurisdiction": "Khyber Pakhtunkhwa",
+    "authority": "Provincial Assembly of Khyber Pakhtunkhwa",
+    "source_name": "KP Code",
+    "source_url": "https://kpcode.kp.gov.pk/uploads/THE_KHYBER_PAKHTUNKHWA_LOCAL_GOVERNMENT_ACT_2013.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "KP-003",
+    "title": "West Pakistan Land Revenue Act, 1967 (Khyber Pakhtunkhwa)",
+    "document_type": "KP Law",
+    "jurisdiction": "Khyber Pakhtunkhwa",
+    "authority": "Provincial Assembly of Khyber Pakhtunkhwa",
+    "source_name": "KP Code",
+    "source_url": "https://kpcode.kp.gov.pk/uploads/1967_17_THE_WEST_PAKISTAN_LAND_REVENUE_ACT_1967.pdf",
+    "priority": "High"
+  },
+  {
+    "document_id": "BL-001",
+    "title": "Balochistan Local Government Act, 2010",
+    "document_type": "Balochistan Law",
+    "jurisdiction": "Balochistan",
+    "authority": "Provincial Assembly of Balochistan",
+    "source_name": "Balochistan Code",
+    "source_url": "https://balochistancode.gob.pk/lawdir/69b034f7-9fe6-45d3-a6cb-1fff3c94f9b6.pdf",
+    "priority": "Medium"
+  },
+  {
+    "document_id": "BL-002",
+    "title": "Balochistan Land Revenue Act, 1967",
+    "document_type": "Balochistan Law",
+    "jurisdiction": "Balochistan",
+    "authority": "Provincial Assembly of Balochistan",
+    "source_name": "Balochistan Code",
+    "source_url": "https://balochistancode.gob.pk/lawdir/3853b24d-debb-49db-90e7-6d35eea75244.pdf",
+    "priority": "High"
   },
   {
     "document_id": "SHC-001",

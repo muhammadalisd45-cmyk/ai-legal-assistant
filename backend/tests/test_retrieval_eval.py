@@ -34,7 +34,12 @@ def real_embedder(real_index):
 
 def test_real_index_integrity(real_index):
     assert real_index.size > 1000
-    assert all(c["source_url"].startswith("https://pakistancode.gov.pk/") for c in real_index.chunks)
+    from app.legal.manifest import OFFICIAL_HOSTS
+    from urllib.parse import urlparse
+    assert all(c["source_url"].startswith("https://") and urlparse(c["source_url"]).hostname in OFFICIAL_HOSTS
+               for c in real_index.chunks)
+    jurisdictions = {c["jurisdiction"] for c in real_index.chunks}
+    assert {"Federal", "Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan"} <= jurisdictions
     assert not any(c["document_id"].startswith("SHC-") for c in real_index.chunks), "placeholders must never be indexed"
     assert len({c["chunk_id"] for c in real_index.chunks}) == real_index.size
     assert all(c["page_start"] >= 1 and c["page_end"] >= c["page_start"] for c in real_index.chunks)
@@ -43,10 +48,10 @@ def test_real_index_integrity(real_index):
 
 
 @pytest.mark.parametrize("query,expect_strong", [
-    ("What is the income tax rate on crypto profits?", False),
+    ("What is the income tax rate on crypto profits?", True),   # Income Tax Ordinance, 2001 is now indexed
     ("car accident insurance claim", False),
     ("how to apply for a passport", False),
-    ("how to get divorce khula", False),          # family law not in the verified corpus yet
+    ("how to get divorce khula", True),           # MFLO 1961 + Family Courts Act 1964 are now indexed
     ("What are my rights if I am arrested?", True),
     ("chacha ne zameen par qabza kar liya", True),
     ("ضمانت کب ملتی ہے", True),

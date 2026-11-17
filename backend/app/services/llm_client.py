@@ -89,12 +89,19 @@ class LLMClient:
         user_prompt: str,
         json_schema: dict[str, Any],
         schema_name: str = "legal_triage_result",
+        models: list[str] | None = None,
+        timeout: float | None = None,
     ) -> dict[str, Any]:
+        """`models` overrides the configured model order (e.g. to retry on the next model after bad output);
+        `timeout` caps this call when the caller has less time left than `llm_timeout_seconds`."""
         if not settings.llm_configured:
             raise LLMError("not_configured", "LLM is not configured")
 
         # Cost guard: never send a request to a paid model.
         paid = settings.llm_paid_models()
+        order = [m for m in (models or settings.llm_models) if m]
+        if settings.llm_free_only and models:
+            paid = paid + [m for m in order if not is_free_model(m) and m not in paid]
         if paid:
             logger.error("llm_paid_model_blocked", extra={"models": paid})
             raise LLMError("paid_model_blocked", f"Paid models are not allowed: {', '.join(paid)}")
@@ -102,7 +109,7 @@ class LLMClient:
         url = settings.llm_base_url.rstrip("/") + "/chat/completions"
         headers = {"Authorization": f"Bearer {settings.llm_api_key}", "Content-Type": "application/json"}
         payload: dict[str, Any] = {
-            "model": settings.llm_model,
+            "model": order[0],
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
@@ -112,10 +119,10 @@ class LLMClient:
         if settings.llm_is_openrouter:
             headers["HTTP-Referer"] = "https://pakistan-justice-navigator.local"
             headers["X-Title"] = "Pakistan Justice Navigator"
-            models = settings.llm_models[:OPENROUTER_MAX_MODELS]
-            if len(models) > 1:
+            routed = order[:OPENROUTER_MAX_MODELS]
+            if len(routed) > 1:
                 # OpenRouter tries these in order when one is rate-limited or down.
-                payload["models"] = models
+                payload["models"] = routed
             if settings.llm_free_only:
                 # Server-side cap: OpenRouter refuses any provider that would charge for this request.
                 payload["provider"] = {"max_price": {"prompt": 0, "completion": 0}}
@@ -133,7 +140,7 @@ class LLMClient:
                 + json.dumps(json_schema, ensure_ascii=False)
             )
 
-        timeout = settings.llm_timeout_seconds
+        timeout = min(settings.llm_timeout_seconds, timeout) if timeout else settings.llm_timeout_seconds
         attempts = settings.llm_max_retries + 1
         last: LLMError | None = None
         for attempt in range(attempts):
@@ -141,6 +148,14 @@ class LLMClient:
                 # Hard wall-clock cap in addition to httpx's per-phase timeouts.
                 return await asyncio.wait_for(self._post(url, headers, payload, timeout), timeout=timeout + 2)
             except LLMError as exc:
+                if exc.reason == "reasoning_required":
+                    # openrouter/free (or a fallback) picked a model that cannot turn reasoning off; it answered
+                    # instantly with a 400, so resend once with the provider's default.
+                    payload.pop("reasoning", None)
+                    try:
+                        return await asyncio.wait_for(self._post(url, headers, payload, timeout), timeout=timeout + 2)
+                    except asyncio.TimeoutError as timeout_exc:
+                        raise LLMError("timeout", "LLM request timed out") from timeout_exc
                 last = exc
                 if exc.reason not in {"rate_limited", "upstream_5xx", "transport"}:
                     raise
@@ -172,6 +187,8 @@ class LLMClient:
             except (ValueError, AttributeError):
                 detail = ""
             logger.warning("llm_rejected", extra={"status": response.status_code, "detail": detail})
+            if "reasoning" in payload and "reasoning is mandatory" in detail.lower():
+                raise LLMError("reasoning_required", "model requires reasoning to stay enabled")
             raise LLMError("upstream_4xx", f"LLM provider rejected the request ({response.status_code})")
         try:
             data = response.json()
@@ -192,7 +209,7 @@ class LLMClient:
             raise LLMError("invalid_response", "LLM response missing choices") from exc
         served_by = str(data.get("model") or "")
         if (settings.llm_free_only and served_by and settings.llm_is_openrouter
-                and not is_free_model(served_by) and served_by not in settings.llm_models):
+                and not is_free_model(served_by) and served_by not in (payload.get("models") or [payload["model"]])):
             # The "openrouter/free" router reports the concrete free model it picked; anything else is unexpected.
             logger.error("llm_unexpected_model", extra={"model": served_by})
             raise LLMError("paid_model_blocked", f"Response came from a non-free model: {served_by}")

@@ -12,9 +12,10 @@ python -m venv .venv
 pip install -r requirements.txt
 cp .env.example .env               # works as-is for local development
 
-# Corpus (one-time, ~10–15 min): download official PDFs → extract → chunk → embed
-python scripts/acquire_corpus.py   # 13 Pakistan Code PDFs, SHA-256 provenance
-python scripts/build_index.py      # 3,388 chunks + 384-d embeddings
+# Corpus (one-time, ~30–40 min): download official PDFs → extract → chunk → embed
+python scripts/import_catalog.py   # optional: re-resolve team catalogs (frontend/data/catalog) to official PDFs
+python scripts/acquire_corpus.py   # 56 official PDFs (Federal, Punjab, Sindh, KP, Balochistan), SHA-256 provenance
+python scripts/build_index.py      # ~9,800 chunks + 384-d embeddings
 
 uvicorn app.main:app --reload --port 8000
 python scripts/smoke_test.py       # 17 live end-to-end checks

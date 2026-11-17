@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { deleteDraft, listDrafts, saveDraft, type SavedDraft } from "@/lib/draft-store";
+import { deleteDraft, listDrafts, loadDrafts, saveDraft, type SavedDraft } from "@/lib/draft-store";
 import { DRAFT_TEMPLATES } from "@/lib/drafting-templates";
 import { Notice, PageHeader, formatDate } from "./app-ui";
 import { Icon } from "./icons";
@@ -22,7 +22,10 @@ export function DraftingStudio() {
 
   const template = useMemo(() => DRAFT_TEMPLATES.find((item) => item.id === templateId) ?? DRAFT_TEMPLATES[0], [templateId]);
 
-  useEffect(() => setSaved(listDrafts()), []);
+  useEffect(() => {
+    setSaved(listDrafts());
+    loadDrafts().then(setSaved).catch(() => undefined);
+  }, []);
 
   function choose(id: string) {
     setTemplateId(id);
@@ -40,9 +43,10 @@ export function DraftingStudio() {
     setMessage("");
   }
 
-  function persist() {
-    setSaved(saveDraft({ id: draftId, templateId, title: template.name, body, reviewed }));
-    setMessage("Draft saved in this browser.");
+  async function persist() {
+    const { drafts, savedTo } = await saveDraft({ id: draftId, templateId, title: template.name, body, reviewed });
+    setSaved(drafts);
+    setMessage(savedTo === "account" ? "Draft saved to your account." : "Draft saved in this browser only. Sign in to keep it in your account.");
   }
 
   async function copy() {
@@ -135,7 +139,7 @@ export function DraftingStudio() {
         <aside className="app-card">
           <div className="app-card-head"><h2>Saved drafts</h2></div>
           {saved.length === 0 ? (
-            <p className="app-fine">Nothing saved yet. Drafts you save stay in this browser only.</p>
+            <p className="app-fine">Nothing saved yet. Drafts are saved to your account when you are signed in.</p>
           ) : (
             <ul className="app-list">
               {saved.map((draft) => (
@@ -144,7 +148,7 @@ export function DraftingStudio() {
                     <span className="app-list-icon"><Icon name="document" size={16} /></span>
                     <div><strong>{draft.title}</strong><small>{draft.id} · {formatDate(draft.updatedAt)}{draft.reviewed ? " · reviewed" : ""}</small></div>
                   </button>
-                  <button type="button" className="app-icon-btn" aria-label={`Delete draft ${draft.id}`} onClick={() => setSaved(deleteDraft(draft.id))}><Icon name="close" size={14} /></button>
+                  <button type="button" className="app-icon-btn" aria-label={`Delete draft ${draft.id}`} onClick={() => void deleteDraft(draft.id).then(setSaved)}><Icon name="close" size={14} /></button>
                 </li>
               ))}
             </ul>

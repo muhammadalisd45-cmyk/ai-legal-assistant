@@ -1,0 +1,242 @@
+{
+  "baselines": {
+    "sja_updated_laws": "2026-11-13",
+    "sindh_code": "2026-11-13",
+    "kp_code": "2026-11-13",
+    "pakistan_code": "2026-11-13",
+    "balochistan_code": "2026-11-13",
+    "punjab_code": "2026-11-13"
+  },
+  "runs": [
+    {
+      "run_at": "2026-11-13T05:12:56.368334+00:00",
+      "run_date": "2026-11-13",
+      "resolve": "auto",
+      "sources": {
+        "pakistan_code": {
+          "listed": 1037,
+          "previous": 0,
+          "baseline": true,
+          "partial": false,
+          "pdf_resolved": 1037,
+          "pdf_failed": 0,
+          "with_pdf": 1037,
+          "changes": 0
+        },
+        "punjab_code": {
+          "listed": 746,
+          "previous": 0,
+          "baseline": true,
+          "partial": false,
+          "pdf_resolved": 746,
+          "pdf_failed": 0,
+          "with_pdf": 746,
+          "changes": 0
+        },
+        "sindh_code": {
+          "listed": 1383,
+          "previous": 0,
+          "baseline": true,
+          "partial": false,
+          "pdf_resolved": 0,
+          "pdf_failed": 0,
+          "with_pdf": 1383,
+          "changes": 0
+        },
+        "sja_updated_laws": {
+          "listed": 41,
+          "previous": 0,
+          "baseline": true,
+          "partial": false,
+          "pdf_resolved": 0,
+          "pdf_failed": 0,
+          "with_pdf": 41,
+          "changes": 0
+        },
+        "kp_code": {
+          "listed": 575,
+          "previous": 0,
+          "baseline": true,
+          "partial": false,
+          "pdf_resolved": 572,
+          "pdf_failed": 0,
+          "with_pdf": 572,
+          "changes": 0
+        },
+        "balochistan_code": {
+          "listed": 1790,
+          "previous": 0,
+          "baseline": true,
+          "partial": false,
+          "pdf_resolved": 1790,
+          "pdf_failed": 0,
+          "with_pdf": 1790,
+          "changes": 0
+        }
+      },
+      "changes": 0
+    },
+    {
+      "run_at": "2026-11-13T05:21:07.661592+00:00",
+      "run_date": "2026-11-13",
+      "resolve": "auto",
+      "sources": {
+        "pakistan_code": {
+          "listed": 1037,
+          "previous": 1037,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 38,
+          "pdf_failed": 0,
+          "with_pdf": 1037,
+          "changes": 0
+        },
+        "punjab_code": {
+          "listed": 746,
+          "previous": 746,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 746,
+          "pdf_failed": 0,
+          "with_pdf": 746,
+          "changes": 1492
+        },
+        "sindh_code": {
+          "listed": 1383,
+          "previous": 1383,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 0,
+          "pdf_failed": 0,
+          "with_pdf": 1383,
+          "changes": 0
+        },
+        "sja_updated_laws": {
+          "listed": 41,
+          "previous": 41,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 0,
+          "pdf_failed": 0,
+          "with_pdf": 41,
+          "changes": 0
+        },
+        "kp_code": {
+          "listed": 575,
+          "previous": 575,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 3,
+          "pdf_failed": 0,
+          "with_pdf": 572,
+          "changes": 0
+        },
+        "balochistan_code": {
+          "listed": 1791,
+          "previous": 1790,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 6,
+          "pdf_failed": 0,
+          "with_pdf": 1791,
+          "changes": 1
+        }
+      },
+      "changes": 1493,
+      "note": "invalidated for punjab_code: Punjab Code article URLs change on every visit, so all 746 laws looked new; keys switched to title + Act No. + date, Punjab re-baselined, 694 wrongly added rows/PDFs removed"
+    },
+    {
+      "run_at": "2026-11-13T09:09:24.160464+00:00",
+      "run_date": "2026-11-13",
+      "resolve": "auto",
+      "sources": {
+        "punjab_code": {
+          "listed": 746,
+          "previous": 0,
+          "baseline": true,
+          "partial": false,
+          "pdf_resolved": 746,
+          "pdf_failed": 0,
+          "with_pdf": 746,
+          "changes": 0,
+          "anomaly": ""
+        }
+      },
+      "changes": 0
+    },
+    {
+      "run_at": "2026-11-13T09:10:40.874787+00:00",
+      "run_date": "2026-11-13",
+      "resolve": "auto",
+      "sources": {
+        "pakistan_code": {
+          "listed": 1037,
+          "previous": 1037,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 38,
+          "pdf_failed": 0,
+          "with_pdf": 1037,
+          "changes": 0,
+          "anomaly": ""
+        },
+        "punjab_code": {
+          "listed": 746,
+          "previous": 746,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 4,
+          "pdf_failed": 0,
+          "with_pdf": 746,
+          "changes": 0,
+          "anomaly": ""
+        },
+        "sindh_code": {
+          "listed": 1383,
+          "previous": 1383,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 0,
+          "pdf_failed": 0,
+          "with_pdf": 1383,
+          "changes": 0,
+          "anomaly": ""
+        },
+        "sja_updated_laws": {
+          "listed": 41,
+          "previous": 41,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 0,
+          "pdf_failed": 0,
+          "with_pdf": 41,
+          "changes": 0,
+          "anomaly": ""
+        },
+        "kp_code": {
+          "listed": 575,
+          "previous": 575,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 3,
+          "pdf_failed": 0,
+          "with_pdf": 572,
+          "changes": 0,
+          "anomaly": ""
+        },
+        "balochistan_code": {
+          "listed": 1792,
+          "previous": 1791,
+          "baseline": false,
+          "partial": false,
+          "pdf_resolved": 6,
+          "pdf_failed": 0,
+          "with_pdf": 1792,
+          "changes": 1,
+          "anomaly": ""
+        }
+      },
+      "changes": 1
+    }
+  ]
+}

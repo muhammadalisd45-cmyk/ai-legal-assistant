@@ -27,7 +27,8 @@ const rows = lines.slice(1).map((line) => Object.fromEntries(header.map((key, in
 const required = ["document_id","title","document_type","jurisdiction","authority","bench","source_url","status","source_tier"];
 for (const key of required) if (!header.includes(key)) throw new Error(`Missing manifest column: ${key}`);
 const ids = new Set();
-const allowed = new Set(["pakistancode.gov.pk","www.pakistancode.gov.pk","sindhlaws.gov.pk","www.sindhlaws.gov.pk","caselaw.shc.gov.pk"]);
+const allowed = new Set(["pakistancode.gov.pk","www.pakistancode.gov.pk","sindhlaws.gov.pk","www.sindhlaws.gov.pk","caselaw.shc.gov.pk",
+  "punjabcode.punjab.gov.pk","kpcode.kp.gov.pk","balochistancode.gob.pk","sja.gos.pk"]);
 for (const row of rows) {
   if (ids.has(row.document_id)) throw new Error(`Duplicate document_id: ${row.document_id}`);
   ids.add(row.document_id);

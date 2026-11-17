@@ -14,3 +14,6 @@ frontend/pakistan_legal_corpus/**/*.pdf
 # Embeddings are reproducible: python backend/scripts/build_index.py
 frontend/data/rag_index/legal_chunk_embeddings.npy
 frontend/data/rag_index/legal_chunk_embeddings.meta.json
+
+# Local source-sync logs (backend/scripts/run_source_sync.ps1)
+backend/logs/

@@ -63,7 +63,11 @@ def looks_like_contents(text: str, previous_was_contents: bool = False) -> bool:
     if numbered / count >= 0.45 and avg_len < 75:
         return True
     # Weaker signal only for pages continuing a TOC run (schedule tables elsewhere also have short lines).
-    if previous_was_contents and numbered >= 3 and prose_ratio < 0.3:
+    # Numbered-line density is required too: some codes (e.g. Sindh Code PDFs) wrap body text at ~60 characters,
+    # which reads as "no prose" and would otherwise cascade the TOC flag over every page of a short Act.
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    page_refs = sum(1 for line in lines if re.search(r"\D\s\d{1,4}$", line)) / count  # "240. Removal of difficulties 501"
+    if previous_was_contents and numbered >= 3 and prose_ratio < 0.3 and (numbered / count >= 0.25 or page_refs >= 0.3 or avg_len < 30):
         return True
     return has_contents_heading and numbered / count >= 0.3
 

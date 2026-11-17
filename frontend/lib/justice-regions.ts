@@ -12,10 +12,10 @@ export type JusticeRegion = {
 
 // Reference facts only (names and seats of courts). Verify against official court websites before relying on them.
 export const JUSTICE_REGIONS: JusticeRegion[] = [
-  { id: "punjab", name: "Punjab", kind: "Province", capital: "Lahore", highCourt: "Lahore High Court" },
+  { id: "punjab", name: "Punjab", kind: "Province", capital: "Lahore", highCourt: "Lahore High Court", libraryJurisdiction: "Punjab" },
   { id: "sindh", name: "Sindh", kind: "Province", capital: "Karachi", highCourt: "High Court of Sindh", libraryJurisdiction: "Sindh" },
-  { id: "kp", name: "Khyber Pakhtunkhwa", kind: "Province", capital: "Peshawar", highCourt: "Peshawar High Court" },
-  { id: "balochistan", name: "Balochistan", kind: "Province", capital: "Quetta", highCourt: "High Court of Balochistan" },
+  { id: "kp", name: "Khyber Pakhtunkhwa", kind: "Province", capital: "Peshawar", highCourt: "Peshawar High Court", libraryJurisdiction: "Khyber Pakhtunkhwa" },
+  { id: "balochistan", name: "Balochistan", kind: "Province", capital: "Quetta", highCourt: "High Court of Balochistan", libraryJurisdiction: "Balochistan" },
   { id: "ict", name: "Islamabad Capital Territory", kind: "Federal capital", capital: "Islamabad", highCourt: "Islamabad High Court" },
   { id: "gilgit-baltistan", name: "Gilgit-Baltistan", kind: "Administrative territory", capital: "Gilgit", highCourt: "Gilgit-Baltistan Chief Court" },
   { id: "ajk", name: "Azad Jammu & Kashmir", kind: "Administrative territory", capital: "Muzaffarabad", highCourt: "High Court of Azad Jammu & Kashmir" }

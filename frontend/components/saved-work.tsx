@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { listCases } from "@/lib/case-store";
-import { deleteDraft, listDrafts, type SavedDraft } from "@/lib/draft-store";
+import { deleteDraft, listDrafts, loadDrafts, type SavedDraft } from "@/lib/draft-store";
 import type { CaseDraft } from "@/lib/types";
 import { EmptyState, PageHeader, formatDate } from "./app-ui";
 import { Icon } from "./icons";
@@ -15,11 +15,12 @@ export function SavedWork() {
   useEffect(() => {
     listCases().then(setCases).catch(() => setCases([]));
     setDrafts(listDrafts());
+    loadDrafts().then(setDrafts).catch(() => undefined);
   }, []);
 
   return (
     <div className="app-page">
-      <PageHeader eyebrow="Saved Work" title="Everything you have saved" lede="Case briefs and document drafts stored in this browser. Nothing here is shared." />
+      <PageHeader eyebrow="Saved Work" title="Everything you have saved" lede="Case briefs and document drafts. Saved to your account when you are signed in. Nothing here is shared." />
 
       <section className="app-grid-2">
         <div className="app-card">
@@ -43,7 +44,7 @@ export function SavedWork() {
               {drafts.map((draft) => (
                 <li key={draft.id} className="app-list-row">
                   <Link href="/drafting"><span className="app-list-icon"><Icon name="document" size={16} /></span><div><strong>{draft.title}</strong><small>{draft.id} · {formatDate(draft.updatedAt)}</small></div></Link>
-                  <button type="button" className="app-icon-btn" aria-label={`Delete draft ${draft.id}`} onClick={() => setDrafts(deleteDraft(draft.id))}><Icon name="close" size={14} /></button>
+                  <button type="button" className="app-icon-btn" aria-label={`Delete draft ${draft.id}`} onClick={() => void deleteDraft(draft.id).then(setDrafts)}><Icon name="close" size={14} /></button>
                 </li>
               ))}
             </ul>

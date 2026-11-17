@@ -84,8 +84,34 @@ def embedding_text(row: dict) -> str:
     return f"{head}\n{row['content']}"
 
 
+def embedding_key(row: dict) -> str:
+    import hashlib
+
+    return hashlib.sha256(embedding_text(row).encode("utf-8")).hexdigest()
+
+
+def previous_vectors(chunks_path: Path, embeddings_path: Path, meta_path: Path, model_name: str) -> dict:
+    """Vectors from the current index keyed by the exact text that was embedded, for incremental rebuilds.
+
+    Only reused when the stored index was built with the same embedding model and its rows are aligned.
+    """
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        if meta.get("embedding_model") != model_name or not embeddings_path.exists():
+            return {}
+        matrix = np.load(embeddings_path)
+        with chunks_path.open(encoding="utf-8") as handle:
+            rows = [json.loads(line) for line in handle if line.strip()]
+        if len(rows) != matrix.shape[0] or meta.get("chunk_count") != len(rows):
+            return {}
+        return {embedding_key(row): matrix[index] for index, row in enumerate(rows)}
+    except Exception as exc:  # noqa: BLE001 - a damaged old index just means a full rebuild
+        logger.warning("previous index unusable for reuse: %s", exc)
+        return {}
+
+
 def write_index(chunk_rows: list[dict], chunks_path: Path, embeddings_path: Path, meta_path: Path,
-                embedder: Embedder | None, log=print) -> dict:
+                embedder: Embedder | None, log=print, reuse: dict | None = None) -> dict:
     chunks_path.parent.mkdir(parents=True, exist_ok=True)
     with chunks_path.open("w", encoding="utf-8") as handle:
         for row in chunk_rows:
@@ -99,12 +125,21 @@ def write_index(chunk_rows: list[dict], chunks_path: Path, embeddings_path: Path
         "content_hashes": [row["content_hash"] for row in chunk_rows],
     }
     if embedder is not None and chunk_rows:
-        vectors = []
+        reuse = reuse or {}
+        keys = [embedding_key(r) for r in chunk_rows]
+        todo = [i for i, key in enumerate(keys) if key not in reuse]
+        matrix = np.zeros((len(chunk_rows), EXPECTED_DIM), dtype=np.float32)
+        for i, key in enumerate(keys):
+            if key in reuse:
+                matrix[i] = reuse[key]
         batch = 128
-        for start in range(0, len(chunk_rows), batch):
-            vectors.append(embedder.embed([embedding_text(r) for r in chunk_rows[start:start + batch]]))
-            log(f"embedded {min(start + batch, len(chunk_rows))}/{len(chunk_rows)}")
-        matrix = check_dim(np.vstack(vectors), EXPECTED_DIM).astype(np.float32)
+        for start in range(0, len(todo), batch):
+            part = todo[start:start + batch]
+            matrix[part] = check_dim(embedder.embed([embedding_text(chunk_rows[i]) for i in part]), EXPECTED_DIM)
+            log(f"embedded {min(start + batch, len(todo))}/{len(todo)} new chunks")
+        log(f"reused {len(chunk_rows) - len(todo)} embeddings, computed {len(todo)}")
+        meta["embeddings_reused"] = len(chunk_rows) - len(todo)
+        matrix = check_dim(matrix, EXPECTED_DIM).astype(np.float32)
         np.save(embeddings_path, matrix)
         meta["embedding_model"] = embedder.name
         meta["embedding_dim"] = int(matrix.shape[1])
