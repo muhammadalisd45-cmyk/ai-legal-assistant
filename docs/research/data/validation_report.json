@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-11-13T04:57:04+00:00",
+  "rows": {
+    "source_directory": 69,
+    "extracted_courts": 11,
+    "extracted_tribunals": 6,
+    "extracted_statute_portals": 10,
+    "extracted_third_party_datasets": 5,
+    "extracted_legal_provisions": 7,
+    "evidence": 30,
+    "gap_federal_ict_punjab_sindh": 8,
+    "gap_inaccessible_sources": 13,
+    "gap_open_questions": 6,
+    "actions": 15
+  },
+  "problems": [],
+  "links": {
+    "checked": 194,
+    "ok": 168,
+    "not_fetched": 13,
+    "failed": [
+      {
+        "url": "https://mis.ihc.gov.pk/ihc.asmx/srchDecisionClms",
+        "status": "",
+        "error": "TooManyRedirects: Exceeded maximum allowed redirects."
+      },
+      {
+        "url": "https://www.fto.gov.pk/decisions.aspx",
+        "status": "",
+        "error": "ConnectError: (\"The certificate's CN name does not match the passed value.\",)"
+      },
+      {
+        "url": "http://blncode.pitb.gov.pk",
+        "status": "",
+        "error": "ConnectTimeout: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time"
+      },
+      {
+        "url": "https://gba.gov.pk/acts/",
+        "status": "",
+        "error": "ConnectError: ('A required certificate is not within its validity period when verifying against the current system clock or the timest"
+      },
+      {
+        "url": "https://dawn.com/news/1828670/lhc-asks-judges-to-protect-rape-victims-identity-in-verdicts",
+        "status": 403,
+        "error": ""
+      },
+      {
+        "url": "https://www.dawn.com/news/1949786",
+        "status": 403,
+        "error": ""
+      },
+      {
+        "url": "https://mis.ihc.gov.pk/ihc.asmx/srchDecisionClms",
+        "status": "",
+        "error": "TooManyRedirects: Exceeded maximum allowed redirects."
+      },
+      {
+        "url": "https://gba.gov.pk/acts/",
+        "status": "",
+        "error": "ConnectError: ('A required certificate is not within its validity period when verifying against the current system clock or the timest"
+      },
+      {
+        "url": "https://datasets-server.huggingface.co/filter?dataset=abdullah693/adaption-pakistan-law-qa-pairs&config=default&split=train&where=%22domain%22%20IS%20NULL&length=5",
+        "status": 500,
+        "error": ""
+      },
+      {
+        "url": "https://www.ihc.gov.pk/",
+        "status": "",
+        "error": "RemoteProtocolError: Server disconnected without sending a response."
+      },
+      {
+        "url": "https://mis.ihc.gov.pk/ihc.asmx/GetLatestJgmntsNew",
+        "status": "",
+        "error": "TooManyRedirects: Exceeded maximum allowed redirects."
+      },
+      {
+        "url": "https://www.fto.gov.pk/",
+        "status": "",
+        "error": "ConnectError: (\"The certificate's CN name does not match the passed value.\",)"
+      },
+      {
+        "url": "https://www.fto.gov.pk/decisions.aspx",
+        "status": "",
+        "error": "ConnectError: (\"The certificate's CN name does not match the passed value.\",)"
+      }
+    ]
+  }
+}

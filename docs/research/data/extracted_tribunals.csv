@@ -1,0 +1,7 @@
+Body,Published,Count,Format,robots,Source
+CCP,"Orders, 2007–2026",177,"Scan (HP Scan), http host",None (404),CCP https://cc.gov.pk/home/orders
+CAT (via CCP),Appellate orders,87,Phone-app scan (CamScanner),None (404),CAT https://cc.gov.pk/home/decidedcatcases
+FTO,Curated decisions 2022–2026; all signed findings for 15 days,245; 647 in window,Scan + copier OCR,None (404),FTO https://www.fto.gov.pk/decisions.aspx; feed http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions
+Wafaqi Mohtasib,Selected findings 2017–2020,13,Scan,None (404),WMS https://mohtasib.gov.pk/Publications
+ATIR,Nothing,0,—,Returns HTML,ATIR https://atir.gov.pk/Judgements
+FST,Nothing; site suspended,0,—,Unretrievable,FST https://www.fst.gov.pk/robots.txt

@@ -20,7 +20,8 @@ async function ensureSession(): Promise<{ accessToken: string; userId: string; u
   return { accessToken: session.access_token, userId: session.user.id, url, key };
 }
 
-async function dataRequest(path: string, options: RequestInit = {}) {
+/** Supabase REST call as the signed-in user (RLS applies). Returns null when nobody is signed in. */
+export async function dataRequest(path: string, options: RequestInit = {}) {
   const auth = await ensureSession();
   if (!auth) return null;
   const response = await fetch(`${auth.url}/rest/v1/${path}`, {

@@ -22,7 +22,8 @@ export type IconName =
   | "help"
   | "settings"
   | "menu"
-  | "close";
+  | "close"
+  | "mic";
 
 export function Icon({
   name,
@@ -49,6 +50,12 @@ export function Icon({
       </>
     ),
     arrow: <path d="M5 12h13M14 7l5 5-5 5" />,
+    mic: (
+      <>
+        <rect x="9" y="3" width="6" height="11" rx="3" />
+        <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7" />
+      </>
+    ),
     shield: (
       <>
         <path d="M12 3 5 6v5c0 4.8 2.8 8.4 7 10 4.2-1.6 7-5.2 7-10V6l-7-3Z" />

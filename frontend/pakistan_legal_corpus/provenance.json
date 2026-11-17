@@ -383,7 +383,1313 @@
         "problems": [],
         "ok": true
       }
+    },
+    "PK-005": {
+      "document_id": "PK-005",
+      "title": "Contract Act, 1872",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator8332a6df32386960ac7d81a5cf7aade2.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator8332a6df32386960ac7d81a5cf7aade2.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/contract_act_1872.pdf",
+      "sha256": "930c60f67216530fab28f37d439ad3c3ae941dc918c914f2e7c18ddbabb7bfbd",
+      "bytes": 868059,
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 12 Feb 2025 10:37:36 GMT",
+      "fetched_at": "2026-11-12T16:04:46.903191+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 65,
+        "text_chars": 166827,
+        "avg_chars_per_page": 2566.6,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "contract"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-006": {
+      "document_id": "PK-006",
+      "title": "Qanun-e-Shahadat Order, 1984",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator01031a2c8cddc523d08a0df0ec37d7d0.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator01031a2c8cddc523d08a0df0ec37d7d0.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/qanun_e_shahadat_order_1984.pdf",
+      "sha256": "749073c30cdc38cdc7ecb9c1ab241ab7f033b876682098ae16ccf6d6c4910a7e",
+      "bytes": 638845,
+      "content_type": "application/pdf",
+      "last_modified": "Thu, 15 Jan 2026 10:11:10 GMT",
+      "fetched_at": "2026-11-12T16:04:54.688456+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 65,
+        "text_chars": 155749,
+        "avg_chars_per_page": 2396.1,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "qanun",
+          "shahadat"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-009": {
+      "document_id": "PK-009",
+      "title": "Transfer of Property Act, 1882",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator77923ce792b475e339e1f46ba0442da3.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator77923ce792b475e339e1f46ba0442da3.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/transfer_of_property_act_1882.pdf",
+      "sha256": "d75669bc902f55b55b0bde6f5ddc1002bb891a834d89a2d56b840462a8449185",
+      "bytes": 523349,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 21 Jan 2025 09:42:10 GMT",
+      "fetched_at": "2026-11-12T16:05:01.960228+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 56,
+        "text_chars": 154606,
+        "avg_chars_per_page": 2760.8,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "transfer",
+          "property"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-011": {
+      "document_id": "PK-011",
+      "title": "Partnership Act, 1932",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratorbbc0b5b0d78c35e99e3b94f6b77b69db.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratorbbc0b5b0d78c35e99e3b94f6b77b69db.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/partnership_act_1932.pdf",
+      "sha256": "c2041e9f822d2ce3c5c2962394d7b0e7e503dc57c7f1a319cda873aa04fff864",
+      "bytes": 575881,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 24 Jul 2023 09:32:47 GMT",
+      "fetched_at": "2026-11-12T16:05:14.505239+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 24,
+        "text_chars": 58548,
+        "avg_chars_per_page": 2439.5,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "partnership"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-012": {
+      "document_id": "PK-012",
+      "title": "Companies Act, 2017",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator89de324eeaa53c96ff701820d2e007e4.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator89de324eeaa53c96ff701820d2e007e4.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/companies_act_2017.pdf",
+      "sha256": "66bff996e06e6a1c9a1d34ee8464b761d69054feadb08f85b6d6d7e6242c61ad",
+      "bytes": 5169726,
+      "content_type": "application/pdf",
+      "last_modified": "Fri, 07 Oct 2022 09:34:21 GMT",
+      "fetched_at": "2026-11-12T16:06:31.909760+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 401,
+        "text_chars": 956463,
+        "avg_chars_per_page": 2385.2,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "companies"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-013": {
+      "document_id": "PK-013",
+      "title": "Sale of Goods Act, 1930",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator03eadfb5474bfa7c9e45ab4558d5a926.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator03eadfb5474bfa7c9e45ab4558d5a926.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/sale_of_goods_act_1930.pdf",
+      "sha256": "ac89374529aa0d4929fa1feb5fefc6106c0513187dfde2d8b05ce9042e2a5fd8",
+      "bytes": 395246,
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 21 Aug 2024 06:06:27 GMT",
+      "fetched_at": "2026-11-12T16:06:33.297404+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 19,
+        "text_chars": 50272,
+        "avg_chars_per_page": 2645.9,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sale",
+          "goods"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-014": {
+      "document_id": "PK-014",
+      "title": "Arbitration Act, 1940",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator0a802e3468735238090ceede22ccfd11.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator0a802e3468735238090ceede22ccfd11.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/arbitration_act_1940.pdf",
+      "sha256": "441edc9a5a1f7d411850e21195ea2230726b5f4ab0863a2269004377be4285dc",
+      "bytes": 302041,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 24 Jul 2023 09:29:18 GMT",
+      "fetched_at": "2026-11-12T16:06:34.596205+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 17,
+        "text_chars": 43138,
+        "avg_chars_per_page": 2537.5,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "arbitration"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-021": {
+      "document_id": "PK-021",
+      "title": "Prevention of Electronic Crimes Act, 2016 (PECA)",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/prevention_of_electronic_crimes_act_2016.pdf",
+      "sha256": "b096696f758d4b1ec5e764ac500462667ba70e9daba7342050239395171d19f8",
+      "bytes": 388722,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 10 Feb 2025 09:34:59 GMT",
+      "fetched_at": "2026-11-12T16:06:37.666942+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 39,
+        "text_chars": 102414,
+        "avg_chars_per_page": 2626.0,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "prevention",
+          "electronic",
+          "crimes"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-022": {
+      "document_id": "PK-022",
+      "title": "Islamabad Consumers Protection Act, 1995",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratorbc4daf1cd281f7808ceb417c316f18ea.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratorbc4daf1cd281f7808ceb417c316f18ea.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/islamabad_consumers_protection_act_1995.pdf",
+      "sha256": "1b4eb0ba3040e2f2caad8563c4b671890db5a98653edf02fd71fb89952f90cf2",
+      "bytes": 239502,
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 03 Aug 2022 13:41:02 GMT",
+      "fetched_at": "2026-11-12T16:06:38.593141+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 7,
+        "text_chars": 15380,
+        "avg_chars_per_page": 2197.1,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "islamabad",
+          "consumers",
+          "protection"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-023": {
+      "document_id": "PK-023",
+      "title": "Muslim Family Laws Ordinance, 1961",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratoreecaf3b490e2d43d2e3b50c0c068b5d7.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratoreecaf3b490e2d43d2e3b50c0c068b5d7.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/muslim_family_laws_ordinance_1961.pdf",
+      "sha256": "c821bbcd9b3c79e2559d4334398a9a120ed4d266f6fe4deccd8c3047b8260440",
+      "bytes": 323070,
+      "content_type": "application/pdf",
+      "last_modified": "Thu, 10 Mar 2022 10:15:44 GMT",
+      "fetched_at": "2026-11-12T16:06:40.349548+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 7,
+        "text_chars": 16283,
+        "avg_chars_per_page": 2326.1,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "muslim",
+          "family",
+          "laws"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-024": {
+      "document_id": "PK-024",
+      "title": "Family Courts Act, 1964",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratorf08eaec19066a65a1b82cb4ad49feb4d.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratorf08eaec19066a65a1b82cb4ad49feb4d.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/family_courts_act_1964.pdf",
+      "sha256": "73133d8a3fbcdb5322e3e268b567544d2d9b1978916dba2ae09a1e781c89779b",
+      "bytes": 280226,
+      "content_type": "application/pdf",
+      "last_modified": "Fri, 17 Jan 2025 10:38:23 GMT",
+      "fetched_at": "2026-11-12T16:06:41.843676+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 13,
+        "text_chars": 30729,
+        "avg_chars_per_page": 2363.8,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "family",
+          "courts"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-025": {
+      "document_id": "PK-025",
+      "title": "Dowry and Bridal Gifts (Restriction) Act, 1976",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator359d2ddc2ad3cb8f4a5bfa3c263e5ba1.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator359d2ddc2ad3cb8f4a5bfa3c263e5ba1.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/dowry_and_bridal_gifts_restriction_act_1976.pdf",
+      "sha256": "bc55f7bbd188910e21a23a20ceb472a67576922c5b2309f48e92957ff9d70d07",
+      "bytes": 552568,
+      "content_type": "application/pdf",
+      "last_modified": "Thu, 03 Aug 2023 08:27:08 GMT",
+      "fetched_at": "2026-11-12T16:06:43.053311+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 4,
+        "text_chars": 9066,
+        "avg_chars_per_page": 2266.5,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "dowry",
+          "bridal",
+          "gifts",
+          "restriction"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-026": {
+      "document_id": "PK-026",
+      "title": "Child Marriage Restraint Act, 1929",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator0cb12b901d4304d7e5463da076d88639.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator0cb12b901d4304d7e5463da076d88639.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/child_marriage_restraint_act_1929.pdf",
+      "sha256": "34ea8179527cf1873b365480027d29d8cdbad1e8017eb428930d42e874ba96fb",
+      "bytes": 251321,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 06 May 2024 05:01:43 GMT",
+      "fetched_at": "2026-11-12T16:06:43.469273+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 4,
+        "text_chars": 7401,
+        "avg_chars_per_page": 1850.2,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "child",
+          "marriage",
+          "restraint"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-027": {
+      "document_id": "PK-027",
+      "title": "Factories Act, 1934",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratorf38efe0a6e760531f05b4a29ba4ba215.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratorf38efe0a6e760531f05b4a29ba4ba215.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/factories_act_1934.pdf",
+      "sha256": "ccf58e9664d67152fc8e93b7b248af10608045623bd95991a8a5c894c6ab4c43",
+      "bytes": 663945,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 05 May 2025 10:37:38 GMT",
+      "fetched_at": "2026-11-12T16:06:47.598056+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 44,
+        "text_chars": 111289,
+        "avg_chars_per_page": 2529.3,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "factories"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-028": {
+      "document_id": "PK-028",
+      "title": "Industrial Relations Act, 2012",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator964ce81cc171ed5dcd0960630e922422.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator964ce81cc171ed5dcd0960630e922422.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/industrial_relations_act_2012.pdf",
+      "sha256": "fb60685b3279788da2410988257e040b1af4a9829377a967afcb697bd2f6b99b",
+      "bytes": 500429,
+      "content_type": "application/pdf",
+      "last_modified": "Fri, 19 May 2023 02:39:20 GMT",
+      "fetched_at": "2026-11-12T16:06:50.473865+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 51,
+        "text_chars": 123236,
+        "avg_chars_per_page": 2416.4,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "industrial",
+          "relations"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-029": {
+      "document_id": "PK-029",
+      "title": "Minimum Wages Ordinance, 1961",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator26a975453aac76e06711066e6c07e718.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator26a975453aac76e06711066e6c07e718.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/minimum_wages_ordinance_1961.pdf",
+      "sha256": "2c95ca4b141a7c16478c12c0ef59dac65740de44cf3c7dfeec143cc057680f13",
+      "bytes": 259321,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 29 Apr 2024 06:19:59 GMT",
+      "fetched_at": "2026-11-12T16:06:51.082207+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 8,
+        "text_chars": 19282,
+        "avg_chars_per_page": 2410.2,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "minimum",
+          "wages"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-030": {
+      "document_id": "PK-030",
+      "title": "Employees' Old-Age Benefits Act, 1976",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratorf3be1ec8d21dfebb9c5d1733f43cffe6.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratorf3be1ec8d21dfebb9c5d1733f43cffe6.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/employees_old_age_benefits_act_1976.pdf",
+      "sha256": "f455a5a5e28b91e5748ae24b1e05bdc7a6cce07d706289f82626c91a6fa32259",
+      "bytes": 898479,
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 07 Jun 2023 05:59:27 GMT",
+      "fetched_at": "2026-11-12T16:06:57.842190+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 24,
+        "text_chars": 56890,
+        "avg_chars_per_page": 2370.4,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "employees",
+          "benefits"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-031": {
+      "document_id": "PK-031",
+      "title": "Workers' Welfare Fund Ordinance, 1971",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator8b34b071116ce718a2770908b43282a9.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator8b34b071116ce718a2770908b43282a9.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/workers_welfare_fund_ordinance_1971.pdf",
+      "sha256": "360de0007cd3a94a153bbdc2dd2bcdc75c17e8373bbd3823c976fdef3cdf188f",
+      "bytes": 394603,
+      "content_type": "application/pdf",
+      "last_modified": "Sat, 27 May 2023 08:52:20 GMT",
+      "fetched_at": "2026-11-12T16:07:02.674062+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 15,
+        "text_chars": 30043,
+        "avg_chars_per_page": 2002.9,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "workers",
+          "welfare",
+          "fund"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-032": {
+      "document_id": "PK-032",
+      "title": "Customs Act, 1969",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator6d344e569c576550c200d66afb7b28f6.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator6d344e569c576550c200d66afb7b28f6.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/customs_act_1969.pdf",
+      "sha256": "9e22264a08ff3b5817329433f88fb6559a9bdb289a77614e586dcc39a3d51fd8",
+      "bytes": 1868136,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 15 Sep 2025 06:19:09 GMT",
+      "fetched_at": "2026-11-12T16:07:22.855995+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 279,
+        "text_chars": 638104,
+        "avg_chars_per_page": 2287.1,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "customs"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-033": {
+      "document_id": "PK-033",
+      "title": "Sales Tax Act, 1990",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratorf6d20932403661e059756ab223d8542b.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratorf6d20932403661e059756ab223d8542b.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/sales_tax_act_1990.pdf",
+      "sha256": "97cfb09a7034b8a503987036526676ecc3133bc8aad7a106b91a327ae1dfd129",
+      "bytes": 1856772,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 10 Aug 2026 05:30:07 GMT",
+      "fetched_at": "2026-11-12T16:07:40.612985+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 229,
+        "text_chars": 479893,
+        "avg_chars_per_page": 2095.6,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sales"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-034": {
+      "document_id": "PK-034",
+      "title": "Income Tax Ordinance, 2001",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administratorc09ecd376211abe32a7e44510f3fd719.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administratorc09ecd376211abe32a7e44510f3fd719.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/income_tax_ordinance_2001.pdf",
+      "sha256": "1b611d31c667107a65d3d47a97e163df2ee8ba403952930f527db11d40b32c8b",
+      "bytes": 7870242,
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 12 Aug 2026 05:45:54 GMT",
+      "fetched_at": "2026-11-12T16:09:06.636837+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 839,
+        "text_chars": 2050148,
+        "avg_chars_per_page": 2443.6,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "income"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-035": {
+      "document_id": "PK-035",
+      "title": "Federal Excise Act, 2005",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator06f0200ef997b50983df81ea052e8011.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator06f0200ef997b50983df81ea052e8011.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/federal_excise_act_2005.pdf",
+      "sha256": "d43c2ce824b05fc1677466156fe88f1344cce68da5834bdd7dbe37e474f5c9b4",
+      "bytes": 899211,
+      "content_type": "application/pdf",
+      "last_modified": "Wed, 12 Aug 2026 05:45:37 GMT",
+      "fetched_at": "2026-11-12T16:09:15.281174+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 103,
+        "text_chars": 218222,
+        "avg_chars_per_page": 2118.7,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "federal",
+          "excise"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-036": {
+      "document_id": "PK-036",
+      "title": "National Accountability Ordinance, 1999",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator889746414e53d53e4398264cda458947.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator889746414e53d53e4398264cda458947.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/national_accountability_ordinance_1999.pdf",
+      "sha256": "a0a48bde54cb2827e44cb3185ba454b81d6fd8ce308ee8264ff5c657c8d9a216",
+      "bytes": 644390,
+      "content_type": "application/pdf",
+      "last_modified": "Fri, 06 Mar 2026 09:55:51 GMT",
+      "fetched_at": "2026-11-12T16:09:20.603136+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 38,
+        "text_chars": 103940,
+        "avg_chars_per_page": 2735.3,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "national",
+          "accountability"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-037": {
+      "document_id": "PK-037",
+      "title": "Illegal Dispossession Act, 2005",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator8af69a2733e5a880a7795e33df01e2e8.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator8af69a2733e5a880a7795e33df01e2e8.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/illegal_dispossession_act_2005.pdf",
+      "sha256": "93a8848489b0bb6ad0a6f8ee61e4c54c3dc45f455316e00eed30c4d1b6c1d5a2",
+      "bytes": 113252,
+      "content_type": "application/pdf",
+      "last_modified": "Fri, 19 Nov 2021 10:39:54 GMT",
+      "fetched_at": "2026-11-12T16:09:21.029079+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 4,
+        "text_chars": 7725,
+        "avg_chars_per_page": 1931.2,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "illegal",
+          "dispossession"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PK-038": {
+      "document_id": "PK-038",
+      "title": "Right of Access to Information Act, 2017",
+      "source_url": "https://pakistancode.gov.pk/pdffiles/administrator3599d65bc5ecb2dd1915d04c7db91e8f.pdf",
+      "final_url": "https://pakistancode.gov.pk/pdffiles/administrator3599d65bc5ecb2dd1915d04c7db91e8f.pdf",
+      "source_name": "Pakistan Code",
+      "file": "federal_laws/right_of_access_to_information_act_2017.pdf",
+      "sha256": "c343736db66e6478a0e5fa78f99ae34d90dbc583cd3e4bb439920b7f3b486b33",
+      "bytes": 209009,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 27 Jul 2026 10:36:27 GMT",
+      "fetched_at": "2026-11-12T16:09:22.012413+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 14,
+        "text_chars": 31618,
+        "avg_chars_per_page": 2258.4,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "right",
+          "access",
+          "information"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PB-001": {
+      "document_id": "PB-001",
+      "title": "Punjab Consumer Protection Act, 2005",
+      "source_url": "https://punjabcode.punjab.gov.pk/uploads/articles/the_punjab_consumer_protection_act_2005-pdf.pdf",
+      "final_url": "https://punjabcode.punjab.gov.pk/uploads/articles/the_punjab_consumer_protection_act_2005-pdf.pdf",
+      "source_name": "Punjab Code",
+      "file": "punjab_laws/punjab_consumer_protection_act_2005.pdf",
+      "sha256": "9d3e3497293480addb85acefb767583e286ee81fdf022286200bd2bd6040fc01",
+      "bytes": 272364,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 15 Sep 2025 06:38:22 GMT",
+      "fetched_at": "2026-11-12T16:09:23.281806+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 16,
+        "text_chars": 34418,
+        "avg_chars_per_page": 2151.1,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "punjab",
+          "consumer",
+          "protection"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PB-002": {
+      "document_id": "PB-002",
+      "title": "Punjab Land Revenue Act, 1967",
+      "source_url": "https://punjabcode.punjab.gov.pk/uploads/articles/punjab-land-revenue-act-1967-pdf.pdf",
+      "final_url": "https://punjabcode.punjab.gov.pk/uploads/articles/punjab-land-revenue-act-1967-pdf.pdf",
+      "source_name": "Punjab Code",
+      "file": "punjab_laws/punjab_land_revenue_act_1967.pdf",
+      "sha256": "2e76a1afe9a53dbd8a7b936c01d3f31d13d8f0a3e60881c22a8c7bdd1559b293",
+      "bytes": 956469,
+      "content_type": "application/pdf",
+      "last_modified": "Fri, 03 Jul 2026 07:37:59 GMT",
+      "fetched_at": "2026-11-12T16:09:31.266585+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 81,
+        "text_chars": 229939,
+        "avg_chars_per_page": 2838.8,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "punjab",
+          "land",
+          "revenue"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PB-003": {
+      "document_id": "PB-003",
+      "title": "Punjab Local Government Act, 2022",
+      "source_url": "https://punjabcode.punjab.gov.pk/uploads/articles/punjab-local-government-act-2022-xxxiii-of-2022-docx1-pdf.pdf",
+      "final_url": "https://punjabcode.punjab.gov.pk/uploads/articles/punjab-local-government-act-2022-xxxiii-of-2022-docx1-pdf.pdf",
+      "source_name": "Punjab Code",
+      "file": "punjab_laws/punjab_local_government_act_2022.pdf",
+      "sha256": "4dbb6da14922de3be9e917f102b005a4d087febc693e0aa395061c3ccac24190",
+      "bytes": 1043249,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 01 Sep 2025 09:32:04 GMT",
+      "fetched_at": "2026-11-12T16:09:42.407844+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 136,
+        "text_chars": 334773,
+        "avg_chars_per_page": 2461.6,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "punjab",
+          "local",
+          "government"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "PB-004": {
+      "document_id": "PB-004",
+      "title": "Punjab Industrial Relations Act, 2010",
+      "source_url": "https://punjabcode.punjab.gov.pk/uploads/articles/THE_PUNJAB_INDUSTRIAL_RELATIONS_ACT_2010.doc.pdf",
+      "final_url": "https://punjabcode.punjab.gov.pk/uploads/articles/THE_PUNJAB_INDUSTRIAL_RELATIONS_ACT_2010.doc.pdf",
+      "source_name": "Punjab Code",
+      "file": "punjab_laws/punjab_industrial_relations_act_2010.pdf",
+      "sha256": "2f74c0667ea8d7b27a822f82d2b13e893b8b931a3b610a1804263fc303607ae8",
+      "bytes": 426030,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 26 Jun 2018 08:55:23 GMT",
+      "fetched_at": "2026-11-12T16:09:45.761781+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 41,
+        "text_chars": 108131,
+        "avg_chars_per_page": 2637.3,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "punjab",
+          "industrial",
+          "relations"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "SD-002": {
+      "document_id": "SD-002",
+      "title": "Sindh Local Government Act, 2013",
+      "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000156.pdf",
+      "final_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000156.pdf",
+      "source_name": "Sindh Code",
+      "file": "sindh_laws/sindh_local_government_act_2013.pdf",
+      "sha256": "d7b0b1580635bc075fccdb3995e10f7bc000fbebc79616a536f8f3c19d70e748",
+      "bytes": 993198,
+      "content_type": "application/pdf",
+      "last_modified": "Fri, 19 May 2023 09:51:37 GMT",
+      "fetched_at": "2026-11-12T16:09:56.235779+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 158,
+        "text_chars": 266200,
+        "avg_chars_per_page": 1684.8,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sindh",
+          "local",
+          "government"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "SD-003": {
+      "document_id": "SD-003",
+      "title": "Sindh Rented Premises Ordinance, 1979",
+      "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000484.pdf",
+      "final_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000484.pdf",
+      "source_name": "Sindh Code",
+      "file": "sindh_laws/sindh_rented_premises_ordinance_1979.pdf",
+      "sha256": "56589c937f9fc8f6dde0a0aa83e6687692656d44d19870c9fd9d1890736f4dc9",
+      "bytes": 157071,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 14 Jul 2015 07:41:45 GMT",
+      "fetched_at": "2026-11-12T16:09:57.864691+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 16,
+        "text_chars": 29746,
+        "avg_chars_per_page": 1859.1,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sindh",
+          "rented",
+          "premises"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "SD-004": {
+      "document_id": "SD-004",
+      "title": "Sindh Public Property (Removal of Encroachment) Act, 2010",
+      "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-26-000094.pdf",
+      "final_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-26-000094.pdf",
+      "source_name": "Sindh Code",
+      "file": "sindh_laws/sindh_public_property_removal_of_encroachment_act_2010.pdf",
+      "sha256": "8bea86d0c21d521e56874afef4d035476a4e59a10d555bdb48b6906cdfaa071c",
+      "bytes": 203415,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 13 Jul 2026 11:33:17 GMT",
+      "fetched_at": "2026-11-12T16:09:59.288224+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 12,
+        "text_chars": 23114,
+        "avg_chars_per_page": 1926.2,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sindh",
+          "public",
+          "property",
+          "removal",
+          "encroachment"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "SD-005": {
+      "document_id": "SD-005",
+      "title": "Sindh Environmental Protection Act, 2014",
+      "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000076.pdf",
+      "final_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000076.pdf",
+      "source_name": "Sindh Code",
+      "file": "sindh_laws/sindh_environmental_protection_act_2014.pdf",
+      "sha256": "232dcb44521cafb6b8175811398c2744b775bd0f74c887ffabc961246508fe44",
+      "bytes": 275869,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 27 Apr 2015 07:09:10 GMT",
+      "fetched_at": "2026-11-12T16:10:40.211779+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 36,
+        "text_chars": 66526,
+        "avg_chars_per_page": 1847.9,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sindh",
+          "environmental",
+          "protection"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "SD-006": {
+      "document_id": "SD-006",
+      "title": "Sindh Consumer Protection Act, 2014",
+      "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000096.pdf",
+      "final_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000096.pdf",
+      "source_name": "Sindh Code",
+      "file": "sindh_laws/sindh_consumer_protection_act_2014.pdf",
+      "sha256": "f793087b58c3cf0885ff2324c1c13bd42abddf0bb9e5cc2a82dc261f2edf79fc",
+      "bytes": 150279,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 28 Apr 2015 10:53:29 GMT",
+      "fetched_at": "2026-11-12T16:11:05.635155+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 23,
+        "text_chars": 37844,
+        "avg_chars_per_page": 1645.4,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sindh",
+          "consumer",
+          "protection"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "SD-007": {
+      "document_id": "SD-007",
+      "title": "Sindh Employees' Social Security Act, 2016",
+      "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000103.pdf",
+      "final_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000103.pdf",
+      "source_name": "Sindh Code",
+      "file": "sindh_laws/sindh_employees_social_security_act_2016.pdf",
+      "sha256": "92ea1faddf864782670579aae8c985a09c68c93bad64c4be5f8b73654a1cf6ee",
+      "bytes": 497255,
+      "content_type": "application/pdf",
+      "last_modified": "Thu, 01 Feb 2018 06:50:38 GMT",
+      "fetched_at": "2026-11-12T16:11:09.387444+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 33,
+        "text_chars": 74325,
+        "avg_chars_per_page": 2252.3,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sindh",
+          "employees",
+          "social",
+          "security"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "SD-008": {
+      "document_id": "SD-008",
+      "title": "Sindh Domestic Violence (Prevention and Protection) Act, 2013",
+      "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000141.pdf",
+      "final_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000141.pdf",
+      "source_name": "Sindh Code",
+      "file": "sindh_laws/sindh_domestic_violence_prevention_and_protection_act_2013.pdf",
+      "sha256": "648fb38bd5996fb32a28f78891e10d55ebebfbd578f6b4cd855774b023aa4dd5",
+      "bytes": 243069,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 19 Feb 2018 05:40:27 GMT",
+      "fetched_at": "2026-11-12T16:11:10.922158+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 17,
+        "text_chars": 29157,
+        "avg_chars_per_page": 1715.1,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sindh",
+          "domestic",
+          "violence",
+          "prevention",
+          "protection"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "SD-009": {
+      "document_id": "SD-009",
+      "title": "Sindh Child Marriage Restraint Act, 2013",
+      "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000083.pdf",
+      "final_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000083.pdf",
+      "source_name": "Sindh Code",
+      "file": "sindh_laws/sindh_child_marriage_restraint_act_2013.pdf",
+      "sha256": "c93ca63a732a63e747df3411a82ee26ec961fa195dc52913b04141c39c57ffd9",
+      "bytes": 64206,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 27 Apr 2015 10:36:31 GMT",
+      "fetched_at": "2026-11-12T16:11:15.348872+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 4,
+        "text_chars": 5838,
+        "avg_chars_per_page": 1459.5,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sindh",
+          "child",
+          "marriage",
+          "restraint"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "SD-010": {
+      "document_id": "SD-010",
+      "title": "Sindh Transparency and Right to Information Act, 2016",
+      "source_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-20-000002.pdf",
+      "final_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-20-000002.pdf",
+      "source_name": "Sindh Code",
+      "file": "sindh_laws/sindh_transparency_and_right_to_information_act_2016.pdf",
+      "sha256": "c37349c5324d7cce96f45d7cd86606f41746756f8ad7dd2ee5bc3b40f9725e05",
+      "bytes": 157742,
+      "content_type": "application/pdf",
+      "last_modified": "Mon, 19 Jan 2026 07:50:50 GMT",
+      "fetched_at": "2026-11-12T16:11:16.543312+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 15,
+        "text_chars": 25205,
+        "avg_chars_per_page": 1680.3,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sindh",
+          "transparency",
+          "right",
+          "information"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "KP-001": {
+      "document_id": "KP-001",
+      "title": "Khyber Pakhtunkhwa Consumers Protection Act, 1997",
+      "source_url": "https://kpcode.kp.gov.pk/uploads/1997_06_THE_KHYBER_PAKHTUNKHWA_CONSUMERS_PROTECTION_ACT_1997_.pdf",
+      "final_url": "https://kpcode.kp.gov.pk/uploads/1997_06_THE_KHYBER_PAKHTUNKHWA_CONSUMERS_PROTECTION_ACT_1997_.pdf",
+      "source_name": "KP Code",
+      "file": "kp_laws/khyber_pakhtunkhwa_consumers_protection_act_1997.pdf",
+      "sha256": "7458a60dc55b40637b7be308fd08b995faacd8a5f9414fb7ee5628a04bd11098",
+      "bytes": 349325,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 02 Jul 2019 11:44:06 GMT",
+      "fetched_at": "2026-11-12T16:11:17.622720+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 19,
+        "text_chars": 36938,
+        "avg_chars_per_page": 1944.1,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "khyber",
+          "pakhtunkhwa",
+          "consumers",
+          "protection"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "KP-002": {
+      "document_id": "KP-002",
+      "title": "Khyber Pakhtunkhwa Local Government Act, 2013",
+      "source_url": "https://kpcode.kp.gov.pk/uploads/THE_KHYBER_PAKHTUNKHWA_LOCAL_GOVERNMENT_ACT_2013.pdf",
+      "final_url": "https://kpcode.kp.gov.pk/uploads/THE_KHYBER_PAKHTUNKHWA_LOCAL_GOVERNMENT_ACT_2013.pdf",
+      "source_name": "KP Code",
+      "file": "kp_laws/khyber_pakhtunkhwa_local_government_act_2013.pdf",
+      "sha256": "53302016070bb734c1104ced35ae6a887ddbc6637f4214c779a1c8bcdec0f5c5",
+      "bytes": 1513450,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 18 Aug 2026 06:04:48 GMT",
+      "fetched_at": "2026-11-12T16:11:25.459294+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 77,
+        "text_chars": 177666,
+        "avg_chars_per_page": 2307.4,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "khyber",
+          "pakhtunkhwa",
+          "local",
+          "government"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "KP-003": {
+      "document_id": "KP-003",
+      "title": "West Pakistan Land Revenue Act, 1967 (Khyber Pakhtunkhwa)",
+      "source_url": "https://kpcode.kp.gov.pk/uploads/1967_17_THE_WEST_PAKISTAN_LAND_REVENUE_ACT_1967.pdf",
+      "final_url": "https://kpcode.kp.gov.pk/uploads/1967_17_THE_WEST_PAKISTAN_LAND_REVENUE_ACT_1967.pdf",
+      "source_name": "KP Code",
+      "file": "kp_laws/west_pakistan_land_revenue_act_1967_khyber_pakhtunkhwa.pdf",
+      "sha256": "9f44bfec35d68101d9f0970be8cd4818cd7cc0454d215623fc7aaaf13d0a2d2c",
+      "bytes": 626196,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 02 Jul 2019 11:44:10 GMT",
+      "fetched_at": "2026-11-12T16:11:35.245034+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 83,
+        "text_chars": 183018,
+        "avg_chars_per_page": 2205.0,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "west",
+          "pakistan",
+          "land",
+          "revenue",
+          "khyber"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "BL-001": {
+      "document_id": "BL-001",
+      "title": "Balochistan Local Government Act, 2010",
+      "source_url": "https://balochistancode.gob.pk/lawdir/69b034f7-9fe6-45d3-a6cb-1fff3c94f9b6.pdf",
+      "final_url": "https://balochistancode.gob.pk/lawdir/69b034f7-9fe6-45d3-a6cb-1fff3c94f9b6.pdf",
+      "source_name": "Balochistan Code",
+      "file": "balochistan_laws/balochistan_local_government_act_2010.pdf",
+      "sha256": "b52770a73632a4001e7107d3224ca5405703e168428501a5dbc7f6af7214ab30",
+      "bytes": 383633,
+      "content_type": "application/pdf",
+      "last_modified": "Thu, 31 Aug 2023 02:52:40 GMT",
+      "fetched_at": "2026-11-12T16:11:43.972438+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 107,
+        "text_chars": 192040,
+        "avg_chars_per_page": 1794.8,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "balochistan",
+          "local",
+          "government"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "BL-002": {
+      "document_id": "BL-002",
+      "title": "Balochistan Land Revenue Act, 1967",
+      "source_url": "https://balochistancode.gob.pk/lawdir/3853b24d-debb-49db-90e7-6d35eea75244.pdf",
+      "final_url": "https://balochistancode.gob.pk/lawdir/3853b24d-debb-49db-90e7-6d35eea75244.pdf",
+      "source_name": "Balochistan Code",
+      "file": "balochistan_laws/balochistan_land_revenue_act_1967.pdf",
+      "sha256": "17bb3b954f0ad782fbffc5868e207d3162b3f6e7431a05bd7ab4ec7628a5a7a6",
+      "bytes": 417008,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 29 Aug 2023 05:30:34 GMT",
+      "fetched_at": "2026-11-12T16:11:52.003934+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 92,
+        "text_chars": 188768,
+        "avg_chars_per_page": 2051.8,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "balochistan",
+          "land",
+          "revenue"
+        ],
+        "problems": [],
+        "ok": true
+      }
+    },
+    "SD-001": {
+      "document_id": "SD-001",
+      "title": "Sindh Civil Courts Ordinance, 1962",
+      "source_url": "https://sja.gos.pk/assets/Updated_Laws/Sindh%20Civil%20Court%20Ordinance%2C1962%20Final.pdf",
+      "final_url": "https://sja.gos.pk/assets/Updated_Laws/Sindh%20Civil%20Court%20Ordinance%2C1962%20Final.pdf",
+      "source_name": "Sindh Judicial Academy",
+      "file": "sindh_laws/sindh_civil_courts_ordinance_1962.pdf",
+      "sha256": "0e2311bf31c9953643873a93f8da4c3860bec3c14275f6af11f2397a7fecdca3",
+      "bytes": 986844,
+      "content_type": "application/pdf",
+      "last_modified": "Tue, 11 Mar 2025 07:28:06 GMT",
+      "fetched_at": "2026-11-13T09:10:45.807040+00:00",
+      "validation": {
+        "is_pdf": true,
+        "opens": true,
+        "encrypted": false,
+        "pages": 19,
+        "text_chars": 42447,
+        "avg_chars_per_page": 2234.1,
+        "needs_ocr": false,
+        "title_match": true,
+        "title_terms_found": [
+          "sindh",
+          "civil",
+          "courts"
+        ],
+        "problems": [],
+        "ok": true
+      }
     }
   },
-  "updated_at": "2026-11-08T12:05:43.660594+00:00"
+  "updated_at": "2026-11-13T09:10:45.834031+00:00"
 }

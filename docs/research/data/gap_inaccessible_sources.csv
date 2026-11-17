@@ -1,0 +1,14 @@
+Source,Problem,Consequence
+"www.supremecourt.gov.pk (PDFs, robots, WP listings)",HTTP 403 (Akamai); TLS failure without www,"SC PDF format, extractability and on-face citation unverified; need a manual browser download"
+scp.gov.pk/JudgmentsSearch,reCAPTCHA v3,Total SC count and earliest year unknown
+fccp.gov.pk,"JS-only SPA, no robots",Federal Constitutional Court output unprofiled
+api.bhc.gov.pk/v2/judgments,302 to login on direct call,BHC portal coverage (all vs reported) unknown
+bhc.gov.pk/media/,robots disallow,BHC PDF format untested
+fst.gov.pk,Account suspended,No FST decisions; alternative domain unknown
+atir.gov.pk,Empty; official status unconfirmed (donor-built),No ATIR decisions online
+gba.gov.pk; GB Assembly PDFs,Expired certificate; 404s,GB Acts largely unobtainable online
+blncode.pitb.gov.pk,TCP connect fails,Identity unknown
+SHC Report001,Embedded 404,Seat-wise totals unavailable
+pid.gov.pk press release (National Law Digest),TLS certificate error,"Status of 2023 ""National Law Digest"" proposal unknown"
+Eastern Book Co. v. Modak primary sources,Connection refused/reset,Headnote-copyright reasoning known only from snippet
+NJPMC AI guidelines (Feb 2026),Not fetched,Unknown whether they address third-party AI use of judgments

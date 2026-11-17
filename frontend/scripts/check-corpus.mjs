@@ -9,7 +9,10 @@ const assert = (condition, message) => {
 };
 
 assert(Array.isArray(docs), "Corpus JSON must be an array");
-assert(docs.length === 35, `Expected 35 starter rows, got ${docs.length}`);
+assert(docs.length >= 35, `Expected at least the 35 starter rows, got ${docs.length}`);
+for (const jurisdiction of ["Federal", "Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan"]) {
+  assert(docs.some((d) => d.jurisdiction === jurisdiction), `No ${jurisdiction} records in the directory`);
+}
 
 const ids = new Set(docs.map((d) => d.document_id));
 assert(ids.size === docs.length, "document_id values must be unique");
@@ -21,7 +24,11 @@ const allowedHosts = new Set([
   "pakistancode.gov.pk",
   "www.sindhlaws.gov.pk",
   "sindhlaws.gov.pk",
-  "caselaw.shc.gov.pk"
+  "caselaw.shc.gov.pk",
+  "punjabcode.punjab.gov.pk",
+  "kpcode.kp.gov.pk",
+  "balochistancode.gob.pk",
+  "sja.gos.pk"
 ]);
 
 for (const doc of docs) {

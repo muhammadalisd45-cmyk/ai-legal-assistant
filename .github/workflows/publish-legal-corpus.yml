@@ -1,0 +1,82 @@
+# Publish the legal corpus to Supabase whenever a reviewed change to it lands on main
+# (normally: a merged "Legal sources sync" pull request). Production search reads Supabase directly,
+# so new and amended laws are live when this finishes - no redeploy.
+#
+# One-time setup (repository Settings):
+#   Environments -> "production": add secrets SUPABASE_URL and SUPABASE_SECRET_KEY (service-role key).
+#   Optionally add "Required reviewers" to the environment for a second approval before publishing.
+name: Publish legal corpus to Supabase
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - frontend/data/rag_index/legal_chunks.jsonl
+      - frontend/data/member4_manifest.csv
+      - frontend/pakistan_legal_corpus/provenance.json
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only show what would change"
+        type: boolean
+        default: false
+      full:
+        description: "Re-upload every chunk (after changing the embedding model)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-legal-corpus
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 90
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Optional speed-up: vectors from the last sync run. The publisher only reuses them when they are
+      # verifiably aligned with the committed chunks; otherwise it embeds just the changed chunks itself.
+      - name: Restore embeddings and model cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            frontend/data/rag_index/legal_chunk_embeddings.npy
+            frontend/data/rag_index/legal_chunk_embeddings.meta.json
+            backend/.cache
+          key: legal-corpus-${{ github.sha }}
+          restore-keys: legal-corpus-
+
+      - name: Run tests
+        run: python -m pytest tests -q -k "not test_secrets_are_not_committed"
+
+      - name: Publish to Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ "${{ github.event.inputs.full }}" = "true" ]; then ARGS="$ARGS --full"; fi
+          python scripts/push_to_supabase.py $ARGS | tee publish.log
+          echo '### Legal corpus publish' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          tail -n 12 publish.log >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"

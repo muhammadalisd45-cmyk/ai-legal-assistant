@@ -1,0 +1,11 @@
+Jurisdiction / portal,Holdings,Consolidated?,Currency,Format,robots / terms,Source
+Federal + ICT: Pakistan Code,"~1,037 laws (session crawl context)",Yes (footnotes),"Constitution to 27th Amdt; CPC ""(Under Review)""",Text PDFs at /pdffiles/administrator<hex>.pdf,"User-agent: googlebot / Disallow: /pdffiles/; ""© 2022""; ""under review … refer to … Gazette""",Pakistan Code https://pakistancode.gov.pk/english/index.php
+Punjab: Punjab Code,~746 laws (session crawl context),Not researched,Not researched,Not researched,Not researched,Session context
+Sindh: Sindh Code,"~1,383 Acts/Ordinances (session crawl context); Sindh Civil Courts Ordinance 1962 and Sindh Land Revenue Act 1967 absent",Not researched,Not researched,Not researched,Not researched,Session context
+KP: KP Code,"969 records (Acts 422, Ord 125, Reg 44, Rules 377, Notif 1); ""All Laws"" list 575","Yes (""revised"" form)",Newest Acts VII–IX of 2026 (May 2026),"Born-digital, iTextSharp watermark","Allow: /; ""informational purposes … subject to the Disclaimer""",KP Code https://kpcode.kp.gov.pk/homepage/list_all_law
+KP: Assembly,Acts list with gazetted copies,No,To Act XXI of 2026 (Aug 2026),"PDF (""-GC.pdf"")",robots 404,PAKP https://www.pakp.gov.pk/act/
+Balochistan: Code,"1,790 entries (Rules 637, Gazette Notif 497, Acts 410, Ord 172, Policies 40, Reg 34); ~1,679 unique titles",No (as-enacted),To Act XXIV of 2026 (Oct 2026),Mixed; 2026 Act image-only,"Preamble only; ""All rights reserved""",Balochistan Code https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1
+Balochistan: Assembly,"428 PDFs, 1972–2026",No,To Act XV of 2026,PDF,Allow all,PAB https://pabalochistan.gov.pk/acts
+GB,"~23 Assembly rows (test data, dead PDFs); ~15 Acts + GB Order 2018 on govt portal",No,—,GB Order: text; Adaptation Act 2012: scan,Assembly allow all; portal 404,GB Assembly https://gbassembly.gbit.gov.pk/pages/acts; GB Govt https://gilgitbaltistan.gov.pk/pages/acts
+AJK: law.gok.pk,"1,015 Act PDFs; 1,143 Ordinance PDFs; 618-row Adopted Laws; Law Code vols I–XIV; Interim Constitution",No,Act V 2025; Ord III 2026,2025 gazette: text; 2023 bulk: scans,"WP default; ""© 2026, All Rights Reserved""",AJK Law https://law.gok.pk/acts/
+PJN current holdings,56 official statute PDFs; 0 judgments,—,—,—,—,Session context

@@ -8,6 +8,9 @@ const BY_ID = new Map(legalDocuments.map((document) => [document.document_id, do
 export function getCorpusStats() {
   const federal = legalDocuments.filter((d) => d.jurisdiction === "Federal").length;
   const sindh = legalDocuments.filter((d) => d.jurisdiction === "Sindh").length;
+  const punjab = legalDocuments.filter((d) => d.jurisdiction === "Punjab").length;
+  const kp = legalDocuments.filter((d) => d.jurisdiction === "Khyber Pakhtunkhwa").length;
+  const balochistan = legalDocuments.filter((d) => d.jurisdiction === "Balochistan").length;
   const placeholders = legalDocuments.filter((d) =>
     d.title.toLowerCase().includes("placeholder")
   ).length;
@@ -16,6 +19,9 @@ export function getCorpusStats() {
     total: legalDocuments.length,
     federal,
     sindh,
+    punjab,
+    kp,
+    balochistan,
     placeholders,
     verifiedMetadata: legalDocuments.length - placeholders
   };
@@ -33,7 +39,11 @@ type TopicRule = {
 const topicRules: TopicRule[] = [
   {
     words: ["property", "land", "plot", "qabza", "possession", "inheritance", "inherited", "warasat", "registry", "title"],
-    ids: ["PK-009", "PK-010", "PK-007", "PK-004", "PK-008"]
+    ids: ["PK-009", "PK-010", "PK-037", "PK-007", "PK-004", "PK-008"]
+  },
+  {
+    words: ["land revenue", "mutation", "intiqal", "fard", "patwari", "girdawari"],
+    ids: ["PB-002", "KP-003", "BL-002", "PK-010"]
   },
   {
     words: ["rent", "rented", "tenant", "landlord", "kiraya"],
@@ -42,6 +52,22 @@ const topicRules: TopicRule[] = [
   {
     words: ["crime", "fir", "police", "arrest", "bail", "criminal", "theft", "assault"],
     ids: ["PK-002", "PK-003", "PK-006"]
+  },
+  {
+    words: ["divorce", "talaq", "khula", "maintenance", "nafqa", "custody", "guardianship", "dowry", "jahez", "nikah", "second marriage"],
+    ids: ["PK-023", "PK-024", "PK-025", "PK-026"]
+  },
+  {
+    words: ["cyber", "online", "hacking", "blackmail", "social media", "fake account", "fia"],
+    ids: ["PK-021", "PK-018", "PK-002"]
+  },
+  {
+    words: ["salary", "wages", "factory", "worker", "labour", "labor", "union", "eobi", "pension"],
+    ids: ["PK-029", "PK-027", "PK-028", "PK-030", "PB-004"]
+  },
+  {
+    words: ["tax", "fbr", "income tax", "sales tax", "customs"],
+    ids: ["PK-034", "PK-033", "PK-032", "PK-035"]
   },
   {
     words: ["contract", "agreement", "payment", "vendor", "business", "company", "partnership"],
@@ -53,7 +79,7 @@ const topicRules: TopicRule[] = [
   },
   {
     words: ["consumer", "shop", "service", "product", "refund"],
-    ids: ["SD-006", "PK-013"]
+    ids: ["PB-001", "SD-006", "KP-001", "PK-022", "PK-013"]
   },
   {
     words: ["domestic violence", "abuse", "violence at home"],

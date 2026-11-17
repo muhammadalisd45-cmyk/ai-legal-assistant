@@ -2,27 +2,25 @@
 
 Primary-source policy: only official government and court systems belong in the Tier-1 corpus.
 
-## Federal legislation
-- Pakistan Code — Ministry of Law & Justice: https://pakistancode.gov.pk/english/
-- The manifest currently contains **13 verified direct Pakistan Code PDF endpoints** for priority federal sources. These rows use `status=source_url_verified` until the PDF is actually downloaded and ingested.
-- The verified direct-PDF set currently includes:
-  - Constitution of the Islamic Republic of Pakistan (`PK-001`)
-  - Pakistan Penal Code, 1860 (`PK-002`)
-  - Code of Criminal Procedure, 1898 (`PK-003`)
-  - Code of Civil Procedure, 1908 (`PK-004`)
-  - Specific Relief Act, 1877 (`PK-007`)
-  - Limitation Act, 1908 (`PK-008`)
-  - Registration Act, 1908 (`PK-010`)
-  - Anti-Money Laundering Act, 2010 (`PK-015`)
-  - Anti-Terrorism Act, 1997 (`PK-016`)
-  - Protection against Harassment of Women at the Workplace Act, 2010 (`PK-017`)
-  - Electronic Transactions Ordinance, 2002 (`PK-018`)
-  - Juvenile Justice System Act, 2018 (`PK-019`)
-  - Legal Aid and Justice Authority Act, 2020 (`PK-020`)
+## Statutes — official code websites
 
-## Sindh legislation
-- Sindh Code — Government of Sindh: https://www.sindhlaws.gov.pk/SindhIndex.aspx
-- Current Sindh rows remain metadata-only until a direct official act/PDF endpoint is individually verified.
+Direct PDF links are resolved from the team catalogs in `frontend/data/catalog/` by
+`backend/scripts/import_catalog.py`, which matches each law by name and year on the official code website of its
+jurisdiction. `frontend/data/catalog/import_report.json` lists every match, every catalog correction and what is still missing.
+
+| Jurisdiction | Official source | Verified direct PDFs |
+|---|---|---|
+| Federal (`PK-*`) | Pakistan Code — https://pakistancode.gov.pk/english/ | 38 |
+| Punjab (`PB-*`) | Punjab Code — https://punjabcode.punjab.gov.pk/ | 4 |
+| Sindh (`SD-*`) | Sindh Code — https://www.sindhlaws.gov.pk/SindhIndex.aspx | 9 |
+| Khyber Pakhtunkhwa (`KP-*`) | KP Code — https://kpcode.kp.gov.pk/ | 3 |
+| Balochistan (`BL-*`) | Balochistan Code — https://balochistancode.gob.pk/ | 2 |
+
+Still metadata-only (the principal Act is not published on the Sindh Code; only amendments are):
+`SD-001` Sindh Civil Courts Ordinance, 1962 and `SD-011` Sindh Land Revenue Act, 1967.
+
+Assembly websites and court search pages listed in the catalogs (Punjab/Sindh/KP/Balochistan Assemblies, Supreme Court
+and Islamabad High Court judgment search) are portals, not documents; they are recorded in the import report only.
 
 ## Sindh High Court case law
 - Official case-law search: https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search

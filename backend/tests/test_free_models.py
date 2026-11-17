@@ -74,6 +74,22 @@ def test_openrouter_fallback_list_is_capped_at_three(monkeypatch):
     assert seen[0]["reasoning"] == {"enabled": False}
 
 
+def test_reasoning_mandatory_model_is_retried_without_reasoning_flag(monkeypatch):
+    _configure(monkeypatch, "openrouter/free")
+    monkeypatch.setattr(settings, "llm_max_retries", 0)
+    seen: list = []
+
+    def handler(request):
+        body = json.loads(request.content)
+        seen.append(body)
+        if "reasoning" in body:
+            return httpx.Response(400, json={"error": {"message": "Reasoning is mandatory for this endpoint and cannot be disabled."}})
+        return httpx.Response(200, json={"model": "x/y:free", "choices": [{"message": {"content": '{"ok": true}'}}]})
+
+    assert _call(LLMClient(transport=httpx.MockTransport(handler))) == {"ok": True}
+    assert len(seen) == 2 and "reasoning" in seen[0] and "reasoning" not in seen[1]
+
+
 def test_error_inside_http_200_body_is_retried_then_raised(monkeypatch):
     _configure(monkeypatch, "a/1:free")
     monkeypatch.setattr(settings, "llm_max_retries", 1)

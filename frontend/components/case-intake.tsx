@@ -5,7 +5,9 @@ import { useEffect, useMemo, useRef, useState, type ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 import { clearIntakeDraft, loadIntakeDraft, saveCase, saveIntakeDraft } from "@/lib/case-store";
 import type { CaseDocument, CaseDraft, ClarificationAnswer, Language, TriageResult } from "@/lib/types";
+import { appendDictation } from "@/lib/voice-input";
 import { Icon } from "./icons";
+import { VoiceButton } from "./voice-button";
 
 /** Answered follow-up questions, paired with the question text they answer. */
 function clarificationList(triage: TriageResult | null, answers: Record<string, string>): ClarificationAnswer[] {
@@ -283,6 +285,7 @@ export function CaseIntake() {
             <label className="big-input">
               <span>YOUR STORY —</span>
               <textarea value={description} onChange={(event: ChangeEvent<HTMLTextAreaElement>) => setDescription(event.target.value)} placeholder={ui.placeholder} rows={8} />
+              <VoiceButton language={language} onText={(text) => setDescription((current) => appendDictation(current, text))} />
               <small>{description.trim().length} characters — at least 20 helps us understand enough to ask useful questions.</small>
             </label>
             <div className="action-row">
@@ -312,7 +315,10 @@ export function CaseIntake() {
                   {["Yes", "No", "Not sure"].map((value) => <button type="button" key={value} className={answers[activeQuestion.id] === value ? "choice active" : "choice"} onClick={() => answerCurrent(value)}>{value}</button>)}
                 </div>
               ) : (
-                <input className="answer-input" type={activeQuestion.type === "date" ? "date" : "text"} value={answers[activeQuestion.id] ?? ""} onChange={(event: ChangeEvent<HTMLInputElement>) => answerCurrent(event.target.value)} placeholder={activeQuestion.type === "text" ? "Type your answer" : undefined} />
+                <div className="answer-row">
+                  <input className="answer-input" type={activeQuestion.type === "date" ? "date" : "text"} value={answers[activeQuestion.id] ?? ""} onChange={(event: ChangeEvent<HTMLInputElement>) => answerCurrent(event.target.value)} placeholder={activeQuestion.type === "text" ? "Type or speak your answer" : undefined} />
+                  {activeQuestion.type === "text" && <VoiceButton compact language={language} onText={(text) => setAnswers((old) => ({ ...old, [activeQuestion.id]: appendDictation(old[activeQuestion.id] ?? "", text) }))} />}
+                </div>
               )}
             </div>
 

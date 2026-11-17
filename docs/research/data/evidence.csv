@@ -1,0 +1,31 @@
+#,Key finding,Evidence,Source URL(s)
+D1,SC robots blocks AI crawlers and reserves AI training,"User-agent: ClaudeBot Disallow: /; Content-Signal: search=yes,ai-train=no,use=reference",https://scp.gov.pk/robots.txt
+D2,SC search is CAPTCHA-gated,Loads reCAPTCHA v3; token in recaptchaV3Token,https://scp.gov.pk/JudgmentsSearch
+D3,SC PDFs not retrievable by automation,HTTP 403 Akamai on downloads_judgements,https://www.supremecourt.gov.pk/downloads_judgements/c.p._2972_2022.pdf
+D4,FSC publishes only Shariat petitions online,"169 judgments; criminal and suo motu ""Under Construction""",https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php ; https://www.federalshariatcourt.gov.pk/criminaljudgments.html
+D5,FSC PDF carries PLD headnotes,"Text begins ""P L D 2025 Federal Shariat Court 1""",https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php?download=128
+D6,"IHC open via JSON, no robots, disclaimer only",404 robots; srchDecisionClms returned 97 records,https://mis.ihc.gov.pk/frmJgmnt ; https://mis.ihc.gov.pk/ihc.asmx/srchDecisionClms
+D7,LHC reserves downloading,"""should not be downloaded without prior agreement""",https://lhc.gov.pk/reported_judgments
+D8,LHC publishes a tiny fraction of disposals,"173,229 disposed in 2025 vs 704 + 59 AFR items",https://lhc.gov.pk/system/files/Annual%20Report%202025.pdf ; https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting
+D9,SHC is the largest official corpus,"77,258 uploads / 13,274 AFR (sitting judges)",https://caselaw.shc.gov.pk/caselaw/public/rpt-afr
+D10,SHC requires Registrar's consent,"""without first obtaining written consent from the Registrar""",https://sindhhighcourt.gov.pk/disclaimer.php
+D11,PHC is the largest open corpus,"5,949 records 2009–2026, one POST",https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php?action=search
+D12,BHC PDFs are robots-disallowed,Disallow: /media/,https://bhc.gov.pk/robots.txt
+D13,AJK SC open via REST,704 posts in category 18; robots allow,https://ajksupremecourt.gok.pk/wp-json/wp/v2/categories?per_page=50 ; https://ajksupremecourt.gok.pk/robots.txt
+D14,FST and ATIR publish nothing,"""Account Suspended""; ""No Record Found In Database""",https://www.fst.gov.pk/robots.txt ; https://atir.gov.pk/Judgements
+D15,FTO full feed is only 15 days long,"""will remain accessible … for a period of 15 days""",http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions
+D16,Judgments and Gazette matter reproducible under copyright law,s.57(1)(q)(i)–(ii),https://pakistancode.gov.pk/pdffiles/administratorc8dc84cf91fcedf0a4a00fc2710945a1.pdf
+D17,Commercial and free aggregators forbid scraping,"PakistanLawsite ""must not copy, download, scrape""; Pakistan Case Law ""AI model-training crawlers are not permitted""",https://www.pakistanlawsite.com/ ; https://pakistancaselaw.com/terms
+D18,Juvenile identity bar exempts only HC/SC judgments,JJSA s.13 Explanation,https://lpr.adb.org/sites/default/files/2024-07/pakistan-juvenile-justice-system-act-2018.pdf
+D19,Court PDFs contain personal financial data,IHC sample includes litigant's IBAN,https://mis.ihc.gov.pk/attachments/judgements/209540/1/Muhammad_Usman_v_FoP_WP_No_1553_of_2026__J_Arbab_Muhammad_Tahir__Approved_for_Reporting_639280833781874862.pdf
+D20,Pakistan Code disclaims authenticity,"""should not be taken as authentic or error-free""",https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Fvbpw%3D-sg-jjjjjjjjjjjjj
+D21,KP Code consolidates but lags ~6 months,"FAQ ""revised form""; Assembly to Act XXI/2026 vs Code VII–IX/2026",https://kpcode.kp.gov.pk/homepage/faq ; https://www.pakp.gov.pk/act/
+D22,Balochistan Code is as-enacted with separate amendments,"1,790 entries; 673 titles contain ""amend""",https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1
+D23,Balochistan printing host opts out of AI training,Content-Signal: … ai-train=no; ClaudeBot disallowed,https://printing.balochistan.gov.pk/robots.txt
+D24,GB has no working statute code,Test rows; 3/3 PDFs 404; legacy domains down,https://gbassembly.gbit.gov.pk/pages/acts ; https://gba.gov.pk/acts/
+D25,AJK has the broadest as-enacted regional collection,"1,015 Act PDFs; 1,143 Ordinance PDFs",https://law.gok.pk/acts/ ; https://law.gok.pk/ordinance/
+D26,D2 is traceable to official URLs,Per-row pdf_url + pdf_sha256; robots honoured,https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_provincial_laws/raw/main/README.md
+D27,D3 is one-third off-topic,"3,478 null-domain rows (""How do you cook ribs?"")",https://datasets-server.huggingface.co/filter?dataset=abdullah693/adaption-pakistan-law-qa-pairs&config=default&split=train&where=%22domain%22%20IS%20NULL&length=5
+D28,Zenodo dataset incomplete and stale,No CPC; missing lettered PPC sections; no amendment after 2006,https://zenodo.org/api/records/20509007
+D29,"GitHub repo is a 1,000-PDF student snapshot","Report: ""scraped website https://www.supremecourt.gov.pk/""; 1,000 cases",https://github.com/SyedAhtsham/Pakistani-Law-Cases-Search-Engine/blob/main/CaSearch%20Report.pdf
+D30,Neutral citations are court-specific and only in metadata,LHC 2025 LHC 8083; SHC 2026 SHC KHI 2016; PHC 2025 PHC 14,https://data.lhc.gov.pk/dynamic/approved_judgments_result_new.php?year=2025&debug=0&courtName=All%20Courts&caseNumber=&citationTag=&partyName=&decisionDate0=&decisionDate1=&uploadDate=&uploadDate1= ; https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search

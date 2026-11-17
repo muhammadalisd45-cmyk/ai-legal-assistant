@@ -27,6 +27,10 @@ The app refuses to start if the configuration is unsafe (`/health/ready` also li
    ```
    With `RETRIEVAL_BACKEND=auto` the backend uses Supabase hybrid retrieval when the secret key is set and falls back to
    the bundled local index automatically.
+   After that, keep it current automatically: `.github/workflows/legal-sources-sync.yml` proposes new/amended laws
+   weekly as a PR, and `.github/workflows/publish-legal-corpus.yml` pushes merged changes to Supabase incrementally
+   (including deleting superseded text). Add `SUPABASE_URL` / `SUPABASE_SECRET_KEY` as secrets of the GitHub
+   `production` environment. See `SOURCE_SYNC_PIPELINE.md` → "Going live: Supabase".
 4. Run the RLS live verification in `SECURITY_CHECKLIST.md` on staging.
 
 ## 3. Backend deployment

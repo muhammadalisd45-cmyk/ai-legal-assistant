@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import json
 import logging
+import time
 
 from pydantic import ValidationError
 
+from app.core.config import settings
 from app.core.text import detect_language, detect_prompt_injection
 from app.prompts.triage_prompt import LANGUAGE_NAMES, SYSTEM_PROMPT, USER_TEMPLATE
 from app.schemas.triage import (
@@ -15,6 +17,12 @@ from app.services.llm_client import LLMClient, LLMError
 from app.services.urgency import EMERGENCY_GUIDANCE, apply_floor, detect_urgency_indicators
 
 logger = logging.getLogger("pjn.triage")
+
+# The frontend waits 45 s for /api/triage; keep the whole live attempt (including one retry) inside that.
+TRIAGE_TIME_BUDGET_SECONDS = 38.0
+MIN_RETRY_SECONDS = 8.0
+# Bad output from one model says nothing about the next one; outages are already handled by OpenRouter routing.
+RETRY_ON_NEXT_MODEL = {"invalid_json", "invalid_model_output", "refusal"}
 
 
 def _escape_tags(text: str) -> str:
@@ -31,6 +39,24 @@ class TriageService:
         detected = detect_language(request.message)
         response = detected if request.language == Language.auto else request.language.value
         return detected, response
+
+    async def _live_triage(self, prompt: str, request_id: str) -> TriageLLMOutput:
+        """Ask the model; if it answers with malformed JSON or the wrong shape, retry once on the next free model
+        (OpenRouter's own fallback only covers outages, not bad output) — but only while the caller can still wait."""
+        schema = TriageLLMOutput.model_json_schema()
+        started = time.monotonic()
+        try:
+            return TriageLLMOutput.model_validate(await self.llm.complete_json(SYSTEM_PROMPT, prompt, schema))
+        except (LLMError, ValidationError, ValueError, KeyError, TypeError) as exc:
+            reason = exc.reason if isinstance(exc, LLMError) else "invalid_model_output"
+            remaining = TRIAGE_TIME_BUDGET_SECONDS - (time.monotonic() - started)
+            models = settings.llm_models
+            if reason not in RETRY_ON_NEXT_MODEL or len(models) < 2 or remaining < MIN_RETRY_SECONDS:
+                raise
+            logger.warning("triage_llm_retry_next_model", extra={"reason": reason, "request_id": request_id})
+            rotated = [*models[1:], models[0]]
+            raw = await self.llm.complete_json(SYSTEM_PROMPT, prompt, schema, models=rotated, timeout=remaining)
+            return TriageLLMOutput.model_validate(raw)
 
     async def analyze(self, request: TriageRequest, request_id: str = "") -> TriageResult:
         detected, response_lang = self.resolve_languages(request)
@@ -51,8 +77,7 @@ class TriageService:
         )
 
         try:
-            raw = await self.llm.complete_json(SYSTEM_PROMPT, prompt, TriageLLMOutput.model_json_schema())
-            llm_output = TriageLLMOutput.model_validate(raw)
+            llm_output = await self._live_triage(prompt, request_id)
             result = TriageResult(**llm_output.model_dump(), mode="live")
         except LLMError as exc:
             if exc.reason != "not_configured":

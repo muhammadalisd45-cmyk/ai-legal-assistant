@@ -1,0 +1,735 @@
+{
+  "generated_at": "2026-11-12T16:04:08.955530+00:00",
+  "catalogs": [
+    "pakistan_all_provinces_dataset.json",
+    "pakistan_laws_master_dataset.json"
+  ],
+  "summary": {
+    "resolved_to_official_pdf": 43,
+    "unresolved_metadata_only": 2,
+    "already_in_corpus": 7,
+    "portals_not_documents": 8,
+    "skipped": 1,
+    "manifest_rows": 63
+  },
+  "resolved": [
+    {
+      "jurisdiction": "Federal",
+      "title": "Prevention of Electronic Crimes Act, 2016 (PECA)",
+      "year": "2016",
+      "catalog_titles": [
+        "Prevention of Electronic Crimes Act, 2016 (PECA)"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Prevention of Electronic Crimes Act, 2016",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Jvbp8%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator6a061efe0ed5bd153fa8b79b8eb4cba7.pdf",
+      "document_id": "PK-021"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Islamabad Consumers Protection Act, 1995",
+      "year": "1995",
+      "catalog_titles": [
+        "Consumer Protection Act, 2019"
+      ],
+      "existing_id": null,
+      "correction": "Pakistan Code has no federal 'Consumer Protection Act, 2019'. Consumer protection is provincial; the federal-capital law is the Islamabad Consumers Protection Act, 1995.",
+      "official_title": "Islamabad Consumers Protection Act, 1995",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apqVYw%3D%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administratorbc4daf1cd281f7808ceb417c316f18ea.pdf",
+      "document_id": "PK-022"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Muslim Family Laws Ordinance, 1961",
+      "year": "1961",
+      "catalog_titles": [
+        "Muslim Family Laws Ordinance, 1961"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Muslim Family Laws Ordinance, 1961",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5po-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administratoreecaf3b490e2d43d2e3b50c0c068b5d7.pdf",
+      "document_id": "PK-023"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Family Courts Act, 1964",
+      "year": "1964",
+      "catalog_titles": [
+        "Family Courts Act, 1964"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "The Family Courts Act, 1964",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5lraQ%3D%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administratorf08eaec19066a65a1b82cb4ad49feb4d.pdf",
+      "document_id": "PK-024"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Qanun-e-Shahadat Order, 1984",
+      "year": "1984",
+      "catalog_titles": [
+        "Qanun-e-Shahadat Order, 1984"
+      ],
+      "existing_id": "PK-006",
+      "correction": null,
+      "official_title": "Qanun-e-Shahadat Order, 1984 (QSO)",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5plaw%3D%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator01031a2c8cddc523d08a0df0ec37d7d0.pdf",
+      "document_id": "PK-006"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Dowry and Bridal Gifts (Restriction) Act, 1976",
+      "year": "1976",
+      "catalog_titles": [
+        "Dowry and Bridal Gifts (Restriction) Act, 1976"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Dowry and Bridal Gifts (Restriction) Act, 1976",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-bpuUY2Rp-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator359d2ddc2ad3cb8f4a5bfa3c263e5ba1.pdf",
+      "document_id": "PK-025"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Child Marriage Restraint Act, 1929",
+      "year": "1929",
+      "catalog_titles": [
+        "Child Marriage Restraint Act, 1929"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Child Marriage Restraint Act, 1929",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-ap%2Bb-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator0cb12b901d4304d7e5463da076d88639.pdf",
+      "document_id": "PK-026"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Factories Act, 1934",
+      "year": "1934",
+      "catalog_titles": [
+        "Factories Act, 1934"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Factories Act, 1934",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-b56X-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administratorf38efe0a6e760531f05b4a29ba4ba215.pdf",
+      "document_id": "PK-027"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Industrial Relations Act, 2012",
+      "year": "2012",
+      "catalog_titles": [
+        "Industrial Relations Act, 2012"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Industrial Relations Act, 2012",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2FqaZk%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator964ce81cc171ed5dcd0960630e922422.pdf",
+      "document_id": "PK-028"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Minimum Wages Ordinance, 1961",
+      "year": "1961",
+      "catalog_titles": [
+        "Minimum Wages and Modes of Payment Ordinance, 1961"
+      ],
+      "existing_id": null,
+      "correction": "Official title is 'Minimum Wages Ordinance, 1961'.",
+      "official_title": "Minimum Wages Ordinance, 1961",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-cJ2Y-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator26a975453aac76e06711066e6c07e718.pdf",
+      "document_id": "PK-029"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Employees' Old-Age Benefits Act, 1976",
+      "year": "1976",
+      "catalog_titles": [
+        "Employees' Old-Age Benefits Act, 1976"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Employees' Old-Age Benefits Act, 1976",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-bpuUY2Rt-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administratorf3be1ec8d21dfebb9c5d1733f43cffe6.pdf",
+      "document_id": "PK-030"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Workers' Welfare Fund Ordinance, 1971",
+      "year": "1971",
+      "catalog_titles": [
+        "Workers' Welfare Fund Ordinance, 2001"
+      ],
+      "existing_id": null,
+      "correction": "The Workers' Welfare Fund Ordinance is of 1971, not 2001.",
+      "official_title": "Workers' Welfare Fund Ordinance, 1971",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Fuaps%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator8b34b071116ce718a2770908b43282a9.pdf",
+      "document_id": "PK-031"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Customs Act, 1969",
+      "year": "1969",
+      "catalog_titles": [
+        "Customs Act, 1969"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Customs Act, 1969 (Same as on the official website of FBR dated 30-06-2025)",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5lrbw%3D%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator6d344e569c576550c200d66afb7b28f6.pdf",
+      "document_id": "PK-032"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Sales Tax Act, 1990",
+      "year": "1990",
+      "catalog_titles": [
+        "Sales Tax Act, 1990"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Sales Tax Act, 1990 (Same as on the official website of FBR dated 30-06-2026)",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2JxaJw%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administratorf6d20932403661e059756ab223d8542b.pdf",
+      "document_id": "PK-033"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Income Tax Ordinance, 2001",
+      "year": "2001",
+      "catalog_titles": [
+        "Income Tax Ordinance, 2001"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Income Tax Ordinance, 2001 (Same as on the official website of FBR dated 31-06-2026)",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-a5acag%3D%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administratorc09ecd376211abe32a7e44510f3fd719.pdf",
+      "document_id": "PK-034"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Federal Excise Act, 2005",
+      "year": "2005",
+      "catalog_titles": [
+        "Federal Excise Act, 2005"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Federal Excise Act, 2005 (Same as on the official website of FBR dated 30-06-2026)",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5lrbg%3D%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator06f0200ef997b50983df81ea052e8011.pdf",
+      "document_id": "PK-035"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "National Accountability Ordinance, 1999",
+      "year": "1999",
+      "catalog_titles": [
+        "National Accountability Bureau Ordinance, 1999"
+      ],
+      "existing_id": null,
+      "correction": "Official title is 'National Accountability Ordinance, 1999'.",
+      "official_title": "National Accountability Ordinance, 1999",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5ljaQ%3D%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator889746414e53d53e4398264cda458947.pdf",
+      "document_id": "PK-036"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Illegal Dispossession Act, 2005",
+      "year": "2005",
+      "catalog_titles": [
+        "Illegal Dispossession Act, 2005"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Illegal Dispossession Act, 2005",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5do-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator8af69a2733e5a880a7795e33df01e2e8.pdf",
+      "document_id": "PK-037"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Right of Access to Information Act, 2017",
+      "year": "2017",
+      "catalog_titles": [
+        "Right to Information Act, 2002"
+      ],
+      "existing_id": null,
+      "correction": "The Freedom of Information Ordinance, 2002 was replaced by the Right of Access to Information Act, 2017.",
+      "official_title": "Right of Access to Information Act, 2017",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Noa5c%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator3599d65bc5ecb2dd1915d04c7db91e8f.pdf",
+      "document_id": "PK-038"
+    },
+    {
+      "jurisdiction": "Punjab",
+      "title": "Punjab Consumer Protection Act, 2005",
+      "year": "2005",
+      "catalog_titles": [
+        "Punjab Consumer Protection Act, 2005"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "PUNJAB CONSUMER PROTECTION ACT 2005",
+      "detail_url": "https://punjabcode.punjab.gov.pk/en/show_article/BDEHMwc2VGw-",
+      "pdf_url": "https://punjabcode.punjab.gov.pk/uploads/articles/the_punjab_consumer_protection_act_2005-pdf.pdf",
+      "document_id": "PB-001"
+    },
+    {
+      "jurisdiction": "Punjab",
+      "title": "Punjab Land Revenue Act, 1967",
+      "year": "1967",
+      "catalog_titles": [
+        "Punjab Land Revenue Act, 1967"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "PUNJAB LAND REVENUE ACT, 1967",
+      "detail_url": "https://punjabcode.punjab.gov.pk/en/show_article/XWhSZwQ2VGc-",
+      "pdf_url": "https://punjabcode.punjab.gov.pk/uploads/articles/punjab-land-revenue-act-1967-pdf.pdf",
+      "document_id": "PB-002"
+    },
+    {
+      "jurisdiction": "Punjab",
+      "title": "Punjab Local Government Act, 2022",
+      "year": "2022",
+      "catalog_titles": [
+        "Punjab Local Government Act, 2022"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "PUNJAB LOCAL GOVERNMENT ACT 2022",
+      "detail_url": "https://punjabcode.punjab.gov.pk/en/show_article/UGBdawc4UmpQNA--",
+      "pdf_url": "https://punjabcode.punjab.gov.pk/uploads/articles/punjab-local-government-act-2022-xxxiii-of-2022-docx1-pdf.pdf",
+      "document_id": "PB-003"
+    },
+    {
+      "jurisdiction": "Punjab",
+      "title": "Punjab Industrial Relations Act, 2010",
+      "year": "2010",
+      "catalog_titles": [
+        "Punjab Industrial Relations Act, 2010"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "PUNJAB INDUSTRIAL RELATIONS ACT 2010",
+      "detail_url": "https://punjabcode.punjab.gov.pk/en/show_article/VWBSZldjV2E-",
+      "pdf_url": "https://punjabcode.punjab.gov.pk/uploads/articles/THE_PUNJAB_INDUSTRIAL_RELATIONS_ACT_2010.doc.pdf",
+      "document_id": "PB-004"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Local Government Act, 2013",
+      "year": "2013",
+      "catalog_titles": [
+        "Sindh Local Government Act, 2013"
+      ],
+      "existing_id": "SD-002",
+      "correction": null,
+      "official_title": "SINDH LOCAL GOVERNMENT ACT, 2013",
+      "detail_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000156.pdf",
+      "pdf_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000156.pdf",
+      "document_id": "SD-002"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Consumer Protection Act, 2014",
+      "year": "2014",
+      "catalog_titles": [
+        "Sindh Consumer Protection Act, 2015"
+      ],
+      "existing_id": "SD-006",
+      "correction": "The Act is titled 2014 on the Sindh Code (it was published in 2015).",
+      "official_title": "SINDH CONSUMER PROTECTION ACT, 2014",
+      "detail_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000096.pdf",
+      "pdf_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000096.pdf",
+      "document_id": "SD-006"
+    },
+    {
+      "jurisdiction": "Khyber Pakhtunkhwa",
+      "title": "Khyber Pakhtunkhwa Consumers Protection Act, 1997",
+      "year": "1997",
+      "catalog_titles": [
+        "Khyber Pakhtunkhwa Consumer Protection Act, 2020"
+      ],
+      "existing_id": null,
+      "correction": "KP Code lists no 2020 Act; the consumer law it publishes is the Consumers Protection Act, 1997.",
+      "official_title": "Consumers Protection Act, 1997",
+      "detail_url": "https://kpcode.kp.gov.pk/homepage/lawDetails/1196",
+      "pdf_url": "https://kpcode.kp.gov.pk/uploads/1997_06_THE_KHYBER_PAKHTUNKHWA_CONSUMERS_PROTECTION_ACT_1997_.pdf",
+      "document_id": "KP-001"
+    },
+    {
+      "jurisdiction": "Khyber Pakhtunkhwa",
+      "title": "Khyber Pakhtunkhwa Local Government Act, 2013",
+      "year": "2013",
+      "catalog_titles": [
+        "Khyber Pakhtunkhwa Local Government Act, 2013"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "The Khyber Pakhtunkhwa Local Government Act, 2013",
+      "detail_url": "https://kpcode.kp.gov.pk/homepage/lawDetails/1370",
+      "pdf_url": "https://kpcode.kp.gov.pk/uploads/THE_KHYBER_PAKHTUNKHWA_LOCAL_GOVERNMENT_ACT_2013.pdf",
+      "document_id": "KP-002"
+    },
+    {
+      "jurisdiction": "Khyber Pakhtunkhwa",
+      "title": "West Pakistan Land Revenue Act, 1967 (Khyber Pakhtunkhwa)",
+      "year": "1967",
+      "catalog_titles": [
+        "Khyber Pakhtunkhwa Land Revenue Act"
+      ],
+      "existing_id": null,
+      "correction": "KP Code publishes it as 'The West Pakistan Land-Revenue Act, 1967'.",
+      "official_title": "The West Pakistan Land- Revenue Act, 1967",
+      "detail_url": "https://kpcode.kp.gov.pk/homepage/lawDetails/848",
+      "pdf_url": "https://kpcode.kp.gov.pk/uploads/1967_17_THE_WEST_PAKISTAN_LAND_REVENUE_ACT_1967.pdf",
+      "document_id": "KP-003"
+    },
+    {
+      "jurisdiction": "Balochistan",
+      "title": "Balochistan Local Government Act, 2010",
+      "year": "2010",
+      "catalog_titles": [
+        "Balochistan Local Government Act, 2010"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "Balochistan Local Government Act 2010",
+      "detail_url": "https://balochistancode.gob.pk/Document.aspx?wise=opendoc&docid=1303&docc=1248",
+      "pdf_url": "https://balochistancode.gob.pk/lawdir/69b034f7-9fe6-45d3-a6cb-1fff3c94f9b6.pdf",
+      "document_id": "BL-001"
+    },
+    {
+      "jurisdiction": "Balochistan",
+      "title": "Balochistan Land Revenue Act, 1967",
+      "year": "1967",
+      "catalog_titles": [
+        "Balochistan Land Revenue Act, 1967"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "official_title": "The Balochistan Land Revenue Act, 1967",
+      "detail_url": "https://balochistancode.gob.pk/Document.aspx?wise=opendoc&docid=1113&docc=1063",
+      "pdf_url": "https://balochistancode.gob.pk/lawdir/3853b24d-debb-49db-90e7-6d35eea75244.pdf",
+      "document_id": "BL-002"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Contract Act, 1872",
+      "year": "1872",
+      "catalog_titles": [],
+      "existing_id": "PK-005",
+      "correction": null,
+      "official_title": "Contract Act, 1872",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-a50%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator8332a6df32386960ac7d81a5cf7aade2.pdf",
+      "document_id": "PK-005"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Transfer of Property Act, 1882",
+      "year": "1882",
+      "catalog_titles": [],
+      "existing_id": "PK-009",
+      "correction": null,
+      "official_title": "Transfer of Property Act, 1882",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-bpk%3D-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator77923ce792b475e339e1f46ba0442da3.pdf",
+      "document_id": "PK-009"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Partnership Act, 1932",
+      "year": "1932",
+      "catalog_titles": [],
+      "existing_id": "PK-011",
+      "correction": null,
+      "official_title": "Partnership Act, 1932",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-a5ab-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administratorbbc0b5b0d78c35e99e3b94f6b77b69db.pdf",
+      "document_id": "PK-011"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Companies Act, 2017",
+      "year": "2017",
+      "catalog_titles": [],
+      "existing_id": "PK-012",
+      "correction": null,
+      "official_title": "Companies Act, 2017",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Npa5Zm-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator89de324eeaa53c96ff701820d2e007e4.pdf",
+      "document_id": "PK-012"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Sale of Goods Act, 1930",
+      "year": "1930",
+      "catalog_titles": [],
+      "existing_id": "PK-013",
+      "correction": null,
+      "official_title": "Sale of Goods Act, 1930",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-a5aU-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator03eadfb5474bfa7c9e45ab4558d5a926.pdf",
+      "document_id": "PK-013"
+    },
+    {
+      "jurisdiction": "Federal",
+      "title": "Arbitration Act, 1940",
+      "year": "1940",
+      "catalog_titles": [],
+      "existing_id": "PK-014",
+      "correction": null,
+      "official_title": "Arbitration Act, 1940",
+      "detail_url": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-cJab-sg-jjjjjjjjjjjjj",
+      "pdf_url": "https://pakistancode.gov.pk/pdffiles/administrator0a802e3468735238090ceede22ccfd11.pdf",
+      "document_id": "PK-014"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Rented Premises Ordinance, 1979",
+      "year": "1979",
+      "catalog_titles": [],
+      "existing_id": "SD-003",
+      "correction": null,
+      "official_title": "SIND RENTED PREMISES ORDINANCE, 1979",
+      "detail_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000484.pdf",
+      "pdf_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000484.pdf",
+      "document_id": "SD-003"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Public Property (Removal of Encroachment) Act, 2010",
+      "year": "2010",
+      "catalog_titles": [],
+      "existing_id": "SD-004",
+      "correction": null,
+      "official_title": "SINDH PUBLIC PROPERTY (REMOVAL OF ENCROACHMENT) ACT, 2010",
+      "detail_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-26-000094.pdf",
+      "pdf_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-26-000094.pdf",
+      "document_id": "SD-004"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Environmental Protection Act, 2014",
+      "year": "2014",
+      "catalog_titles": [],
+      "existing_id": "SD-005",
+      "correction": null,
+      "official_title": "SINDH ENVIRONMENTAL PROTECTION ACT, 2014",
+      "detail_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000076.pdf",
+      "pdf_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000076.pdf",
+      "document_id": "SD-005"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Employees' Social Security Act, 2016",
+      "year": "2016",
+      "catalog_titles": [],
+      "existing_id": "SD-007",
+      "correction": null,
+      "official_title": "SINDH EMPLOYEES' SOCIAL SECURITY ACT, 2016",
+      "detail_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000103.pdf",
+      "pdf_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000103.pdf",
+      "document_id": "SD-007"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Domestic Violence (Prevention and Protection) Act, 2013",
+      "year": "2013",
+      "catalog_titles": [],
+      "existing_id": "SD-008",
+      "correction": null,
+      "official_title": "DOMESTIC VIOLENCE (PREVENTION AND PROTECTION) ACT, 2013",
+      "detail_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000141.pdf",
+      "pdf_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-18-000141.pdf",
+      "document_id": "SD-008"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Child Marriage Restraint Act, 2013",
+      "year": "2013",
+      "catalog_titles": [],
+      "existing_id": "SD-009",
+      "correction": null,
+      "official_title": "SINDH CHILD MARRIAGES RESTRAINT ACT 2013",
+      "detail_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000083.pdf",
+      "pdf_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-15-000083.pdf",
+      "document_id": "SD-009"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Transparency and Right to Information Act, 2016",
+      "year": "2016",
+      "catalog_titles": [],
+      "existing_id": "SD-010",
+      "correction": null,
+      "official_title": "TRANSPARENCY AND RIGHT TO INFORMATION ACT,2016",
+      "detail_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-20-000002.pdf",
+      "pdf_url": "https://sindhlaws.gov.pk/setup/Publications_SindhCode/PUB-NEW-20-000002.pdf",
+      "document_id": "SD-010"
+    }
+  ],
+  "unresolved": [
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Land Revenue Act, 1967",
+      "year": "1967",
+      "catalog_titles": [
+        "Sindh Land Revenue Act, 1967"
+      ],
+      "existing_id": null,
+      "correction": null,
+      "reason": "no listing with the same name and year on Sindh Code",
+      "document_id": "SD-011"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Civil Courts Ordinance, 1962",
+      "year": "1962",
+      "catalog_titles": [],
+      "existing_id": "SD-001",
+      "correction": null,
+      "reason": "no listing with the same name and year on Sindh Code",
+      "document_id": "SD-001"
+    }
+  ],
+  "already_in_corpus": [
+    {
+      "document_id": "PK-001",
+      "title": "Constitution of the Islamic Republic of Pakistan, 1973",
+      "catalog_titles": [
+        "Constitution of the Islamic Republic of Pakistan",
+        "Constitution of the Islamic Republic of Pakistan, 1973"
+      ]
+    },
+    {
+      "document_id": "PK-003",
+      "title": "Code of Criminal Procedure, 1898",
+      "catalog_titles": [
+        "Code of Criminal Procedure, 1898 (CrPC)"
+      ]
+    },
+    {
+      "document_id": "PK-004",
+      "title": "Code of Civil Procedure, 1908",
+      "catalog_titles": [
+        "Code of Civil Procedure, 1908 (CPC)"
+      ]
+    },
+    {
+      "document_id": "PK-002",
+      "title": "Pakistan Penal Code, 1860",
+      "catalog_titles": [
+        "Pakistan Penal Code, 1860 (PPC)"
+      ]
+    },
+    {
+      "document_id": "PK-018",
+      "title": "Electronic Transactions Ordinance, 2002",
+      "catalog_titles": [
+        "Electronic Transactions Ordinance, 2002"
+      ]
+    },
+    {
+      "document_id": "PK-016",
+      "title": "Anti-Terrorism Act, 1997",
+      "catalog_titles": [
+        "Anti-Terrorism Act, 1997"
+      ]
+    },
+    {
+      "document_id": "PK-017",
+      "title": "Protection against Harassment of Women at the Workplace Act, 2010",
+      "catalog_titles": [
+        "Protection Against Harassment of Women at Workplace Act, 2010"
+      ]
+    }
+  ],
+  "portals_not_documents": [
+    {
+      "jurisdiction": "Punjab",
+      "title": "Punjab Assembly — Acts and Legislation",
+      "url": "https://www.pap.gov.pk/",
+      "authority": "Provincial Assembly of the Punjab",
+      "catalog": "pakistan_all_provinces_dataset.json"
+    },
+    {
+      "jurisdiction": "Punjab",
+      "title": "Punjab Laws — Rules and Regulations",
+      "url": "https://law.punjab.gov.pk/rules_and_regulations",
+      "authority": "Government of Punjab",
+      "catalog": "pakistan_all_provinces_dataset.json"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Laws Portal — Acts, Rules, Ordinances & Gazette",
+      "url": "https://sindhlaws.gov.pk/SindhIndex.aspx",
+      "authority": "Government of Sindh",
+      "catalog": "pakistan_all_provinces_dataset.json"
+    },
+    {
+      "jurisdiction": "Sindh",
+      "title": "Provincial Assembly of Sindh — Acts Register",
+      "url": "https://pas.gov.pk/acts",
+      "authority": "Provincial Assembly of Sindh",
+      "catalog": "pakistan_all_provinces_dataset.json"
+    },
+    {
+      "jurisdiction": "Khyber Pakhtunkhwa",
+      "title": "Khyber Pakhtunkhwa Assembly — Acts",
+      "url": "https://www.pakp.gov.pk/act/",
+      "authority": "Provincial Assembly of Khyber Pakhtunkhwa",
+      "catalog": "pakistan_all_provinces_dataset.json"
+    },
+    {
+      "jurisdiction": "Balochistan",
+      "title": "Balochistan Assembly — Acts",
+      "url": "https://pabalochistan.gov.pk/new/acts/",
+      "authority": "Provincial Assembly of Balochistan",
+      "catalog": "pakistan_all_provinces_dataset.json"
+    },
+    {
+      "jurisdiction": "Judiciary",
+      "title": "Supreme Court of Pakistan — Judgment Search",
+      "url": "https://scp.gov.pk/JudgmentsSearch",
+      "authority": "Supreme Court of Pakistan",
+      "catalog": "pakistan_all_provinces_dataset.json"
+    },
+    {
+      "jurisdiction": "Judiciary",
+      "title": "Islamabad High Court — Judgments & Orders",
+      "url": "https://mis.ihc.gov.pk/frmJgmnt",
+      "authority": "Islamabad High Court",
+      "catalog": "pakistan_all_provinces_dataset.json"
+    }
+  ],
+  "skipped": [
+    {
+      "jurisdiction": "Sindh",
+      "title": "Sindh Labour Policy / Labour Laws",
+      "catalog": "pakistan_laws_master_dataset.json",
+      "reason": "not a single legal instrument"
+    }
+  ]
+}

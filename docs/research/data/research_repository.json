@@ -1,0 +1,1809 @@
+{
+ "generated_at": "2026-11-13T04:57:04+00:00",
+ "report": "docs/research/reports/Pakistan case law and statute sources.md",
+ "datasets": {
+  "source_directory": {
+   "columns": [
+    "section",
+    "Title",
+    "URL",
+    "Organisation",
+    "Category",
+    "Date / last updated",
+    "Credibility",
+    "Access status",
+    "http_status",
+    "final_url",
+    "check_error",
+    "checked_at"
+   ],
+   "rows": [
+    {
+     "section": "B1. Case law: courts",
+     "Title": "SCP Judgments Search",
+     "URL": "https://scp.gov.pk/JudgmentsSearch",
+     "Organisation": "Supreme Court of Pakistan",
+     "Category": "Official search",
+     "Date / last updated": "Case years 1980–2026 in dropdown",
+     "Credibility": "Primary",
+     "Access status": "Fetched; search gated by reCAPTCHA v3",
+     "http_status": "",
+     "final_url": "",
+     "check_error": "not fetched: robots/AI-crawl restrictions",
+     "checked_at": "2026-11-13T04:54:24+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "SCP Latest Judgments",
+     "URL": "https://scp.gov.pk/LatestJudgments.aspx",
+     "Organisation": "Supreme Court",
+     "Category": "Official listing (25 rows)",
+     "Date / last updated": "Uploads to 11-11-2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; no CAPTCHA",
+     "http_status": "",
+     "final_url": "",
+     "check_error": "not fetched: robots/AI-crawl restrictions",
+     "checked_at": "2026-11-13T04:54:24+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "SCP robots.txt",
+     "URL": "https://scp.gov.pk/robots.txt",
+     "Organisation": "Supreme Court",
+     "Category": "Robots",
+     "Date / last updated": "Live",
+     "Credibility": "Primary",
+     "Access status": "Fetched; blocks AI crawlers; ai-train=no",
+     "http_status": "",
+     "final_url": "",
+     "check_error": "not fetched: robots/AI-crawl restrictions",
+     "checked_at": "2026-11-13T04:54:24+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "SC legacy PDF host",
+     "URL": "https://www.supremecourt.gov.pk/downloads_judgements/",
+     "Organisation": "Supreme Court",
+     "Category": "Judgment PDFs",
+     "Date / last updated": "—",
+     "Credibility": "Primary",
+     "Access status": "Inaccessible (Akamai HTTP 403)",
+     "http_status": "",
+     "final_url": "",
+     "check_error": "not fetched: robots/AI-crawl restrictions",
+     "checked_at": "2026-11-13T04:54:24+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "Federal Constitutional Court judgments",
+     "URL": "https://www.fccp.gov.pk/judgments",
+     "Organisation": "Federal Constitutional Court",
+     "Category": "SPA",
+     "Date / last updated": "Created Nov 2025",
+     "Credibility": "Primary",
+     "Access status": "JS shell only; not profiled",
+     "http_status": 200,
+     "final_url": "https://fccp.gov.pk/judgments",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:24+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "FSC Shariat Petitions list",
+     "URL": "https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php",
+     "Organisation": "Federal Shariat Court",
+     "Category": "Official listing + PDFs",
+     "Date / last updated": "Latest 19 Mar 2025",
+     "Credibility": "Primary",
+     "Access status": "Fetched; open",
+     "http_status": 200,
+     "final_url": "https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:24+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "FSC Criminal / Suo Moto pages",
+     "URL": "https://www.federalshariatcourt.gov.pk/criminaljudgments.html",
+     "Organisation": "FSC",
+     "Category": "Listing",
+     "Date / last updated": "—",
+     "Credibility": "Primary",
+     "Access status": "\"Under Construction\"",
+     "http_status": 200,
+     "final_url": "https://www.federalshariatcourt.gov.pk/criminaljudgments.html",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:25+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "IHC Judgments",
+     "URL": "https://mis.ihc.gov.pk/frmJgmnt",
+     "Organisation": "Islamabad High Court",
+     "Category": "Official listing (JSON-backed)",
+     "Date / last updated": "Live",
+     "Credibility": "Primary",
+     "Access status": "Fetched; no robots, no CAPTCHA",
+     "http_status": 200,
+     "final_url": "https://mis.ihc.gov.pk/frmJgmnt",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:26+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "IHC search JSON",
+     "URL": "https://mis.ihc.gov.pk/ihc.asmx/srchDecisionClms",
+     "Organisation": "IHC",
+     "Category": "Web service",
+     "Date / last updated": "Live",
+     "Credibility": "Primary",
+     "Access status": "Fetched once (97 records)",
+     "http_status": "",
+     "final_url": "",
+     "check_error": "TooManyRedirects: Exceeded maximum allowed redirects.",
+     "checked_at": "2026-11-13T04:54:26+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "LHC AFR (sitting judges)",
+     "URL": "https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting",
+     "Organisation": "Lahore High Court",
+     "Category": "Official listing",
+     "Date / last updated": "Latest 12-11-2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; copyright footer reserves download",
+     "http_status": 200,
+     "final_url": "https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:27+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "LHC AFR (former judges)",
+     "URL": "https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting_by_former_judges",
+     "Organisation": "LHC",
+     "Category": "Official listing",
+     "Date / last updated": "Live",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting_by_former_judges",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:27+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "LHC PDF host",
+     "URL": "https://sys.lhc.gov.pk/appjudgments/",
+     "Organisation": "LHC",
+     "Category": "Judgment PDFs",
+     "Date / last updated": "Live",
+     "Credibility": "Primary",
+     "Access status": "Fetched samples; robots 404",
+     "http_status": 200,
+     "final_url": "https://sys.lhc.gov.pk/appjudgments/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:29+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "LHC Annual Report 2025",
+     "URL": "https://lhc.gov.pk/system/files/Annual%20Report%202025.pdf",
+     "Organisation": "LHC",
+     "Category": "Statistics",
+     "Date / last updated": "2025",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://lhc.gov.pk/system/files/Annual%20Report%202025.pdf",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:29+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "SHC Caselaw Advance Search",
+     "URL": "https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search",
+     "Organisation": "Sindh High Court",
+     "Category": "Official search",
+     "Date / last updated": "Live",
+     "Credibility": "Primary",
+     "Access status": "Fetched; Cloudflare; no CAPTCHA",
+     "http_status": 200,
+     "final_url": "https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:30+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "SHC Report-002 AFR",
+     "URL": "https://caselaw.shc.gov.pk/caselaw/public/rpt-afr",
+     "Organisation": "SHC",
+     "Category": "Statistics",
+     "Date / last updated": "Live",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://caselaw.shc.gov.pk/caselaw/public/rpt-afr",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:33+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "SHC Disclaimer",
+     "URL": "https://sindhhighcourt.gov.pk/disclaimer.php",
+     "Organisation": "SHC",
+     "Category": "Terms",
+     "Date / last updated": "\"© 2001-2002\"",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://sindhhighcourt.gov.pk/disclaimer.php",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:36+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "SHC digital / Search Citation",
+     "URL": "https://digital.shc.gov.pk/search-citation",
+     "Organisation": "SHC",
+     "Category": "eCTC portal",
+     "Date / last updated": "© 2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; reCAPTCHA (do not automate)",
+     "http_status": "",
+     "final_url": "",
+     "check_error": "not fetched: robots/AI-crawl restrictions",
+     "checked_at": "2026-11-13T04:54:36+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "PHC Reported Judgments",
+     "URL": "https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php",
+     "Organisation": "Peshawar High Court",
+     "Category": "Official database",
+     "Date / last updated": "Records to 2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; open",
+     "http_status": 200,
+     "final_url": "https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:36+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "PHC Case Law digest",
+     "URL": "https://peshawarhighcourt.gov.pk/app/site/108/c/Case_Law.html",
+     "Organisation": "PHC",
+     "Category": "Digest PDFs",
+     "Date / last updated": "Latest Jan–Mar 2023",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://peshawarhighcourt.gov.pk/app/site/108/c/Case_Law.html",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:37+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "BHC Judgments index",
+     "URL": "https://bhc.gov.pk/resources/judgments",
+     "Organisation": "Balochistan High Court",
+     "Category": "Per-judge listings",
+     "Date / last updated": "2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; PDFs under robots-disallowed /media/",
+     "http_status": 200,
+     "final_url": "https://bhc.gov.pk/resources/judgments",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:38+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "BHC portal",
+     "URL": "https://portal.bhc.gov.pk/judgments",
+     "Organisation": "BHC",
+     "Category": "Search SPA",
+     "Date / last updated": "—",
+     "Credibility": "Primary",
+     "Access status": "API redirected to login; not pursued",
+     "http_status": 200,
+     "final_url": "https://portal.bhc.gov.pk/judgments/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:39+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "GBCC Reported Judgments",
+     "URL": "https://gbcc.gov.pk/ReportedJudgments.aspx",
+     "Organisation": "Chief Court GB",
+     "Category": "ASP.NET search",
+     "Date / last updated": "Decisions 2015–2020",
+     "Credibility": "Primary",
+     "Access status": "Fetched; open",
+     "http_status": 200,
+     "final_url": "https://gbcc.gov.pk/ReportedJudgments.aspx",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:40+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "SAC GB Judgments",
+     "URL": "https://sacgb.gov.pk/Judgments.html",
+     "Organisation": "Supreme Appellate Court GB",
+     "Category": "Static list",
+     "Date / last updated": "© 2025",
+     "Credibility": "Primary",
+     "Access status": "Fetched; open",
+     "http_status": 200,
+     "final_url": "https://sacgb.gov.pk/Judgments.html",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:41+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "AJK HC Judgments",
+     "URL": "https://ajkhighcourt.gok.pk/important-judgments",
+     "Organisation": "High Court of AJ&K",
+     "Category": "Search",
+     "Date / last updated": "2022–2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; open",
+     "http_status": 200,
+     "final_url": "https://ajkhighcourt.gok.pk/important-judgments",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:42+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "AJK SC Judgements/Orders",
+     "URL": "https://ajksupremecourt.gok.pk/judgements-orders/",
+     "Organisation": "Supreme Court of AJ&K",
+     "Category": "WordPress listing",
+     "Date / last updated": "Latest 28-10-2026",
+     "Credibility": "Primary",
+     "Access status": "HTTP 500 but renders; REST API open",
+     "http_status": 200,
+     "final_url": "https://ajksupremecourt.gok.pk/judgements-orders/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:42+00:00"
+    },
+    {
+     "section": "B1. Case law: courts",
+     "Title": "AJK SC REST API",
+     "URL": "https://ajksupremecourt.gok.pk/wp-json/wp/v2/posts?categories=18&per_page=100",
+     "Organisation": "AJK SC",
+     "Category": "JSON",
+     "Date / last updated": "Live",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://ajksupremecourt.gok.pk/wp-json/wp/v2/posts?categories=18&per_page=100",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:43+00:00"
+    },
+    {
+     "section": "B2. Case law: tribunals and quasi-judicial bodies",
+     "Title": "CCP Orders",
+     "URL": "https://cc.gov.pk/home/orders",
+     "Organisation": "Competition Commission",
+     "Category": "Orders",
+     "Date / last updated": "Latest 11 Sep 2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; open",
+     "http_status": 200,
+     "final_url": "https://cc.gov.pk/home/orders",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:46+00:00"
+    },
+    {
+     "section": "B2. Case law: tribunals and quasi-judicial bodies",
+     "Title": "CAT orders (CCP-hosted)",
+     "URL": "https://cc.gov.pk/home/decidedcatcases",
+     "Organisation": "Competition Appellate Tribunal via CCP",
+     "Category": "Orders",
+     "Date / last updated": "Latest 06-07-2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; open",
+     "http_status": 200,
+     "final_url": "https://cc.gov.pk/home/decidedcatcases",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:46+00:00"
+    },
+    {
+     "section": "B2. Case law: tribunals and quasi-judicial bodies",
+     "Title": "FTO Reported Decisions",
+     "URL": "https://www.fto.gov.pk/decisions.aspx",
+     "Organisation": "Federal Tax Ombudsman",
+     "Category": "Selected decisions",
+     "Date / last updated": "2022–2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; open",
+     "http_status": "",
+     "final_url": "",
+     "check_error": "ConnectError: (\"The certificate's CN name does not match the passed value.\",)",
+     "checked_at": "2026-11-13T04:54:48+00:00"
+    },
+    {
+     "section": "B2. Case law: tribunals and quasi-judicial bodies",
+     "Title": "FTO Signed Decisions (15-day)",
+     "URL": "http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions",
+     "Organisation": "FTO (third-party DNS host)",
+     "Category": "Rolling feed",
+     "Date / last updated": "29/10–12/11/2026",
+     "Credibility": "Primary (by linkage)",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:54:48+00:00"
+    },
+    {
+     "section": "B2. Case law: tribunals and quasi-judicial bodies",
+     "Title": "Wafaqi Mohtasib Findings",
+     "URL": "https://mohtasib.gov.pk/Publications",
+     "Organisation": "Federal Ombudsman",
+     "Category": "Findings",
+     "Date / last updated": "Newest 18/12/2020",
+     "Credibility": "Primary",
+     "Access status": "Fetched; stale",
+     "http_status": 200,
+     "final_url": "https://mohtasib.gov.pk/Publications",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:10+00:00"
+    },
+    {
+     "section": "B2. Case law: tribunals and quasi-judicial bodies",
+     "Title": "FST site",
+     "URL": "https://www.fst.gov.pk/",
+     "Organisation": "Federal Service Tribunal",
+     "Category": "Official site",
+     "Date / last updated": "Suspended",
+     "Credibility": "Primary",
+     "Access status": "Inaccessible (\"Account Suspended\")",
+     "http_status": 200,
+     "final_url": "https://www.fst.gov.pk/cgi-sys/suspendedpage.cgi",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:10+00:00"
+    },
+    {
+     "section": "B2. Case law: tribunals and quasi-judicial bodies",
+     "Title": "FST archived home",
+     "URL": "http://web.archive.org/web/20260716134606/https://fst.gov.pk/",
+     "Organisation": "Internet Archive",
+     "Category": "Archive",
+     "Date / last updated": "16 Jul 2026",
+     "Credibility": "Secondary",
+     "Access status": "Fetched; no judgments section",
+     "http_status": 200,
+     "final_url": "http://web.archive.org/web/20260716134606/https://fst.gov.pk/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:11+00:00"
+    },
+    {
+     "section": "B2. Case law: tribunals and quasi-judicial bodies",
+     "Title": "ATIR Judgements",
+     "URL": "https://atir.gov.pk/Judgements",
+     "Organisation": "Appellate Tribunal Inland Revenue",
+     "Category": "Listing",
+     "Date / last updated": "© 2023",
+     "Credibility": "Primary (official status unconfirmed)",
+     "Access status": "Fetched; \"No Record Found\"",
+     "http_status": 200,
+     "final_url": "https://atir.gov.pk/Judgements/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:12+00:00"
+    },
+    {
+     "section": "B2. Case law: tribunals and quasi-judicial bodies",
+     "Title": "LJCP ATSC 2024 report",
+     "URL": "https://ljcp.gov.pk/SiteImage/Misc/files/ATSC%202024%20(20-06-25).pdf",
+     "Organisation": "LJCP",
+     "Category": "Statistics",
+     "Date / last updated": "20-06-2025",
+     "Credibility": "Primary",
+     "Access status": "Snippet only",
+     "http_status": 206,
+     "final_url": "https://ljcp.gov.pk/SiteImage/Misc/files/ATSC%202024%20(20-06-25).pdf",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:14+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "Pakistan Code",
+     "URL": "https://pakistancode.gov.pk/english/index.php",
+     "Organisation": "Ministry of Law & Justice",
+     "Category": "Federal + ICT consolidated code",
+     "Date / last updated": "© 2022; ticker items from 2023",
+     "Credibility": "Primary",
+     "Access status": "Fetched (home + sample laws); ~1,037 laws per session crawl",
+     "http_status": 200,
+     "final_url": "https://pakistancode.gov.pk/english/index.php",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:15+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "Punjab Code",
+     "URL": "https://punjabcode.punjab.gov.pk/en/alphabetical",
+     "Organisation": "Govt of Punjab",
+     "Category": "Provincial code",
+     "Date / last updated": "Crawled 2026-11-12",
+     "Credibility": "Primary",
+     "Access status": "Fetched; 746 laws with PDFs; robots.txt HTTP 403",
+     "http_status": 200,
+     "final_url": "https://punjabcode.punjab.gov.pk/en/alphabetical",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:16+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "Punjab Code – recently updated",
+     "URL": "https://punjabcode.punjab.gov.pk/en/recently_updated",
+     "Organisation": "Govt of Punjab",
+     "Category": "Amendment/new-law feed",
+     "Date / last updated": "Fetched 2026-11-13",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://punjabcode.punjab.gov.pk/en/recently_updated",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:18+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "Sindh Code",
+     "URL": "https://sindhlaws.gov.pk/Alpha.aspx?pg=ACT",
+     "Organisation": "Govt of Sindh",
+     "Category": "Provincial code",
+     "Date / last updated": "Crawled 2026-11-12",
+     "Credibility": "Primary",
+     "Access status": "Fetched; 1,383 Acts/Ordinances (letter filter + paging); robots Allow: /",
+     "http_status": 200,
+     "final_url": "https://sindhlaws.gov.pk/Alpha.aspx?pg=ACT",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:20+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "Sindh Judicial Academy – Updated Laws",
+     "URL": "https://sja.gos.pk/updated-laws/",
+     "Organisation": "Sindh Judicial Academy",
+     "Category": "Consolidated texts (tier 2)",
+     "Date / last updated": "Fetched 2026-11-13",
+     "Credibility": "Primary (secondary compilation)",
+     "Access status": "Fetched; 41 laws incl. Sindh Civil Courts Ordinance 1962",
+     "http_status": 200,
+     "final_url": "https://sja.gos.pk/updated-laws/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:20+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "Pakistan Code – chronological / latest ordinances",
+     "URL": "https://pakistancode.gov.pk/english/KmTY5e.php",
+     "Organisation": "Ministry of Law and Justice",
+     "Category": "New-law feed",
+     "Date / last updated": "Fetched 2026-11-13",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://pakistancode.gov.pk/english/KmTY5e.php",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:21+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "KP Code",
+     "URL": "https://kpcode.kp.gov.pk/homepage/list_all_law",
+     "Organisation": "KP Law Dept",
+     "Category": "Consolidated provincial code",
+     "Date / last updated": "Newest Act VIII/IX of 2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; robots Allow all",
+     "http_status": 200,
+     "final_url": "https://kpcode.kp.gov.pk/homepage/list_all_law",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:21+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "KP Assembly Acts",
+     "URL": "https://www.pakp.gov.pk/act/",
+     "Organisation": "Provincial Assembly KP",
+     "Category": "Acts + gazetted copies",
+     "Date / last updated": "To Act XXI of 2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://www.pakp.gov.pk/act/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:22+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "Balochistan Code",
+     "URL": "https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1",
+     "Organisation": "Balochistan Law Dept",
+     "Category": "As-enacted repository",
+     "Date / last updated": "To 05 Nov 2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; robots no directives",
+     "http_status": 200,
+     "final_url": "https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:22+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "Balochistan Assembly Acts",
+     "URL": "https://pabalochistan.gov.pk/acts",
+     "Organisation": "Provincial Assembly Balochistan",
+     "Category": "Acts list",
+     "Date / last updated": "To Act XV of 2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; robots allow all",
+     "http_status": 200,
+     "final_url": "https://pabalochistan.gov.pk/acts",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:24+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "Balochistan Printing Dept",
+     "URL": "https://printing.balochistan.gov.pk/",
+     "Organisation": "Govt of Balochistan",
+     "Category": "Gazette printer",
+     "Date / last updated": "—",
+     "Credibility": "Primary",
+     "Access status": "Fetched; no gazette PDFs; ai-train=no",
+     "http_status": "",
+     "final_url": "",
+     "check_error": "not fetched: robots/AI-crawl restrictions",
+     "checked_at": "2026-11-13T04:55:24+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "blncode.pitb.gov.pk",
+     "URL": "http://blncode.pitb.gov.pk",
+     "Organisation": "Unknown (PITB subdomain)",
+     "Category": "Unknown",
+     "Date / last updated": "—",
+     "Credibility": "Unknown",
+     "Access status": "Inaccessible (TCP connect fails)",
+     "http_status": "",
+     "final_url": "",
+     "check_error": "ConnectTimeout: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time",
+     "checked_at": "2026-11-13T04:55:24+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "GB Assembly Acts",
+     "URL": "https://gbassembly.gbit.gov.pk/pages/acts",
+     "Organisation": "GB Assembly",
+     "Category": "Acts list",
+     "Date / last updated": "2020–2025",
+     "Credibility": "Primary (buggy)",
+     "Access status": "Fetched; 3/3 PDFs 404",
+     "http_status": 200,
+     "final_url": "https://gbassembly.gbit.gov.pk/pages/acts",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:46+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "GB Govt Acts / Laws",
+     "URL": "https://gilgitbaltistan.gov.pk/pages/acts",
+     "Organisation": "Govt of GB",
+     "Category": "Download list (~15 Acts)",
+     "Date / last updated": "GB Order PDF Nov 2024",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://gilgitbaltistan.gov.pk/pages/acts",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:47+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "gba.gov.pk / gba.gbit.gov.pk",
+     "URL": "https://gba.gov.pk/acts/",
+     "Organisation": "GB Assembly (legacy)",
+     "Category": "Acts list",
+     "Date / last updated": "—",
+     "Credibility": "Primary",
+     "Access status": "Inaccessible (expired cert / 404)",
+     "http_status": "",
+     "final_url": "",
+     "check_error": "ConnectError: ('A required certificate is not within its validity period when verifying against the current system clock or the timest",
+     "checked_at": "2026-11-13T04:55:48+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "AJK Law Dept",
+     "URL": "https://law.gok.pk/acts/",
+     "Organisation": "AJK Law Dept",
+     "Category": "Acts, Ordinances, Law Code vols",
+     "Date / last updated": "To Act V 2025 / Ord III 2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched; WP robots",
+     "http_status": 200,
+     "final_url": "https://law.gok.pk/acts/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:48+00:00"
+    },
+    {
+     "section": "B3. Statutes",
+     "Title": "AJK Assembly Acts",
+     "URL": "https://ajkassembly.gok.pk/acts/",
+     "Organisation": "AJK Legislative Assembly",
+     "Category": "Acts list",
+     "Date / last updated": "2019–2023",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://ajkassembly.gok.pk/acts/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:49+00:00"
+    },
+    {
+     "section": "B4. Legal framework and landscape",
+     "Title": "Copyright Ordinance 1962 (Pakistan Code PDF)",
+     "URL": "https://pakistancode.gov.pk/pdffiles/administratorc8dc84cf91fcedf0a4a00fc2710945a1.pdf",
+     "Organisation": "Ministry of Law & Justice",
+     "Category": "Statute",
+     "Date / last updated": "Current portal copy",
+     "Credibility": "Primary",
+     "Access status": "Fetched",
+     "http_status": 206,
+     "final_url": "https://pakistancode.gov.pk/pdffiles/administratorc8dc84cf91fcedf0a4a00fc2710945a1.pdf",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:50+00:00"
+    },
+    {
+     "section": "B4. Legal framework and landscape",
+     "Title": "Copyright Ordinance 1962 (WIPO Lex)",
+     "URL": "https://www.wipo.int/wipolex/en/text/129350",
+     "Organisation": "WIPO",
+     "Category": "Statute (secondary host)",
+     "Date / last updated": "As amended to 2000",
+     "Credibility": "Secondary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://www.wipo.int/wipolex/en/text/129350",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:51+00:00"
+    },
+    {
+     "section": "B4. Legal framework and landscape",
+     "Title": "Juvenile Justice System Act 2018",
+     "URL": "https://lpr.adb.org/sites/default/files/2024-07/pakistan-juvenile-justice-system-act-2018.pdf",
+     "Organisation": "ADB LPR",
+     "Category": "Statute (secondary host)",
+     "Date / last updated": "Jul 2024 upload",
+     "Credibility": "Secondary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://lpr.adb.org/sites/default/files/2024-07/pakistan-juvenile-justice-system-act-2018.pdf",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:52+00:00"
+    },
+    {
+     "section": "B4. Legal framework and landscape",
+     "Title": "s.376A PPC Gazette scan",
+     "URL": "https://sld.com.pk/wp-content/uploads/2021/04/1485428121_999.pdf",
+     "Organisation": "Supreme Law Digest",
+     "Category": "Gazette scan",
+     "Date / last updated": "2016",
+     "Credibility": "Secondary",
+     "Access status": "Snippet only (OCR damaged)",
+     "http_status": 200,
+     "final_url": "https://sld.com.pk/wp-content/uploads/2021/04/1485428121_999.pdf",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:52+00:00"
+    },
+    {
+     "section": "B4. Legal framework and landscape",
+     "Title": "LHC victim-anonymity ruling",
+     "URL": "https://dawn.com/news/1828670/lhc-asks-judges-to-protect-rape-victims-identity-in-verdicts",
+     "Organisation": "Dawn",
+     "Category": "News",
+     "Date / last updated": "21 Apr 2024",
+     "Credibility": "Secondary",
+     "Access status": "Fetched",
+     "http_status": 403,
+     "final_url": "https://dawn.com/news/1828670/lhc-asks-judges-to-protect-rape-victims-identity-in-verdicts",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:53+00:00"
+    },
+    {
+     "section": "B4. Legal framework and landscape",
+     "Title": "PakistanLawsite",
+     "URL": "https://www.pakistanlawsite.com/",
+     "Organisation": "Oratier Technologies / PLD",
+     "Category": "Commercial publisher",
+     "Date / last updated": "© 2026",
+     "Credibility": "Secondary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://www.pakistanlawsite.com/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:54+00:00"
+    },
+    {
+     "section": "B4. Legal framework and landscape",
+     "Title": "Pakistan Case Law terms",
+     "URL": "https://pakistancaselaw.com/terms",
+     "Organisation": "Hamadullah Shah, Advocate",
+     "Category": "Free aggregator",
+     "Date / last updated": "10 Jul 2026",
+     "Credibility": "Secondary",
+     "Access status": "Fetched",
+     "http_status": 200,
+     "final_url": "https://pakistancaselaw.com/terms",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:54+00:00"
+    },
+    {
+     "section": "B4. Legal framework and landscape",
+     "Title": "LJCP home (NJPMC AI guidelines link)",
+     "URL": "https://ljcp.gov.pk/",
+     "Organisation": "Law & Justice Commission",
+     "Category": "Official",
+     "Date / last updated": "© 2026",
+     "Credibility": "Primary",
+     "Access status": "Fetched (guideline text not read)",
+     "http_status": 200,
+     "final_url": "https://ljcp.gov.pk/",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:54+00:00"
+    },
+    {
+     "section": "B4. Legal framework and landscape",
+     "Title": "PHC footnote-omission petition",
+     "URL": "https://www.dawn.com/news/1949786",
+     "Organisation": "Dawn",
+     "Category": "News",
+     "Date / last updated": "19 Oct 2025",
+     "Credibility": "Secondary",
+     "Access status": "Fetched",
+     "http_status": 403,
+     "final_url": "https://www.dawn.com/news/1949786",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:55+00:00"
+    },
+    {
+     "section": "B5. Third-party datasets",
+     "Title": "Pakistan_Laws_Dataset (D1)",
+     "URL": "https://huggingface.co/datasets/AyeshaJadoon/Pakistan_Laws_Dataset",
+     "Organisation": "AyeshaJadoon",
+     "Category": "HF dataset (federal statutes)",
+     "Date / last updated": "2025-01-30",
+     "Credibility": "Low",
+     "Access status": "Metadata + 3 byte ranges",
+     "http_status": 200,
+     "final_url": "https://huggingface.co/datasets/AyeshaJadoon/Pakistan_Laws_Dataset",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:55+00:00"
+    },
+    {
+     "section": "B5. Third-party datasets",
+     "Title": "ipfs_pakistan_provincial_laws (D2)",
+     "URL": "https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_provincial_laws",
+     "Organisation": "endomorphosis",
+     "Category": "HF dataset (KP + Balochistan)",
+     "Date / last updated": "2026-11-06",
+     "Credibility": "Medium-high (provenance logged)",
+     "Access status": "Metadata, viewer API, manifests",
+     "http_status": 200,
+     "final_url": "https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_provincial_laws",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:55+00:00"
+    },
+    {
+     "section": "B5. Third-party datasets",
+     "Title": "ipfs_pakistan_laws (federal sibling)",
+     "URL": "https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_laws",
+     "Organisation": "endomorphosis",
+     "Category": "HF dataset (federal)",
+     "Date / last updated": "2026-11-06",
+     "Credibility": "Medium (unvetted)",
+     "Access status": "README + first rows",
+     "http_status": 200,
+     "final_url": "https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_laws",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:57+00:00"
+    },
+    {
+     "section": "B5. Third-party datasets",
+     "Title": "adaption-pakistan-law-qa-pairs (D3)",
+     "URL": "https://huggingface.co/datasets/abdullah693/adaption-pakistan-law-qa-pairs",
+     "Organisation": "abdullah693",
+     "Category": "Synthetic QA",
+     "Date / last updated": "2026-06-20",
+     "Credibility": "Low-medium",
+     "Access status": "Viewer API (600 rows sampled)",
+     "http_status": 200,
+     "final_url": "https://huggingface.co/datasets/abdullah693/adaption-pakistan-law-qa-pairs",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:55:58+00:00"
+    },
+    {
+     "section": "B5. Third-party datasets",
+     "Title": "Zenodo Pakistani Law Dataset",
+     "URL": "https://zenodo.org/records/20509007",
+     "Organisation": "Umair Ahmed",
+     "Category": "Statute CSVs + QA",
+     "Date / last updated": "2026-06-02",
+     "Credibility": "Low-medium",
+     "Access status": "API + 1 file in full",
+     "http_status": 200,
+     "final_url": "https://zenodo.org/records/20509007",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:56:00+00:00"
+    },
+    {
+     "section": "B5. Third-party datasets",
+     "Title": "PakLegalAid QA (companion)",
+     "URL": "https://zenodo.org/records/20509273",
+     "Organisation": "Umair Ahmed",
+     "Category": "QA CSV",
+     "Date / last updated": "2026-06-02",
+     "Credibility": "Low-medium",
+     "Access status": "API",
+     "http_status": 200,
+     "final_url": "https://zenodo.org/records/20509273",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:56:01+00:00"
+    },
+    {
+     "section": "B5. Third-party datasets",
+     "Title": "SC NER dataset (alternative)",
+     "URL": "https://zenodo.org/records/21671415",
+     "Organisation": "Ul-Hasan, Shafait",
+     "Category": "214 annotated SC judgments",
+     "Date / last updated": "2026-07-29",
+     "Credibility": "Medium",
+     "Access status": "Metadata only",
+     "http_status": 200,
+     "final_url": "https://zenodo.org/records/21671415",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:56:02+00:00"
+    },
+    {
+     "section": "B5. Third-party datasets",
+     "Title": "Pakistani-Law-Cases-Search-Engine",
+     "URL": "https://github.com/SyedAhtsham/Pakistani-Law-Cases-Search-Engine",
+     "Organisation": "SyedAhtsham",
+     "Category": "Student repo, 1,000 SC PDFs",
+     "Date / last updated": "Last push 2023-05-08",
+     "Credibility": "Low",
+     "Access status": "API + 3 PDFs",
+     "http_status": 200,
+     "final_url": "https://github.com/SyedAhtsham/Pakistani-Law-Cases-Search-Engine",
+     "check_error": "",
+     "checked_at": "2026-11-13T04:56:04+00:00"
+    }
+   ]
+  },
+  "extracted_courts": {
+   "columns": [
+    "Court",
+    "What is published",
+    "Coverage / count (as observed)",
+    "Format (samples)",
+    "Collection mechanism",
+    "robots.txt",
+    "Terms / notice",
+    "Source"
+   ],
+   "rows": [
+    {
+     "Court": "Supreme Court",
+     "What is published": "Reported + unreported judgments (Reported Y/N filter); 35 case types",
+     "Coverage / count (as observed)": "Case-year filter 1980–2026; Latest list 25 rows",
+     "Format (samples)": "Not verified (PDFs 403); listing sizes 18 KB–2.65 MB",
+     "Collection mechanism": "reCAPTCHA v3 search; plain HTML Latest list",
+     "robots.txt": "Blocks ClaudeBot, anthropic-ai, GPTBot, CCBot, etc.; all agents ai-train=no, use=reference",
+     "Terms / notice": "\"© 2026 … All Rights Reserved\"; Terms link is href=\"#\"",
+     "Source": "scp.gov.pk https://scp.gov.pk/LatestJudgments.aspx"
+    },
+    {
+     "Court": "Federal Shariat Court",
+     "What is published": "Shariat petitions only",
+     "Coverage / count (as observed)": "169 listed, 159 PDFs, 1980–2025",
+     "Format (samples)": "2025: text PDF of PLD-reported version; 1990: scan + poor OCR",
+     "Collection mechanism": "One HTML table; ?download=N",
+     "robots.txt": "Disallow /wp-admin/ only",
+     "Terms / notice": "Footer \"© 2026 … IT Wing\"",
+     "Source": "FSC https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php"
+    },
+    {
+     "Court": "Islamabad HC",
+     "What is published": "Reported (AFR) + important; search over decisions",
+     "Coverage / count (as observed)": "2025 AFR query: 97 records (24 with citation)",
+     "Format (samples)": "Born-digital text, numbered paras",
+     "Collection mechanism": "POST JSON ihc.asmx/*",
+     "robots.txt": "None (404)",
+     "Terms / notice": "\"for information only … not … for official purposes\"",
+     "Source": "IHC https://mis.ihc.gov.pk/frmJgmnt"
+    },
+    {
+     "Court": "Lahore HC",
+     "What is published": "AFR only, sitting + former judges",
+     "Coverage / count (as observed)": "2010–2026; 2025: 704 + 59; 2015: 205; former 2010: 164",
+     "Format (samples)": "Born-digital Word PDFs; no headnotes; citation not in text",
+     "Collection mechanism": "GET approved_judgments_result_new.php?year=",
+     "robots.txt": "lhc.gov.pk: no rule on judgments; data host 403; PDF host 404",
+     "Terms / notice": "\"should not be downloaded without prior agreement\"",
+     "Source": "LHC https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting"
+    },
+    {
+     "Court": "Sindh HC",
+     "What is published": "Judgments + orders, AFR flag; all seats",
+     "Coverage / count (as observed)": "Sitting judges: 77,258 uploads / 13,274 AFR",
+     "Format (samples)": "Born-digital tagged PDF",
+     "Collection mechanism": "POST AJAX_PUBLIC.php (opt=search_judgement); view-file/{base64}",
+     "robots.txt": "caselaw host: preamble only, no directives; main site disallows /causelist/",
+     "Terms / notice": "Registrar's written consent required to copy/re-publish",
+     "Source": "SHC https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search; Disclaimer https://sindhhighcourt.gov.pk/disclaimer.php"
+    },
+    {
+     "Court": "Peshawar HC",
+     "What is published": "Reported / referred judgments, all benches",
+     "Coverage / count (as observed)": "5,949 records, 2009–2026; 1,103 with PHC neutral citation; 278 link SC judgment",
+     "Format (samples)": "Mixed: 2/3 samples image-only",
+     "Collection mechanism": "One POST \"All Years\" (12.4 MB HTML)",
+     "robots.txt": "None (JS redirect)",
+     "Terms / notice": "\"All Rights Reserved\"",
+     "Source": "PHC https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php?action=search"
+    },
+    {
+     "Court": "Balochistan HC",
+     "What is published": "Reported + significant per judge",
+     "Coverage / count (as observed)": "1,959 + 42 entries; 2,001 PDF ids (1–2004); citation years 2010–2026",
+     "Format (samples)": "Not tested (robots)",
+     "Collection mechanism": "Static per-judge pages; portal API → login",
+     "robots.txt": "Disallow /media/ (all PDFs)",
+     "Terms / notice": "\"© 2026 … All rights reserved\"",
+     "Source": "BHC https://bhc.gov.pk/resources/judgments; robots https://bhc.gov.pk/robots.txt"
+    },
+    {
+     "Court": "GB Chief Court",
+     "What is published": "Reported judgments",
+     "Coverage / count (as observed)": "17 decision dates, 2015–2020",
+     "Format (samples)": "Scan (HP Scan)",
+     "Collection mechanism": "ASP.NET postback → static PDF",
+     "robots.txt": "None (404)",
+     "Terms / notice": "\"© … All Rights Reserved\"",
+     "Source": "GBCC https://gbcc.gov.pk/ReportedJudgments.aspx"
+    },
+    {
+     "Court": "SAC GB",
+     "What is published": "Judgments",
+     "Coverage / count (as observed)": "~757 rows / 753 PDFs; case years 2007–2025, peak 2015–2017",
+     "Format (samples)": "Mostly scans; some text",
+     "Collection mechanism": "Single static HTML page",
+     "robots.txt": "None (404)",
+     "Terms / notice": "\"Copyright © 2025\"",
+     "Source": "SAC GB https://sacgb.gov.pk/Judgments.html"
+    },
+    {
+     "Court": "AJK HC",
+     "What is published": "Judgments (active + previous judges)",
+     "Coverage / count (as observed)": "220 + 43 PDFs; 2022–2026",
+     "Format (samples)": "Born-digital (Word 2016)",
+     "Collection mechanism": "Form POST, \"All\" returns everything",
+     "robots.txt": "None (404)",
+     "Terms / notice": "\"Copy Right @ 2017-2025\"",
+     "Source": "AJK HC https://ajkhighcourt.gok.pk/important-judgments"
+    },
+    {
+     "Court": "AJK SC",
+     "What is published": "\"Important judgements\"",
+     "Coverage / count (as observed)": "704 posts, 2016-01-14 to 2026-10-28",
+     "Format (samples)": "Text PDFs; 2026 posts partly on Google Drive",
+     "Collection mechanism": "WordPress REST API",
+     "robots.txt": "Allows all except /?s=",
+     "Terms / notice": "\"Copyright 2020\"",
+     "Source": "AJK SC REST https://ajksupremecourt.gok.pk/wp-json/wp/v2/posts?categories=18&per_page=100"
+    }
+   ]
+  },
+  "extracted_tribunals": {
+   "columns": [
+    "Body",
+    "Published",
+    "Count",
+    "Format",
+    "robots",
+    "Source"
+   ],
+   "rows": [
+    {
+     "Body": "CCP",
+     "Published": "Orders, 2007–2026",
+     "Count": "177",
+     "Format": "Scan (HP Scan), http host",
+     "robots": "None (404)",
+     "Source": "CCP https://cc.gov.pk/home/orders"
+    },
+    {
+     "Body": "CAT (via CCP)",
+     "Published": "Appellate orders",
+     "Count": "87",
+     "Format": "Phone-app scan (CamScanner)",
+     "robots": "None (404)",
+     "Source": "CAT https://cc.gov.pk/home/decidedcatcases"
+    },
+    {
+     "Body": "FTO",
+     "Published": "Curated decisions 2022–2026; all signed findings for 15 days",
+     "Count": "245; 647 in window",
+     "Format": "Scan + copier OCR",
+     "robots": "None (404)",
+     "Source": "FTO https://www.fto.gov.pk/decisions.aspx; feed http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions"
+    },
+    {
+     "Body": "Wafaqi Mohtasib",
+     "Published": "Selected findings 2017–2020",
+     "Count": "13",
+     "Format": "Scan",
+     "robots": "None (404)",
+     "Source": "WMS https://mohtasib.gov.pk/Publications"
+    },
+    {
+     "Body": "ATIR",
+     "Published": "Nothing",
+     "Count": "0",
+     "Format": "—",
+     "robots": "Returns HTML",
+     "Source": "ATIR https://atir.gov.pk/Judgements"
+    },
+    {
+     "Body": "FST",
+     "Published": "Nothing; site suspended",
+     "Count": "0",
+     "Format": "—",
+     "robots": "Unretrievable",
+     "Source": "FST https://www.fst.gov.pk/robots.txt"
+    }
+   ]
+  },
+  "extracted_statute_portals": {
+   "columns": [
+    "Jurisdiction / portal",
+    "Holdings",
+    "Consolidated?",
+    "Currency",
+    "Format",
+    "robots / terms",
+    "Source"
+   ],
+   "rows": [
+    {
+     "Jurisdiction / portal": "Federal + ICT: Pakistan Code",
+     "Holdings": "~1,037 laws (session crawl context)",
+     "Consolidated?": "Yes (footnotes)",
+     "Currency": "Constitution to 27th Amdt; CPC \"(Under Review)\"",
+     "Format": "Text PDFs at /pdffiles/administrator<hex>.pdf",
+     "robots / terms": "User-agent: googlebot / Disallow: /pdffiles/; \"© 2022\"; \"under review … refer to … Gazette\"",
+     "Source": "Pakistan Code https://pakistancode.gov.pk/english/index.php"
+    },
+    {
+     "Jurisdiction / portal": "Punjab: Punjab Code",
+     "Holdings": "~746 laws (session crawl context)",
+     "Consolidated?": "Not researched",
+     "Currency": "Not researched",
+     "Format": "Not researched",
+     "robots / terms": "Not researched",
+     "Source": "Session context"
+    },
+    {
+     "Jurisdiction / portal": "Sindh: Sindh Code",
+     "Holdings": "~1,383 Acts/Ordinances (session crawl context); Sindh Civil Courts Ordinance 1962 and Sindh Land Revenue Act 1967 absent",
+     "Consolidated?": "Not researched",
+     "Currency": "Not researched",
+     "Format": "Not researched",
+     "robots / terms": "Not researched",
+     "Source": "Session context"
+    },
+    {
+     "Jurisdiction / portal": "KP: KP Code",
+     "Holdings": "969 records (Acts 422, Ord 125, Reg 44, Rules 377, Notif 1); \"All Laws\" list 575",
+     "Consolidated?": "Yes (\"revised\" form)",
+     "Currency": "Newest Acts VII–IX of 2026 (May 2026)",
+     "Format": "Born-digital, iTextSharp watermark",
+     "robots / terms": "Allow: /; \"informational purposes … subject to the Disclaimer\"",
+     "Source": "KP Code https://kpcode.kp.gov.pk/homepage/list_all_law"
+    },
+    {
+     "Jurisdiction / portal": "KP: Assembly",
+     "Holdings": "Acts list with gazetted copies",
+     "Consolidated?": "No",
+     "Currency": "To Act XXI of 2026 (Aug 2026)",
+     "Format": "PDF (\"-GC.pdf\")",
+     "robots / terms": "robots 404",
+     "Source": "PAKP https://www.pakp.gov.pk/act/"
+    },
+    {
+     "Jurisdiction / portal": "Balochistan: Code",
+     "Holdings": "1,790 entries (Rules 637, Gazette Notif 497, Acts 410, Ord 172, Policies 40, Reg 34); ~1,679 unique titles",
+     "Consolidated?": "No (as-enacted)",
+     "Currency": "To Act XXIV of 2026 (Oct 2026)",
+     "Format": "Mixed; 2026 Act image-only",
+     "robots / terms": "Preamble only; \"All rights reserved\"",
+     "Source": "Balochistan Code https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1"
+    },
+    {
+     "Jurisdiction / portal": "Balochistan: Assembly",
+     "Holdings": "428 PDFs, 1972–2026",
+     "Consolidated?": "No",
+     "Currency": "To Act XV of 2026",
+     "Format": "PDF",
+     "robots / terms": "Allow all",
+     "Source": "PAB https://pabalochistan.gov.pk/acts"
+    },
+    {
+     "Jurisdiction / portal": "GB",
+     "Holdings": "~23 Assembly rows (test data, dead PDFs); ~15 Acts + GB Order 2018 on govt portal",
+     "Consolidated?": "No",
+     "Currency": "—",
+     "Format": "GB Order: text; Adaptation Act 2012: scan",
+     "robots / terms": "Assembly allow all; portal 404",
+     "Source": "GB Assembly https://gbassembly.gbit.gov.pk/pages/acts; GB Govt https://gilgitbaltistan.gov.pk/pages/acts"
+    },
+    {
+     "Jurisdiction / portal": "AJK: law.gok.pk",
+     "Holdings": "1,015 Act PDFs; 1,143 Ordinance PDFs; 618-row Adopted Laws; Law Code vols I–XIV; Interim Constitution",
+     "Consolidated?": "No",
+     "Currency": "Act V 2025; Ord III 2026",
+     "Format": "2025 gazette: text; 2023 bulk: scans",
+     "robots / terms": "WP default; \"© 2026, All Rights Reserved\"",
+     "Source": "AJK Law https://law.gok.pk/acts/"
+    },
+    {
+     "Jurisdiction / portal": "PJN current holdings",
+     "Holdings": "56 official statute PDFs; 0 judgments",
+     "Consolidated?": "—",
+     "Currency": "—",
+     "Format": "—",
+     "robots / terms": "—",
+     "Source": "Session context"
+    }
+   ]
+  },
+  "extracted_third_party_datasets": {
+   "columns": [
+    "Dataset",
+    "Size / scope (verified)",
+    "Provenance",
+    "Licence",
+    "Quality defects observed",
+    "Source"
+   ],
+   "rows": [
+    {
+     "Dataset": "AyeshaJadoon/Pakistan_Laws_Dataset",
+     "Size / scope (verified)": "One 46,924,676-byte JSON; card claims 969 laws (unverified)",
+     "Provenance": "file_name = Pakistan Code hashed PDF name; no URL/title/date",
+     "Licence": "ODC-BY tag",
+     "Quality defects observed": "Page headers, split words, letter-spaced garbage; viewer cannot read it",
+     "Source": "HF https://huggingface.co/api/datasets/AyeshaJadoon/Pakistan_Laws_Dataset"
+    },
+    {
+     "Dataset": "endomorphosis/ipfs_pakistan_provincial_laws",
+     "Size / scope (verified)": "1,122 laws (KP 568, Bal 554) + 21,857 section rows; snapshot 2026-10-23",
+     "Provenance": "Per-row official pdf_url, pdf_sha256, detail page",
+     "Licence": "\"other\" / no licence stated",
+     "Quality defects observed": "OCR on 816 pages in 144 docs; date/title mismatches; repeal unverified",
+     "Source": "README https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_provincial_laws/raw/main/README.md"
+    },
+    {
+     "Dataset": "abdullah693/adaption-pakistan-law-qa-pairs",
+     "Size / scope (verified)": "11,195 rows; 7,717 legal (criminal 3,349, constitutional 2,951, evidence 1,117, CPC 208, family 92) + 3,478 null-domain chat",
+     "Provenance": "Citations as shorthand; no URLs",
+     "Licence": "None",
+     "Quality defects observed": "Enhanced fields hallucinate (UCMJ, wrong clause); base 9/9 correct",
+     "Source": "HF stats https://datasets-server.huggingface.co/statistics?dataset=abdullah693/adaption-pakistan-law-qa-pairs&config=default&split=train"
+    },
+    {
+     "Dataset": "Zenodo 20509007",
+     "Size / scope (verified)": "7 statutes (PPC, CrPC, QSO, MFLO, TPA, Police Order 2002, Limitation Act) + lawyer QA; ~5.4 MB",
+     "Provenance": "\"parsed from official PDF versions\" (no URL/edition)",
+     "Licence": "CC-BY-4.0",
+     "Quality defects observed": "Missing PPC 295-A/B/C, 489-F; CrPC 164, 498, 561-A; Limitation Schedule; no post-2006 amendments",
+     "Source": "Zenodo https://zenodo.org/api/records/20509007"
+    },
+    {
+     "Dataset": "SyedAhtsham repo",
+     "Size / scope (verified)": "1,000 SC PDFs (stored twice); 8 informal categories",
+     "Provenance": "Scraped from supremecourt.gov.pk by Dec 2021",
+     "Licence": "None",
+     "Quality defects observed": "No metadata; tokens only; 29 empty token files; MAP 0.003",
+     "Source": "GitHub https://api.github.com/repos/SyedAhtsham/Pakistani-Law-Cases-Search-Engine"
+    }
+   ]
+  },
+  "extracted_legal_provisions": {
+   "columns": [
+    "Provision",
+    "Text / effect",
+    "Source"
+   ],
+   "rows": [
+    {
+     "Provision": "Copyright Ord. s.57(1)(q)(i)",
+     "Text / effect": "Reproduction of \"any matter which has been published in any official Gazette\" not infringement unless prohibited by Government",
+     "Source": "Pakistan Code PDF https://pakistancode.gov.pk/pdffiles/administratorc8dc84cf91fcedf0a4a00fc2710945a1.pdf"
+    },
+    {
+     "Provision": "Copyright Ord. s.57(1)(q)(ii)",
+     "Text / effect": "\"any judgment or order of a court, tribunal or other judicial authority, unless … prohibited by the court\"",
+     "Source": "Same"
+    },
+    {
+     "Provision": "Copyright Ord. s.2 \"Government work\"",
+     "Text / effect": "Includes work made or published under control of \"any court, tribunal or other judicial or legislative authority in Pakistan\"",
+     "Source": "Same"
+    },
+    {
+     "Provision": "JJSA 2018 s.13(1), (3), Explanation",
+     "Text / effect": "Up to 3 years for publishing juvenile identity; up to 2 years for Juvenile Court proceedings without permission; HC/SC judgments exempt",
+     "Source": "JJSA PDF https://lpr.adb.org/sites/default/files/2024-07/pakistan-juvenile-justice-system-act-2018.pdf"
+    },
+    {
+     "Provision": "s.376A PPC (2016)",
+     "Text / effect": "Offence of publishing rape-victim identity, up to 3 years; Explanation illegible",
+     "Source": "Gazette scan https://sld.com.pk/wp-content/uploads/2021/04/1485428121_999.pdf"
+    },
+    {
+     "Provision": "LHC 2024 direction",
+     "Text / effect": "\"Henceforth, they shall identify the victims using acronyms rather than full names.\"",
+     "Source": "Dawn https://dawn.com/news/1828670/lhc-asks-judges-to-protect-rape-victims-identity-in-verdicts"
+    },
+    {
+     "Provision": "GB Order 2018 s.60(3)",
+     "Text / effect": "PM may adopt \"any amendment in the existing laws or any new law in force in Pakistan\"",
+     "Source": "GB Order PDF https://gilgitbaltistan.gov.pk/storage/downloads/GB%20Order%202018.pdf"
+    }
+   ]
+  },
+  "evidence": {
+   "columns": [
+    "#",
+    "Key finding",
+    "Evidence",
+    "Source URL(s)"
+   ],
+   "rows": [
+    {
+     "#": "D1",
+     "Key finding": "SC robots blocks AI crawlers and reserves AI training",
+     "Evidence": "User-agent: ClaudeBot Disallow: /; Content-Signal: search=yes,ai-train=no,use=reference",
+     "Source URL(s)": "https://scp.gov.pk/robots.txt"
+    },
+    {
+     "#": "D2",
+     "Key finding": "SC search is CAPTCHA-gated",
+     "Evidence": "Loads reCAPTCHA v3; token in recaptchaV3Token",
+     "Source URL(s)": "https://scp.gov.pk/JudgmentsSearch"
+    },
+    {
+     "#": "D3",
+     "Key finding": "SC PDFs not retrievable by automation",
+     "Evidence": "HTTP 403 Akamai on downloads_judgements",
+     "Source URL(s)": "https://www.supremecourt.gov.pk/downloads_judgements/c.p._2972_2022.pdf"
+    },
+    {
+     "#": "D4",
+     "Key finding": "FSC publishes only Shariat petitions online",
+     "Evidence": "169 judgments; criminal and suo motu \"Under Construction\"",
+     "Source URL(s)": "https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php ; https://www.federalshariatcourt.gov.pk/criminaljudgments.html"
+    },
+    {
+     "#": "D5",
+     "Key finding": "FSC PDF carries PLD headnotes",
+     "Evidence": "Text begins \"P L D 2025 Federal Shariat Court 1\"",
+     "Source URL(s)": "https://www.federalshariatcourt.gov.pk/shariatjudgment2.2.php?download=128"
+    },
+    {
+     "#": "D6",
+     "Key finding": "IHC open via JSON, no robots, disclaimer only",
+     "Evidence": "404 robots; srchDecisionClms returned 97 records",
+     "Source URL(s)": "https://mis.ihc.gov.pk/frmJgmnt ; https://mis.ihc.gov.pk/ihc.asmx/srchDecisionClms"
+    },
+    {
+     "#": "D7",
+     "Key finding": "LHC reserves downloading",
+     "Evidence": "\"should not be downloaded without prior agreement\"",
+     "Source URL(s)": "https://lhc.gov.pk/reported_judgments"
+    },
+    {
+     "#": "D8",
+     "Key finding": "LHC publishes a tiny fraction of disposals",
+     "Evidence": "173,229 disposed in 2025 vs 704 + 59 AFR items",
+     "Source URL(s)": "https://lhc.gov.pk/system/files/Annual%20Report%202025.pdf ; https://data.lhc.gov.pk/reported_judgments/judgments_approved_for_reporting"
+    },
+    {
+     "#": "D9",
+     "Key finding": "SHC is the largest official corpus",
+     "Evidence": "77,258 uploads / 13,274 AFR (sitting judges)",
+     "Source URL(s)": "https://caselaw.shc.gov.pk/caselaw/public/rpt-afr"
+    },
+    {
+     "#": "D10",
+     "Key finding": "SHC requires Registrar's consent",
+     "Evidence": "\"without first obtaining written consent from the Registrar\"",
+     "Source URL(s)": "https://sindhhighcourt.gov.pk/disclaimer.php"
+    },
+    {
+     "#": "D11",
+     "Key finding": "PHC is the largest open corpus",
+     "Evidence": "5,949 records 2009–2026, one POST",
+     "Source URL(s)": "https://peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php?action=search"
+    },
+    {
+     "#": "D12",
+     "Key finding": "BHC PDFs are robots-disallowed",
+     "Evidence": "Disallow: /media/",
+     "Source URL(s)": "https://bhc.gov.pk/robots.txt"
+    },
+    {
+     "#": "D13",
+     "Key finding": "AJK SC open via REST",
+     "Evidence": "704 posts in category 18; robots allow",
+     "Source URL(s)": "https://ajksupremecourt.gok.pk/wp-json/wp/v2/categories?per_page=50 ; https://ajksupremecourt.gok.pk/robots.txt"
+    },
+    {
+     "#": "D14",
+     "Key finding": "FST and ATIR publish nothing",
+     "Evidence": "\"Account Suspended\"; \"No Record Found In Database\"",
+     "Source URL(s)": "https://www.fst.gov.pk/robots.txt ; https://atir.gov.pk/Judgements"
+    },
+    {
+     "#": "D15",
+     "Key finding": "FTO full feed is only 15 days long",
+     "Evidence": "\"will remain accessible … for a period of 15 days\"",
+     "Source URL(s)": "http://onlinecomplaints.cloudns.asia:4041/presentation/showalldecisions"
+    },
+    {
+     "#": "D16",
+     "Key finding": "Judgments and Gazette matter reproducible under copyright law",
+     "Evidence": "s.57(1)(q)(i)–(ii)",
+     "Source URL(s)": "https://pakistancode.gov.pk/pdffiles/administratorc8dc84cf91fcedf0a4a00fc2710945a1.pdf"
+    },
+    {
+     "#": "D17",
+     "Key finding": "Commercial and free aggregators forbid scraping",
+     "Evidence": "PakistanLawsite \"must not copy, download, scrape\"; Pakistan Case Law \"AI model-training crawlers are not permitted\"",
+     "Source URL(s)": "https://www.pakistanlawsite.com/ ; https://pakistancaselaw.com/terms"
+    },
+    {
+     "#": "D18",
+     "Key finding": "Juvenile identity bar exempts only HC/SC judgments",
+     "Evidence": "JJSA s.13 Explanation",
+     "Source URL(s)": "https://lpr.adb.org/sites/default/files/2024-07/pakistan-juvenile-justice-system-act-2018.pdf"
+    },
+    {
+     "#": "D19",
+     "Key finding": "Court PDFs contain personal financial data",
+     "Evidence": "IHC sample includes litigant's IBAN",
+     "Source URL(s)": "https://mis.ihc.gov.pk/attachments/judgements/209540/1/Muhammad_Usman_v_FoP_WP_No_1553_of_2026__J_Arbab_Muhammad_Tahir__Approved_for_Reporting_639280833781874862.pdf"
+    },
+    {
+     "#": "D20",
+     "Key finding": "Pakistan Code disclaims authenticity",
+     "Evidence": "\"should not be taken as authentic or error-free\"",
+     "Source URL(s)": "https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Fvbpw%3D-sg-jjjjjjjjjjjjj"
+    },
+    {
+     "#": "D21",
+     "Key finding": "KP Code consolidates but lags ~6 months",
+     "Evidence": "FAQ \"revised form\"; Assembly to Act XXI/2026 vs Code VII–IX/2026",
+     "Source URL(s)": "https://kpcode.kp.gov.pk/homepage/faq ; https://www.pakp.gov.pk/act/"
+    },
+    {
+     "#": "D22",
+     "Key finding": "Balochistan Code is as-enacted with separate amendments",
+     "Evidence": "1,790 entries; 673 titles contain \"amend\"",
+     "Source URL(s)": "https://balochistancode.gob.pk/laws_rules.aspx?wise=alphabetical&opento=1"
+    },
+    {
+     "#": "D23",
+     "Key finding": "Balochistan printing host opts out of AI training",
+     "Evidence": "Content-Signal: … ai-train=no; ClaudeBot disallowed",
+     "Source URL(s)": "https://printing.balochistan.gov.pk/robots.txt"
+    },
+    {
+     "#": "D24",
+     "Key finding": "GB has no working statute code",
+     "Evidence": "Test rows; 3/3 PDFs 404; legacy domains down",
+     "Source URL(s)": "https://gbassembly.gbit.gov.pk/pages/acts ; https://gba.gov.pk/acts/"
+    },
+    {
+     "#": "D25",
+     "Key finding": "AJK has the broadest as-enacted regional collection",
+     "Evidence": "1,015 Act PDFs; 1,143 Ordinance PDFs",
+     "Source URL(s)": "https://law.gok.pk/acts/ ; https://law.gok.pk/ordinance/"
+    },
+    {
+     "#": "D26",
+     "Key finding": "D2 is traceable to official URLs",
+     "Evidence": "Per-row pdf_url + pdf_sha256; robots honoured",
+     "Source URL(s)": "https://huggingface.co/datasets/endomorphosis/ipfs_pakistan_provincial_laws/raw/main/README.md"
+    },
+    {
+     "#": "D27",
+     "Key finding": "D3 is one-third off-topic",
+     "Evidence": "3,478 null-domain rows (\"How do you cook ribs?\")",
+     "Source URL(s)": "https://datasets-server.huggingface.co/filter?dataset=abdullah693/adaption-pakistan-law-qa-pairs&config=default&split=train&where=%22domain%22%20IS%20NULL&length=5"
+    },
+    {
+     "#": "D28",
+     "Key finding": "Zenodo dataset incomplete and stale",
+     "Evidence": "No CPC; missing lettered PPC sections; no amendment after 2006",
+     "Source URL(s)": "https://zenodo.org/api/records/20509007"
+    },
+    {
+     "#": "D29",
+     "Key finding": "GitHub repo is a 1,000-PDF student snapshot",
+     "Evidence": "Report: \"scraped website https://www.supremecourt.gov.pk/\"; 1,000 cases",
+     "Source URL(s)": "https://github.com/SyedAhtsham/Pakistani-Law-Cases-Search-Engine/blob/main/CaSearch%20Report.pdf"
+    },
+    {
+     "#": "D30",
+     "Key finding": "Neutral citations are court-specific and only in metadata",
+     "Evidence": "LHC 2025 LHC 8083; SHC 2026 SHC KHI 2016; PHC 2025 PHC 14",
+     "Source URL(s)": "https://data.lhc.gov.pk/dynamic/approved_judgments_result_new.php?year=2025&debug=0&courtName=All%20Courts&caseNumber=&citationTag=&partyName=&decisionDate0=&decisionDate1=&uploadDate=&uploadDate1= ; https://caselaw.shc.gov.pk/caselaw/pview.php?rpt=search"
+    }
+   ]
+  },
+  "gap_federal_ict_punjab_sindh": {
+   "columns": [
+    "Question",
+    "Finding (fetched)"
+   ],
+   "rows": [
+    {
+     "Question": "Pakistan Code size and structure",
+     "Finding (fetched)": "1,037 laws in the A–Z listing; each listing entry carries category, Act number and promulgation date; per-year chronological pages (LGu0xBD?year=YYYY) and a \"Latest Ordinances\" page (KmTY5e.php) expose new laws"
+    },
+    {
+     "Question": "Pakistan Code robots and terms",
+     "Finding (fetched)": "robots.txt disallows /pdffiles/ for Googlebot only; disclaimer says texts are \"for general informational purposes only… not… authentic\", Gazette prevails"
+    },
+    {
+     "Question": "ICT",
+     "Finding (fetched)": "No separate official statute portal and no ICT category on Pakistan Code; 46 ICT-titled laws sit in the federal list"
+    },
+    {
+     "Question": "Punjab Code",
+     "Finding (fetched)": "746 laws; listing shows \"Last Updated On\" dates and a recently_updated page; robots.txt returns HTTP 403 (no readable rules)"
+    },
+    {
+     "Question": "Sindh Code",
+     "Finding (fetched)": "1,383 Acts/Ordinances via letter filter (unfiltered paging is unstable); robots.txt Allow: /; Rules listing exists"
+    },
+    {
+     "Question": "Sindh Civil Courts Ordinance 1962",
+     "Finding (fetched)": "Found: consolidated to Sindh Act VI of 2025 at the Sindh Judicial Academy (sja.gos.pk), 19-page text PDF — official but secondary (tier 2)"
+    },
+    {
+     "Question": "Sindh Land Revenue Act 1967",
+     "Finding (fetched)": "Still missing: Board of Revenue Sindh site unreachable; not on Sindh Code or SJA"
+    },
+    {
+     "Question": "Assemblies",
+     "Finding (fetched)": "National Assembly /en/acts-tenure.php (132 PDFs, to 2026); Sindh Assembly /acts/details/…"
+    }
+   ]
+  },
+  "gap_inaccessible_sources": {
+   "columns": [
+    "Source",
+    "Problem",
+    "Consequence"
+   ],
+   "rows": [
+    {
+     "Source": "www.supremecourt.gov.pk (PDFs, robots, WP listings)",
+     "Problem": "HTTP 403 (Akamai); TLS failure without www",
+     "Consequence": "SC PDF format, extractability and on-face citation unverified; need a manual browser download"
+    },
+    {
+     "Source": "scp.gov.pk/JudgmentsSearch",
+     "Problem": "reCAPTCHA v3",
+     "Consequence": "Total SC count and earliest year unknown"
+    },
+    {
+     "Source": "fccp.gov.pk",
+     "Problem": "JS-only SPA, no robots",
+     "Consequence": "Federal Constitutional Court output unprofiled"
+    },
+    {
+     "Source": "api.bhc.gov.pk/v2/judgments",
+     "Problem": "302 to login on direct call",
+     "Consequence": "BHC portal coverage (all vs reported) unknown"
+    },
+    {
+     "Source": "bhc.gov.pk/media/",
+     "Problem": "robots disallow",
+     "Consequence": "BHC PDF format untested"
+    },
+    {
+     "Source": "fst.gov.pk",
+     "Problem": "Account suspended",
+     "Consequence": "No FST decisions; alternative domain unknown"
+    },
+    {
+     "Source": "atir.gov.pk",
+     "Problem": "Empty; official status unconfirmed (donor-built)",
+     "Consequence": "No ATIR decisions online"
+    },
+    {
+     "Source": "gba.gov.pk; GB Assembly PDFs",
+     "Problem": "Expired certificate; 404s",
+     "Consequence": "GB Acts largely unobtainable online"
+    },
+    {
+     "Source": "blncode.pitb.gov.pk",
+     "Problem": "TCP connect fails",
+     "Consequence": "Identity unknown"
+    },
+    {
+     "Source": "SHC Report001",
+     "Problem": "Embedded 404",
+     "Consequence": "Seat-wise totals unavailable"
+    },
+    {
+     "Source": "pid.gov.pk press release (National Law Digest)",
+     "Problem": "TLS certificate error",
+     "Consequence": "Status of 2023 \"National Law Digest\" proposal unknown"
+    },
+    {
+     "Source": "Eastern Book Co. v. Modak primary sources",
+     "Problem": "Connection refused/reset",
+     "Consequence": "Headnote-copyright reasoning known only from snippet"
+    },
+    {
+     "Source": "NJPMC AI guidelines (Feb 2026)",
+     "Problem": "Not fetched",
+     "Consequence": "Unknown whether they address third-party AI use of judgments"
+    }
+   ]
+  },
+  "gap_open_questions": {
+   "columns": [
+    "Domain",
+    "Open question"
+   ],
+   "rows": [
+    {
+     "Domain": "Legal",
+     "Open question": "Do website terms and robots signals (LHC, SHC, SC, BHC) bind reuse that s.57(1)(q) permits? Does s.57(1)(q)(ii) cover adaptation (translation, AI summaries)? Does s.376A PPC have a superior-court Explanation like JJSA s.13? Are consolidated portal texts (not Gazette prints) covered by s.57(1)(q)(i)? Has s.57 been amended since 2000 (the Pakistan Code PDF matches the quoted text, but amendment history was not traced)?"
+    },
+    {
+     "Domain": "Courts",
+     "Open question": "When and by what instrument were LHC, SHC, PHC and SC neutral citations introduced? Are non-AFR LHC PDFs at predictable URLs (deliberately not probed)? Total counts and earliest years for IHC, SC and SHC (including former judges)? Share of scanned PDFs per court (samples of 1–3 only)? Are any court orders restricting publication flagged anywhere machine-readably?"
+    },
+    {
+     "Domain": "Tribunals",
+     "Open question": "Provincial service tribunals, AJK/GB service tribunals, banking, consumer and environmental forums: not covered or shallowly searched. No standalone CAT website found."
+    },
+    {
+     "Domain": "Statutes",
+     "Open question": "Legal status of KP merged-district Continuation Acts 2018/2019; list of federal laws extended to GB or the merged districts; whether the AJK Interim Constitution PDF includes all amendments; KP Code disclaimer text; GB Order 2018's current constitutional status."
+    },
+    {
+     "Domain": "Datasets",
+     "Open question": "D1 record count and duplicate rate; D3 source of 3,478 chat rows and the LEGAL-UQA licence; how many records in the federal sibling ipfs_pakistan_laws came from Common Crawl; content of Zenodo 21671415."
+    },
+    {
+     "Domain": "Data protection",
+     "Open question": "Stage of the Personal Data Protection Bill; family-court confidentiality rules; provincial child-protection media bars (e.g. KP 2010 Act)."
+    }
+   ]
+  },
+  "actions": {
+   "columns": [
+    "Priority",
+    "Action",
+    "Why",
+    "Basis"
+   ],
+   "rows": [
+    {
+     "Priority": "1",
+     "Action": "Ingest Tier 1 now with a polite, identified crawler: PHC (one POST), FSC listing, AJK SC via REST, AJK HC, SAC GB, GBCC, CCP/CAT, FTO curated decisions",
+     "Why": "About 8,300 documents with no robots or CAPTCHA barrier",
+     "Basis": "Parts A, C1, C2"
+    },
+    {
+     "Priority": "1",
+     "Action": "Start a daily FTO signed-findings collector immediately",
+     "Why": "The full feed only persists for 15 days; every day lost is unrecoverable",
+     "Basis": "D15"
+    },
+    {
+     "Priority": "1",
+     "Action": "Send formal permission letters to the SC Registrar / Research Centre (request data feed or API), the LHC Registrar / Director IT, the SHC Registrar and the BHC Registrar. Cite their notices, PJN's attribution and link-back terms, and no-alteration commitments",
+     "Why": "Unlocks ~90% of identifiable volume plus apex precedent",
+     "Basis": "D1–D3, D7, D10, D12"
+    },
+    {
+     "Priority": "1",
+     "Action": "Run the source-sync pipeline (backend/scripts/sync_sources.py) on a schedule so the inventory of ~5,500 official statutes stays current and new laws are fetched automatically",
+     "Why": "Statute coverage verified (E1); new laws must not wait for manual work",
+     "Basis": "E1"
+    },
+    {
+     "Priority": "2",
+     "Action": "Ingest the Sindh Civil Courts Ordinance 1962 from the Sindh Judicial Academy (tier 2); obtain the Sindh Land Revenue Act 1967 from the Gazette or Board of Revenue",
+     "Why": "One core Sindh statute found, one still missing",
+     "Basis": "E1"
+    },
+    {
+     "Priority": "2",
+     "Action": "IHC: ingest via JSON endpoints at ≤1 request per 2–5 s off-peak, and send a courtesy permission letter",
+     "Why": "Technically open; fragile server; disclaimer",
+     "Basis": "D6"
+    },
+    {
+     "Priority": "2",
+     "Action": "KP and Balochistan statutes: ingest from KP Code + KP Assembly and Balochistan Code + Assembly. Use D2 as the gap-finder and check its pdf_sha256 values against fresh fetches",
+     "Why": "Covers the 6-month KP lag and Balochistan's as-enacted model",
+     "Basis": "D21, D22, D26"
+    },
+    {
+     "Priority": "2",
+     "Action": "AJK statutes: ingest law.gok.pk Acts, Ordinances and the Adopted Laws table, with OCR for the 2023 scans",
+     "Why": "Broadest regional collection",
+     "Basis": "D25"
+    },
+    {
+     "Priority": "2",
+     "Action": "GB: request the statute corpus from the GB Law and Prosecution Department or Assembly (FOI/RTI if needed); tag federal laws as \"applies in GB only if adapted\"",
+     "Why": "No working online code",
+     "Basis": "D24"
+    },
+    {
+     "Priority": "2",
+     "Action": "Build pipeline safeguards: English + Urdu OCR; PLD/reporter headnote stripping; anonymisation of juveniles, rape victims and their families (mandatory for subordinate-court material, best practice for all sexual-offence, juvenile and family cases); PII redaction (IBANs, CNICs)",
+     "Why": "Criminal exposure under JJSA s.13 and s.376A; personal data in PDFs",
+     "Basis": "D5, D18, D19"
+    },
+    {
+     "Priority": "2",
+     "Action": "Data model: take citations from listing metadata; allow multiple neutral and reporter citations per document; key on listing row + SHA-256; store fetch URL and date; re-check robots.txt before every run",
+     "Why": "Citations not in PDFs; filenames unstable; spam injection on PHC/BHC; SHC could switch on content signals",
+     "Basis": "D30, Part A"
+    },
+    {
+     "Priority": "3",
+     "Action": "Build point-in-time statute versions from principal Acts plus dated amendment instruments; curate repeal status manually",
+     "Why": "No official source offers it",
+     "Basis": "Part A statutes"
+    },
+    {
+     "Priority": "3",
+     "Action": "Commission counsel review of: the effect of site terms versus s.57(1)(q); adaptation and translation; the s.376A Explanation; consolidated portal text under (q)(i). Also read the NJPMC AI guidelines",
+     "Why": "Unresolved legal questions",
+     "Basis": "E3"
+    },
+    {
+     "Priority": "3",
+     "Action": "Datasets: adopt D2 as a KP/Balochistan gap-finder only. Vet endomorphosis/ipfs_pakistan_laws as a federal cross-check. Use the Zenodo lawyer questions (CC-BY-4.0, with attribution) and D3 rows 0–7716 base fields as internal evaluation prompts only, after licence clearance for D3. Use the GitHub 1,000-case list as an SC regression set once official access exists. Drop D1. Do not train on any of them",
+     "Why": "None is citable; each has a narrow supporting use",
+     "Basis": "Part A datasets, C4"
+    },
+    {
+     "Priority": "3",
+     "Action": "Do not use pakistanlawsite.com, pakistancaselaw.com or pakcaselaw.duckdns.org as sources, and do not use the SHC raw-IP hosts with embedded credentials",
+     "Why": "Terms prohibit it; unofficial or insecure",
+     "Basis": "D17"
+    }
+   ]
+  }
+ }
+}

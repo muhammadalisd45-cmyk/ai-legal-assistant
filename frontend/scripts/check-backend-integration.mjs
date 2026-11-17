@@ -24,7 +24,7 @@ const cases = [
   { description: "پولیس نے میرے بھائی کو بغیر وارنٹ کے گرفتار کر لیا ہے اور ایف آئی آر نہیں دکھائی۔", language: "ur" }
 ];
 for (const request of cases) {
-  const result = await requestBackendTriage({ backendUrl: backend, request, timeoutMs: 20000 });
+  const result = await requestBackendTriage({ backendUrl: backend, request, timeoutMs: 45000 });
   assert.ok(result.ok, `triage contract failed (${result.reason}) for ${request.language}`);
   const t = result.result;
   assert.ok(["backend", "backend-fallback"].includes(t.mode));

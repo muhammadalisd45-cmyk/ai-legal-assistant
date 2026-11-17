@@ -144,6 +144,25 @@ def test_llm_schema_violation_degrades(client, llm):
     assert body["fallback_reason"] == "invalid_model_output"
 
 
+def test_bad_output_retries_once_on_next_free_model(client, llm, monkeypatch):
+    from app.core.config import settings
+    monkeypatch.setattr(settings, "llm_fallback_models", "backup-model:free")
+    transport = llm(ScriptedLLM("not json at all", valid_llm_output()))
+    body = client.post(URL, json={"message": "Police arrested my brother", "language": "english"}).json()
+    assert body["mode"] == "live"
+    assert [r["model"] for r in transport.requests] == ["test-model:free", "backup-model:free"]
+
+
+def test_bad_output_retry_respects_time_budget(client, llm, monkeypatch):
+    from app.core.config import settings
+    from app.services import triage_service
+    monkeypatch.setattr(settings, "llm_fallback_models", "backup-model:free")
+    monkeypatch.setattr(triage_service, "TRIAGE_TIME_BUDGET_SECONDS", 0.0)
+    transport = llm(ScriptedLLM("not json at all", valid_llm_output()))
+    body = client.post(URL, json={"message": "My landlord is evicting me", "language": "english"}).json()
+    assert body["fallback_reason"] == "invalid_json" and len(transport.requests) == 1
+
+
 def test_strict_schema_is_provider_compatible():
     schema = to_strict_schema(TriageLLMOutput.model_json_schema())
 

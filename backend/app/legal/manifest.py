@@ -17,6 +17,8 @@ OFFICIAL_HOSTS = frozenset({
     "kpcode.kp.gov.pk", "www.kpcode.kp.gov.pk",
     "balochistancode.gob.pk", "www.balochistancode.gob.pk",
     "na.gov.pk", "www.na.gov.pk", "senate.gov.pk", "www.senate.gov.pk",
+    # Sindh Judicial Academy (Government of Sindh): consolidated texts, ingested as source_tier 2
+    "sja.gos.pk",
 })
 
 # Statuses that may never be treated as legal evidence.
@@ -105,6 +107,12 @@ def destination(corpus_dir: Path, row: ManifestRow) -> Path:
         folder = corpus_dir / "constitution"
     elif document_id.startswith("SD-") or ("sindh" in jurisdiction and not court):
         folder = corpus_dir / "sindh_laws"
+    elif document_id.startswith("PB-") or ("punjab" in jurisdiction and not court):
+        folder = corpus_dir / "punjab_laws"
+    elif document_id.startswith("KP-") or ("khyber" in jurisdiction and not court):
+        folder = corpus_dir / "kp_laws"
+    elif document_id.startswith("BL-") or ("balochistan" in jurisdiction and not court):
+        folder = corpus_dir / "balochistan_laws"
     elif "supreme court" in court:
         folder = corpus_dir / "supreme_court"
     elif "sindh high court" in court:
